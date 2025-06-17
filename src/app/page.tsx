@@ -1,5 +1,4 @@
 "use client";
-import CustomNavbar from "@/app/components/ui/CustomNavbar";
 import localFont from "next/font/local";
 
 const jalnanGothic = localFont({
@@ -8,9 +7,9 @@ const jalnanGothic = localFont({
 });
 
 export default function Home() {
-  const contactClick = () => {
-    location.href = `tel:010-5333-4383`;
-  };
+  // const contactClick = () => {
+  //   location.href = `tel:010-5333-4383`;
+  // };
 
   return (
     <>
