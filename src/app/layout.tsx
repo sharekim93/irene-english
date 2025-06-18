@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+
 import CustomHeroUiProvider from "@/app/components/CustomHeroUiProvider";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const jalnan = localFont({
+const Jalnan = localFont({
   src: "../fonts/Jalnan2TTF.woff",
   display: "swap",
+  variable: "--font-jalnan",
+});
+
+const JalnanGothic = localFont({
+  src: "../fonts/JalnanGothicTTF.woff",
+  display: "swap",
+  variable: "--font-jalnan-gothic",
 });
 
 export const metadata: Metadata = {
@@ -36,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className={`${jalnan.className}`}>
+    <html suppressHydrationWarning lang="ko">
+      <body className={`${Jalnan.variable} ${JalnanGothic.variable}`}>
         <CustomHeroUiProvider>{children}</CustomHeroUiProvider>
       </body>
     </html>

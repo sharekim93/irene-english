@@ -1,10 +1,4 @@
 "use client";
-import localFont from "next/font/local";
-
-const jalnanGothic = localFont({
-  src: "../fonts/JalnanGothicTTF.woff",
-  display: "swap",
-});
 
 export default function Home() {
   // const contactClick = () => {
@@ -14,10 +8,7 @@ export default function Home() {
   return (
     <>
       <div className={`w-full my-10 mx-2`}>
-        {/* <CustomNavbar /> */}
-        <h1
-          className={`${jalnanGothic.className} text-foreground font-bold text-4xl`}
-        >
+        <h1 className={`font-gothic text-foreground font-bold text-4xl`}>
           석성초 삼성영어 셀레나 아이린 교실
         </h1>
         <hgroup className="my-2">
