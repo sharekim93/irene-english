@@ -33,9 +33,9 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">연락처</h4>
             <ul className="space-y-2 text-gray-400">
               <li>📞 1588-0000</li>
-              <li>📧 info@selenaenglish.com</li>
-              <li>🕒 평일 09:00-18:00</li>
-              <li>🕒 토요일 09:00-15:00</li>
+              {/* <li>📧 info@selenaenglish.com</li> */}
+              <li>🕒 평일 13:00-18:00</li>
+              {/* <li>🕒 토요일 09:00-15:00</li> */}
             </ul>
           </div>
         </div>

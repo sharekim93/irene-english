@@ -19,7 +19,7 @@ const CTASection = () => {
             셀레나 영어와 함께 영어 실력을 완성하고 꿈을 이루어보세요. 전국
             각지의 학원에서 최고의 교육을 경험하실 수 있습니다.
           </p>
-          <div className="space-x-4">
+          <div className="hidden space-x-4">
             <Button
               size="lg"
               className="bg-white text-pink-600 hover:bg-gray-100 font-semibold px-8 py-3"
