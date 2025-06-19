@@ -3,7 +3,19 @@ import { Card, CardBody, Chip } from "@heroui/react";
 import { motion } from "motion/react";
 
 // Program Card Component
-const ProgramCard = ({ program, index }) => {
+const ProgramCard = ({
+  program,
+  index,
+}: {
+  program: {
+    color: string;
+    title: string;
+    age: string;
+    description: string;
+    features: string[];
+  };
+  index: number;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

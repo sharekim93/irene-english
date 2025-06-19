@@ -2,7 +2,13 @@
 
 import { motion } from "motion/react";
 
-const FeatureCard = ({ feature, index }) => {
+const FeatureCard = ({
+  feature,
+  index,
+}: {
+  feature: { icon: string; title: string; description: string };
+  index: number;
+}) => {
   return (
     <motion.div
       className="text-center"
