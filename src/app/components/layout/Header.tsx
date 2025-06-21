@@ -14,7 +14,7 @@ import {
   Button,
   Chip,
 } from "@heroui/react";
-import logoImage from "@/images/logo.webp";
+import logoImage from "@/images/logo.png";
 import Image from "next/image";
 
 const Header = () => {
@@ -33,7 +33,7 @@ const Header = () => {
       shouldHideOnScroll
       isBlurred={false}
       isMenuOpen={isMenuOpen}
-      className="shadow-xs"
+      className="shadow-xs bg-white"
       maxWidth="full"
       height="80px"
     >
@@ -46,7 +46,7 @@ const Header = () => {
 
         {/* Logo */}
         <NavbarBrand className="flex items-center gap-3 flex-none">
-          <Image src={logoImage} alt="logo" width={158} height={36} />
+          <Image src={logoImage} alt="logo" width={240} height={64} />
         </NavbarBrand>
       </NavbarContent>
 
@@ -84,12 +84,19 @@ const Header = () => {
       {/* Right Side Content */}
       <NavbarContent justify="end">
         {/* Contact Info - Hidden on small screens */}
-        <NavbarItem className="hidden md:flex items-center gap-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+        <NavbarItem
+          className="hidden md:flex items-center gap-4"
+          onClick={() => {
+            location.href = "tel:010-3421-4383";
+          }}
+        >
+          <div className="flex items-center gap-2 text-md text-gray-600">
             <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
               <span className="text-green-600 text-xs">📞</span>
             </div>
-            <span className="font-medium">1588-0000</span>
+            <span className="font-nanum-square-bold font-extrabold">
+              010-3421-4383
+            </span>
           </div>
         </NavbarItem>
 
@@ -101,6 +108,9 @@ const Header = () => {
             color="primary"
             size="sm"
             className="bg-pink-50 text-pink-600"
+            onClick={() => {
+              location.href = "tel:010-3421-4383";
+            }}
           >
             📞
           </Button>
@@ -149,15 +159,22 @@ const Header = () => {
           ))}
 
           {/* Mobile Contact Section */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
+          <div
+            className="mt-6 pt-6 border-t border-gray-200"
+            onClick={() => {
+              location.href = "tel:010-3421-4383";
+            }}
+          >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <span className="text-green-600">📞</span>
                 </div>
                 <div>
-                  <p className="text-lg font-medium text-gray-800">1588-0000</p>
-                  <p className="text-xs text-gray-500">평일 09:00-18:00</p>
+                  <p className="text-lg font-medium text-gray-800">
+                    010-3421-4383
+                  </p>
+                  <p className="text-xs text-gray-500">평일 13:00-18:00</p>
                 </div>
               </div>
             </div>
