@@ -16,6 +16,18 @@ const JalnanGothic = localFont({
   variable: "--font-jalnan-gothic",
 });
 
+const NanumQuareR = localFont({
+  src: "../fonts/NanumSquareR.woff",
+  display: "swap",
+  variable: "--font-nanum-square",
+});
+
+const NanumQuareB = localFont({
+  src: "../fonts/NanumSquareB.woff",
+  display: "swap",
+  variable: "--font-nanum-squre-bold",
+});
+
 export const metadata: Metadata = {
   title:
     "삼성영어 셀레나 아이린 교실 - 동백역, 석성초, 벽산블루밍, 대원칸타빌, 한라비발디, 아펠바움 셀레나 교실",
@@ -58,7 +70,9 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="ko">
-      <body className={`${Jalnan.variable} ${JalnanGothic.variable}`}>
+      <body
+        className={`${Jalnan.variable} ${JalnanGothic.variable} ${NanumQuareR.variable} ${NanumQuareB.variable}`}
+      >
         <CustomHeroUiProvider>{children}</CustomHeroUiProvider>
       </body>
     </html>

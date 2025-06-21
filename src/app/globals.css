@@ -14,6 +14,8 @@
   --color-foreground: var(--foreground);
   --font-jalnan: var(--font-jalnan);
   --font-gothic: var(--font-jalnan-gothic);
+  --font-nanum-square: var(--font-nanum-square);
+  --font-nanum-square-bold: var(--font-nanum-square-bold);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,5 +29,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  @apply font-jalnan;
+  @apply font-nanum-square;
 }
