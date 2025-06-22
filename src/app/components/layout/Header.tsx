@@ -20,11 +20,11 @@ import Image from "next/image";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    { name: "프로그램", href: "#programs", highlight: false },
-    { name: "학습 시스템", href: "#features", highlight: false },
-    { name: "학원 찾기", href: "#location", highlight: false },
-    { name: "공지사항", href: "#notice", highlight: false },
+  const menuItems: { name: string; href: "string"; highlight: "string" }[] = [
+    // { name: "프로그램", href: "#programs", highlight: false },
+    // { name: "학습 시스템", href: "#features", highlight: false },
+    // { name: "학원 찾기", href: "#location", highlight: false },
+    // { name: "공지사항", href: "#notice", highlight: false },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Header = () => {
       shouldHideOnScroll
       isBlurred={false}
       isMenuOpen={isMenuOpen}
-      className="shadow-xs bg-white"
+      className={`shadow-xs bg-transparent}`}
       maxWidth="full"
       height="80px"
     >
