@@ -19,10 +19,14 @@ const FeatureCard = ({
       transition={{ delay: index * 0.1 }}
       whileHover={{ scale: 1.05 }}
     >
-      <div className="text-6xl mb-4 flex justify-center">{feature.icon}</div>
+      <div className="text-6xl mb-4 flex-none">{feature.icon}</div>
       <hgroup>
-        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-        <p className="text-gray-600 whitespace-pre">{feature.description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-black">
+          {feature.title}
+        </h3>
+        <p className="text-gray-600 whitespace-pre-wrap">
+          {feature.description}
+        </p>
       </hgroup>
     </motion.div>
   );
