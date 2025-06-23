@@ -5,7 +5,7 @@ import { Button } from "@heroui/react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-600">
+    <section className="py-20 bg-pink-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -16,8 +16,7 @@ const CTASection = () => {
             지금 시작하세요!
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            셀레나 영어와 함께 영어 실력을 완성하고 꿈을 이루어보세요. 전국
-            각지의 학원에서 최고의 교육을 경험하실 수 있습니다.
+            아이린 석성 교습소와 함께 영어 실력을 완성하고 꿈을 이루어보세요.
           </p>
           <div className="hidden space-x-4">
             <Button
