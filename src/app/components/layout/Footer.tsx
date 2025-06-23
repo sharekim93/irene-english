@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <hgroup>
               <h3 className="text-xl  mb-4">삼성영어 셀레나</h3>
-              <p>석성초 아이린 교습소</p>
+              <p>아이린 석성 교습소</p>
             </hgroup>
             {/* <p className="text-gray-400">
               혁신적인 AI 교육 시스템으로
