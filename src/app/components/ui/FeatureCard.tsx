@@ -1,26 +1,29 @@
 "use client";
 
 import { motion } from "motion/react";
+import { ReactNode } from "react";
 
 const FeatureCard = ({
   feature,
   index,
 }: {
-  feature: { icon: string; title: string; description: string };
+  feature: { icon: ReactNode; title: string; description: string };
   index: number;
 }) => {
   return (
     <motion.div
-      className="text-center"
+      className="text-left flex gap-8"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ scale: 1.05 }}
     >
-      <div className="text-6xl mb-4">{feature.icon}</div>
-      <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-      <p className="text-gray-600">{feature.description}</p>
+      <div className="text-6xl mb-4 flex justify-center">{feature.icon}</div>
+      <hgroup>
+        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+        <p className="text-gray-600 whitespace-pre">{feature.description}</p>
+      </hgroup>
     </motion.div>
   );
 };
