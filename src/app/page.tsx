@@ -3,7 +3,6 @@ import Header from "./components/layout/Header";
 import ComingSoon from "./components/section/ComingSoon";
 import CTASection from "./components/section/CTASection";
 import FeaturesSection from "./components/section/FeatureSection";
-import ProgramsSection from "./components/section/ProgramSection";
 
 const SelenaEnglishHomepage = () => {
   return (
@@ -11,7 +10,7 @@ const SelenaEnglishHomepage = () => {
       <Header />
       <ComingSoon />
       <FeaturesSection />
-      <ProgramsSection />
+      {/* <ProgramsSection /> */}
       <CTASection />
       <Footer />
     </div>
