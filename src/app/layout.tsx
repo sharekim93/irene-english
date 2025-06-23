@@ -51,6 +51,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    siteName: "삼성영어 셀레나 아이린 석성 교습소",
     title: "삼성영어 셀레나 아이린 석성 교습소",
     description:
       "삼성영어 셀레나 아이린 석성 교습소입니다. 석성초, 동백역, 벽산블루밍, 대원칸타빌, 한라비발디, 아펠바움 셀레나 교실",

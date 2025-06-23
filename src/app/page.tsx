@@ -5,8 +5,22 @@ import CTASection from "./components/section/CTASection";
 import FeaturesSection from "./components/section/FeatureSection";
 
 const SelenaEnglishHomepage = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "삼성영어 셀레나 아이린 석성 교습소",
+    url: "https://www.irene-english.com",
+  };
   return (
     <div className="min-h-screen bg-white">
+      {/* Add JSON-LD to your page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      {/* ... */}
       <Header />
       <ComingSoon />
       <FeaturesSection />
