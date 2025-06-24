@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "삼성영어 셀레나 아이린 석성 교습소입니다. 어은목 마을에 위치해 있고 석성초, 동백동 동백역 셀레나 영어학원입니다.",
     images: [{ url: "/logo.webp" }],
-    url: "https://www.selena-english.com",
+    url: "https://www.irene-english.com",
     type: "website",
   },
   twitter: {
