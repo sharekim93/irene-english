@@ -64,7 +64,7 @@ const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-nanum-square-bold font-bold text-gray-900 mb-4">
             셀레나 영어만의 특별함
           </h2>
           <p className="text-xl text-gray-600">
