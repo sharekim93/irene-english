@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "삼성영어 셀레나 아이린 석성 교습소",
     description:
       "삼성영어 셀레나 아이린 석성 교습소입니다. 어은목 마을 석성초, 동백동, 동백역 셀레나 영어학원입니다.",
-    images: [{ url: "/logo.webp" }],
+    images: [{ url: "/logo.png", width: 480, height: 128 }],
     url: "https://www.irene-english.com",
     type: "website",
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "삼성영어 셀레나 아이린 석성 교습소",
     description:
       "삼성영어 셀레나 아이린 석성 교습소입니다. 어은목 마을 석성초, 동백동, 동백역 셀레나 영어학원입니다.",
-    images: [{ url: "/logo.webp" }],
+    images: [{ url: "/logo.png", width: 480, height: 128 }],
   },
 };
 
