@@ -12,8 +12,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-jalnan: var(--font-jalnan);
-  --font-gothic: var(--font-jalnan-gothic);
   --font-nanum-square: var(--font-nanum-square);
   --font-nanum-square-bold: var(--font-nanum-square-bold);
 }

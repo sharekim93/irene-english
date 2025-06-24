@@ -4,18 +4,6 @@ import CustomHeroUiProvider from "@/app/components/CustomHeroUiProvider";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const Jalnan = localFont({
-  src: "../fonts/Jalnan2TTF.woff",
-  display: "swap",
-  variable: "--font-jalnan",
-});
-
-const JalnanGothic = localFont({
-  src: "../fonts/JalnanGothicTTF.woff",
-  display: "swap",
-  variable: "--font-jalnan-gothic",
-});
-
 const NanumQuareR = localFont({
   src: "../fonts/NanumSquareR.woff",
   display: "swap",
@@ -72,9 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="ko">
-      <body
-        className={`${Jalnan.variable} ${JalnanGothic.variable} ${NanumQuareR.variable} ${NanumQuareB.variable}`}
-      >
+      <body className={`${NanumQuareR.variable} ${NanumQuareB.variable}`}>
         <CustomHeroUiProvider>{children}</CustomHeroUiProvider>
       </body>
     </html>
