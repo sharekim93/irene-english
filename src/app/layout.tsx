@@ -17,7 +17,7 @@ const NanumQuareB = localFont({
 });
 
 export const metadata: Metadata = {
-  icons: ["/logo.png"],
+  icons: ["/favicon.ico"],
   title:
     "삼성영어 셀레나 아이린 석성 교습소 - 석성초, 어은목마을, 동백역, 벽산블루밍, 대원칸타빌, 한라비발디, 아펠바움 셀레나 교실",
   description:
