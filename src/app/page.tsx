@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import ComingSoon from "./components/section/ComingSoon";
 import CTASection from "./components/section/CTASection";
 import FeaturesSection from "./components/section/FeatureSection";
+import Location from "./components/section/Location";
 
 const SelenaEnglishHomepage = () => {
   const jsonLd = {
@@ -26,6 +27,7 @@ const SelenaEnglishHomepage = () => {
       <FeaturesSection />
       {/* <ProgramsSection /> */}
       <CTASection />
+      <Location />
       <Footer />
     </div>
   );
