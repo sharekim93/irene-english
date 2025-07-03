@@ -44,7 +44,7 @@ const Location = () => {
           <h2 className="text-3xl font-nanum-square-bold font-bold text-gray-900 mb-4">
             오시는 길
           </h2>
-          <p className="py-4">
+          <p className="py-4 font-black">
             경기도 용인시 기흥구 동백2로 9 어은목마을 벽산 블루밍 아파트 상가동
             105호
           </p>
