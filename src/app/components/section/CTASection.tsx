@@ -16,7 +16,7 @@ const CTASection = () => {
             지금 시작하세요!
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            아이린 석성 교습소와 함께 영어 실력을 완성하고 꿈을 이루어보세요.
+            삼성영어 셀레나와 함께 매일 어학연수 떠나보세요
           </p>
           <div className="hidden space-x-4">
             <Button

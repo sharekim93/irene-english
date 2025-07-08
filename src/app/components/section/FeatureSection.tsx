@@ -65,10 +65,10 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-nanum-square-bold font-bold text-gray-900 mb-4">
-            셀레나 영어만의 특별함
+            삼성영어 셀레나 아이린 석성 교습소
           </h2>
           <p className="text-xl text-gray-600">
-            혁신적인 교육 방법으로 영어 실력을 완성합니다
+            분당 영어유치원 10년 경력의 아이린 원장님이 직접 지도합니다
           </p>
         </motion.div>
 
