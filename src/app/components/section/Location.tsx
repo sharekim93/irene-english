@@ -9,7 +9,7 @@ import {
   useNavermaps,
 } from "react-naver-maps";
 import { motion } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const MyMap = () => {
   const naverMaps = useNavermaps();
