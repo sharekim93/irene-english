@@ -2,7 +2,6 @@
 @plugin './hero.ts';
 
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
-@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
@@ -14,13 +13,6 @@
   --color-foreground: var(--foreground);
   --font-nanum-square: var(--font-nanum-square);
   --font-nanum-square-bold: var(--font-nanum-square-bold);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
