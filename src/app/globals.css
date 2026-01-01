@@ -21,3 +21,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   @apply font-nanum-square;
 }
+
+/* CarouselSection 슬라이드 수직 중앙 정렬 */
+.slider-container .slick-slide {
+  height: auto;
+}
+
+.slider-container .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slider-container .slick-slide > div {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container .slick-list {
+  height: auto !important;
+}
