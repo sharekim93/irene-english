@@ -1,105 +1,66 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { Button } from "@heroui/react";
+import styles from "./LandingPage.module.css";
 import logoImage from "@/images/logo.png";
 
 interface LandingPageProps {
   onNavigateToHome: () => void;
 }
 
+const BLOG_URL = "https://blog.naver.com/da_num";
+
 const LandingPage = ({ onNavigateToHome }: LandingPageProps) => {
-  const [countdown, setCountdown] = useState(3);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          window.open("https://blog.naver.com/da_num", "_blank");
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(progressInterval);
-          return 100;
-        }
-        return prev + 100 / 30; // 3초 = 30 * 100ms
-      });
-    }, 100);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(progressInterval);
-    };
-  }, []);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white relative">
-      {/* Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
+    <div className={styles.landingPageRoot}>
+      {/* 라디얼 글로우 배경 */}
+      <div className={styles.bgRadialGlow} />
+
+      <main className="w-full max-w-md relative z-10 flex flex-col items-center">
         <div
-          className="h-full bg-pink-500 transition-all duration-100 ease-linear"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
+          className={`${styles.glassCard} p-10 rounded-2xl shadow-2xl text-center w-full transform transition-all duration-500 hover:shadow-pink-200/50`}
+        >
+          {/* 프로필 영역 */}
+          <div className="mb-8 flex flex-col items-center">
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full blur-xl transition-all flex items-center justify-center " />
+                <Image
+                  src={logoImage}
+                  alt="삼성영어 셀레나 로고"
+                  width={480}
+                  height={128}
+                  style={{ objectFit: "cover" }}
+                />
+            </div>
+          </div>
 
-      <div className="flex flex-col items-center gap-8">
-        {/* Logo */}
-        <div className="flex justify-center">
-          <Image
-            src={logoImage}
-            alt="로고"
-            width={240}
-            height={64}
-            className="object-contain"
-          />
+          {/* 버튼 영역 */}
+          <div className="flex flex-col space-y-2">
+            <a
+              href={BLOG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.glowPulse} group flex items-center justify-center gap-3 w-full py-4 bg-pink-500 text-white font-bold rounded-xl shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:-translate-y-0.5 transition-all duration-300`}
+            >
+              <span className="text-lg">블로그로 이동</span>
+            </a>
+            <button
+              type="button"
+              onClick={onNavigateToHome}
+              className="group flex items-center justify-center gap-3 w-full py-4 bg-white text-zinc-700 font-bold rounded-xl border-2 border-pink-100 hover:border-pink-500 hover:bg-pink-50 transition-all duration-300"
+            >
+              <span className="text-lg">홈페이지로 이동</span>
+            </button>
+          </div>
+          {/* 카운트다운 안내 제거 */}
         </div>
 
-        {/* Countdown Notice */}
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-gray-600 text-sm">
-            {countdown > 0 ? (
-              <>
-                <span className="font-semibold text-pink-500">
-                  {countdown}초
-                </span>{" "}
-                후 블로그로 자동으로 이동합니다
-              </>
-            ) : (
-              <span className="text-pink-500">이동 중...</span>
-            )}
-          </p>
+        {/* 인증 문구 */}
+        <div className="mt-8 flex justify-center space-x-2 text-zinc-400 text-xs tracking-widest font-medium uppercase">
+          <span>Copyright 2026 Irene. All rights reserved.</span>
         </div>
-
-        {/* Buttons */}
-        <div className="flex flex-col gap-4 w-full max-w-xs">
-          <Button
-            size="lg"
-            className="w-full bg-pink-500 text-white hover:bg-pink-600 font-semibold py-6"
-            as="a"
-            href="https://blog.naver.com/da_num"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            블로그로 이동
-          </Button>
-          <Button
-            size="lg"
-            className="w-full bg-pink-500 text-white hover:bg-pink-600 font-semibold py-6"
-            onClick={onNavigateToHome}
-          >
-            홈페이지로 이동
-          </Button>
-        </div>
-      </div>
+      </main>
     </div>
   );
 };

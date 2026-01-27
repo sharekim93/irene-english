@@ -1,0 +1,40 @@
+.landingPageRoot {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
+  overflow: hidden;
+  background-color: #fdf2f8;
+}
+
+.bgRadialGlow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    rgba(236, 72, 153, 0.15) 0%,
+    rgba(253, 242, 248, 0) 70%
+  );
+  z-index: -1;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1.5rem;
+}
+
+.glowPulse {
+  box-shadow: 0 0 15px 0 rgba(236, 72, 153, 0.4);
+}
+
