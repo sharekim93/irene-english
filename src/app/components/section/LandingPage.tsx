@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./LandingPage.module.css";
-import logoImage from "@/images/logo.png";
+import logoImage from "@/images/logo.webp";
 
 interface LandingPageProps {
   onNavigateToHome: () => void;
