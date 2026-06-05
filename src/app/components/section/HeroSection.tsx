@@ -31,7 +31,9 @@ const HeroSection = () => {
             transition={{ delay: 0.25, duration: 0.65, ease: "easeOut" }}
           >
             삼성영어 아이린 석성
-            <span className="block">파닉스부터 중등 영어까지,</span>
+            <span className="block">
+              영어유치원 10년, 관리자 경력의 선생님이
+            </span>
             <span className="block text-pink-600">매일 말하고 확인하는</span>
             1:1 관리형 영어
           </motion.h1>

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import {
   Navbar,
   NavbarBrand,
@@ -20,6 +20,21 @@ import { navItems, siteConfig } from "@/config/site";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const shouldReduceMotion = useReducedMotion();
+  const phoneIconMotion = shouldReduceMotion
+    ? {}
+    : {
+        animate: {
+          rotate: [0, -12, 12, -8, 0],
+          scale: [1, 1.14, 1],
+        },
+        transition: {
+          duration: 1.15,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatDelay: 2.4,
+        },
+      };
 
   return (
     <Navbar
@@ -92,9 +107,12 @@ const Header = () => {
             aria-label={`전화 상담 ${siteConfig.phone}`}
             className="flex items-center gap-2 text-md text-gray-600 hover:text-pink-600"
           >
-            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+            <motion.div
+              {...phoneIconMotion}
+              className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center shadow-sm shadow-green-200"
+            >
               <span className="text-green-600 text-xs">📞</span>
-            </div>
+            </motion.div>
             <span className="font-nanum-square-bold font-extrabold">
               {siteConfig.phone}
             </span>
@@ -113,7 +131,9 @@ const Header = () => {
             className="bg-pink-50 text-pink-600"
             aria-label="전화 상담"
           >
-            📞
+            <motion.span {...phoneIconMotion} className="inline-block">
+              📞
+            </motion.span>
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -168,9 +188,12 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 aria-label={`전화 상담 ${siteConfig.phone}`}
               >
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                <motion.div
+                  {...phoneIconMotion}
+                  className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shadow-sm shadow-green-200"
+                >
                   <span className="text-green-600">📞</span>
-                </div>
+                </motion.div>
                 <div>
                   <p className="text-lg font-medium text-gray-800">
                     {siteConfig.phone}

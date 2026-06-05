@@ -43,7 +43,7 @@ export const navItems = [
   { name: "학원 특징", href: "/feature" },
   { name: "FAQ", href: "/faq" },
   { name: "블로그", href: "/blog" },
-  { name: "오시는 길", href: "/contact", highlight: true },
+  { name: "오시는 길", href: "/contact" },
 ];
 
 export const programSummaries = [
