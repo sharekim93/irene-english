@@ -50,7 +50,7 @@ const Header = () => {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="lg:hidden text-pink-600"
+          className="h-11 w-11 min-w-11 rounded-full text-pink-600 lg:hidden"
         />
 
         {/* Logo */}
@@ -105,7 +105,7 @@ const Header = () => {
           <Link
             href={siteConfig.telHref}
             aria-label={`전화 상담 ${siteConfig.phone}`}
-            className="flex items-center gap-2 text-md text-gray-600 hover:text-pink-600"
+            className="flex min-h-11 items-center gap-2 rounded-full px-2 text-md text-gray-600 hover:text-pink-600"
           >
             <motion.div
               {...phoneIconMotion}
@@ -127,8 +127,8 @@ const Header = () => {
             isIconOnly
             variant="flat"
             color="primary"
-            size="sm"
-            className="bg-pink-50 text-pink-600"
+            size="md"
+            className="h-11 w-11 min-w-11 bg-pink-50 text-pink-600"
             aria-label="전화 상담"
           >
             <motion.span {...phoneIconMotion} className="inline-block">
