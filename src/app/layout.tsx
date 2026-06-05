@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import CustomHeroUiProvider from "@/app/components/CustomHeroUiProvider";
+import { pageDescription, siteConfig } from "@/config/site";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -13,31 +14,21 @@ const NanumQuareR = localFont({
 const NanumQuareB = localFont({
   src: "../fonts/NanumSquareB.woff",
   display: "swap",
-  variable: "--font-nanum-squre-bold",
+  variable: "--font-nanum-square-bold",
 });
 
 export const metadata: Metadata = {
-  title:
-    "삼성영어 셀레나 아이린 석성 교습소 - 석성초 영어학원, 동백역 영어학원, 어은목마을 영어학원",
-  description:
-    "삼성영어 셀레나 석성초 영어학원, 동백역 영어학원, 어은목마을 영어학원",
-  keywords: [
-    "삼성영어 셀레나 아이린 석성 교습소",
-    "석성초 셀레나",
-    "석성초 영어학원",
-    "석성초 영어",
-    "어은목마을 영어학원",
-    "어은목마을 영어",
-    "동백역 영어학원",
-    "동백역 영어",
-    "동백역 셀레나",
-    "초당초 영어학원",
-    "초당초 영어",
-    "초당초 셀레나",
-    "석성초 셀레나 영어학원",
-    "아이린 교실",
-    "석성초 셀레나 교습소",
-  ],
+  metadataBase: new URL(siteConfig.domain),
+  title: {
+    default:
+      "삼성영어 아이린 석성 | 석성초·초당초·동백역 영어학원",
+    template: "%s | 삼성영어 아이린 석성",
+  },
+  description: pageDescription,
+  keywords: siteConfig.keywords,
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     googleBot: {
@@ -46,18 +37,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    siteName: "삼성영어 셀레나 아이린 석성 교습소",
-    title: "삼성영어 셀레나 아이린 석성 교습소",
-    description:
-      "삼성영어 셀레나 아이린 석성 교습소입니다. 석성초 영어학원, 동백역 영어학원, 어은목마을 영어학원.",
+    siteName: siteConfig.name,
+    title: "삼성영어 아이린 석성",
+    description: pageDescription,
     images: [{ url: "/og-image.webp", width: 2835, height: 2835 }],
-    url: "https://www.irene-english.com",
+    url: siteConfig.domain,
     type: "website",
+    locale: "ko_KR",
   },
   twitter: {
-    title: "삼성영어 셀레나 아이린 석성 교습소",
-    description:
-      "삼성영어 셀레나 아이린 석성 교습소입니다. 석성초 영어학원, 동백역 영어학원, 어은목마을 영어학원.",
+    card: "summary_large_image",
+    title: "삼성영어 아이린 석성",
+    description: pageDescription,
     images: [{ url: "/og-image.webp", width: 2835, height: 2835 }],
   },
 };

@@ -13,36 +13,47 @@ const ProgramCard = ({
     age: string;
     description: string;
     features: string[];
+    href: string;
   };
   index: number;
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 44, scale: 0.96 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-      whileHover={{ scale: 1.02 }}
+      transition={{ delay: index * 0.12, duration: 0.58, ease: "easeOut" }}
+      whileHover={{ y: -10, scale: 1.02 }}
     >
-      <Card className={`${program.color} border-2 h-full`}>
-        <CardBody className="p-6">
-          <div className="flex justify-between items-start mb-4">
-            <h3 className="text-2xl font-bold text-gray-800">
+      <Card className={`${program.color} h-full border-2 shadow-xl`}>
+        <CardBody className="flex min-h-[280px] flex-col p-7">
+          <div className="mb-5 flex min-h-20 flex-col items-start justify-between gap-3">
+            <h3 className="text-2xl font-black text-gray-900">
               {program.title}
             </h3>
             <Chip size="sm" variant="flat" color="primary">
               {program.age}
             </Chip>
           </div>
-          <p className="text-gray-700 mb-6 text-lg">{program.description}</p>
-          <div className="space-y-2">
+          <p className="mb-7 text-base leading-7 text-gray-600">
+            {program.description}
+          </p>
+          <div className="mt-auto space-y-3">
             {program.features.map((feature, featureIndex) => (
               <div key={featureIndex} className="flex items-center">
-                <span className="text-green-500 mr-2">✓</span>
-                <span className="text-gray-700">{feature}</span>
+                <span className="mr-3 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-pink-50 text-sm font-black text-pink-600">
+                  ✓
+                </span>
+                <span className="font-bold text-gray-700">{feature}</span>
               </div>
             ))}
           </div>
+          <a
+            href={program.href}
+            className="mt-7 inline-flex h-11 items-center justify-center rounded-xl bg-gray-950 px-4 text-sm font-bold text-white transition hover:bg-pink-600"
+          >
+            상세 보기
+          </a>
         </CardBody>
       </Card>
     </motion.div>

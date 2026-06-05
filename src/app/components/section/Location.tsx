@@ -1,100 +1,146 @@
 "use client";
 
+import { motion } from "motion/react";
+import Image from "next/image";
 import {
-  InfoWindow,
-  Container as MapDiv,
+  Container,
   Marker,
   NaverMap,
   NavermapsProvider,
-  useNavermaps,
 } from "react-naver-maps";
-import { motion } from "motion/react";
-import { useRef } from "react";
 
-const MyMap = () => {
-  const naverMaps = useNavermaps();
-  const imgUrl = new URL("@/images/map_marker_selena.png", import.meta.url)
-    .href;
-  const mapRef = useRef(null);
-  const markerRef = useRef(null);
-  const infoWindowRef = useRef<typeof InfoWindow>(null);
+import markerImage from "@/images/map_marker_selena.png";
+import { siteConfig } from "@/config/site";
+
+const StaticLocationCard = () => (
+  <div className="relative min-h-[360px] bg-[linear-gradient(135deg,#fff,#f4fbff)] p-8">
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(236,72,153,0.08)_1px,transparent_1px),linear-gradient(0deg,rgba(14,165,233,0.08)_1px,transparent_1px)] bg-[size:36px_36px]" />
+    <div className="relative flex h-full min-h-[300px] items-center justify-center">
+      <div className="text-center">
+        <Image
+          src={markerImage}
+          alt="석성초 영어학원 위치 마커"
+          width={90}
+          height={94}
+          className="mx-auto"
+        />
+        <p className="mt-5 text-2xl font-black text-gray-950">
+          {siteConfig.name}
+        </p>
+        <p className="mt-2 text-sm font-bold text-gray-600">
+          위도 {siteConfig.coordinates.latitude} · 경도{" "}
+          {siteConfig.coordinates.longitude}
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
+const NaverMapCard = ({ clientId }: { clientId: string }) => {
+  const center = {
+    lat: siteConfig.coordinates.latitude,
+    lng: siteConfig.coordinates.longitude,
+  };
 
   return (
-    <NaverMap
-      ref={mapRef}
-      defaultCenter={naverMaps.LatLng(37.2674246, 127.154662)}
-      defaultZoom={18}
-      zoomControl
-      zoomControlOptions={{
-        style: naverMaps.ZoomControlStyle.SMALL,
-        position: naverMaps.Position.TOP_RIGHT,
-      }}
+    <div
+      aria-label="삼성영어 아이린 석성 네이버 지도"
+      className="relative min-h-[360px] bg-pink-50"
     >
-      <InfoWindow
-        position={naverMaps.LatLng(37.2674246, 127.154662)}
-        content={`<div style=padding:20px;border-radius:10px;>
-        <h3>아이린 석성교습소</h3>
-        <p>010-4521-4383</p>
-        경기도 용인시 기흥구 동백2로 9 상가동 105호
-        </div>`}
-        ref={infoWindowRef}
-      />
-      <Marker
-        ref={markerRef}
-        position={naverMaps.LatLng(37.2674246, 127.154662)}
-        title="삼성영어 셀레나 아이린 석성 교습소"
-        icon={{
-          url: imgUrl,
-          size: naverMaps.Size(50, 52),
-          origin: naverMaps.Point(0, 0),
-          anchor: naverMaps.Point(6, 60),
-        }}
-        animation={1}
-        onClick={() => {
-          // @ts-expect-error getMap 이 react-naver-maps 에 저장되어 있지 않음
-          if (infoWindowRef.current?.getMap()) {
-            // @ts-expect-error close() 가 react-naver-maps 에 저장되어 있지 않음
-            infoWindowRef.current.close();
-            return;
-          }
-          // @ts-expect-error open() 가 react-naver-maps 에 저장되어 있지 않음
-          infoWindowRef.current?.open(mapRef.current, markerRef?.current);
-        }}
-      />
-    </NaverMap>
+      <NavermapsProvider ncpKeyId={clientId}>
+        <Container
+          className="h-full min-h-[360px] w-full"
+          fallback={<StaticLocationCard />}
+        >
+          <NaverMap
+            defaultCenter={center}
+            defaultZoom={17}
+            minZoom={12}
+            scrollWheel={false}
+            draggable
+            zoomControl
+          >
+            <Marker
+              position={center}
+              title={siteConfig.name}
+              icon={markerImage.src}
+            />
+          </NaverMap>
+        </Container>
+      </NavermapsProvider>
+    </div>
   );
 };
 
 const Location = () => {
+  const naverClientId = process.env.NEXT_PUBLIC_NAVER_CLIENT_ID;
+
   return (
-    <section id="location" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="location" className="bg-white px-5 py-24 sm:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-8"
+          className="mb-8 text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl font-nanum-square-bold font-bold text-gray-900 mb-4">
+          <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
+            LOCATION
+          </p>
+          <h2 className="mb-4 text-3xl font-nanum-square-bold font-bold text-gray-900">
             오시는 길
           </h2>
-          <p className="py-4 text-xl font-black">
-            경기도 용인시 기흥구 동백2로 9 어은목마을 벽산 블루밍 아파트 상가동
-            105호
+          <p className="py-4 text-lg font-black leading-8 text-gray-700 sm:text-xl">
+            {siteConfig.address}
+          </p>
+          <p className="text-base font-bold text-pink-600">
+            수업 시간 {siteConfig.openingHoursText} · 전화 {siteConfig.phone}
           </p>
         </motion.div>
-        <NavermapsProvider
-          ncpKeyId={process.env.NEXT_PUBLIC_NAVER_CLIENT_ID || ""}
+
+        <motion.div
+          className="grid overflow-hidden rounded-2xl border border-pink-100 bg-[#fcf9f8] shadow-2xl shadow-pink-900/10 lg:grid-cols-[1fr_0.9fr]"
+          initial={{ opacity: 0, y: 52, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <MapDiv
-            style={{
-              width: "100%",
-              height: "600px",
-            }}
-          >
-            <MyMap />
-          </MapDiv>
-        </NavermapsProvider>
+          {naverClientId ? (
+            <NaverMapCard clientId={naverClientId} />
+          ) : (
+            <StaticLocationCard />
+          )}
+
+          <div className="flex flex-col justify-center gap-5 bg-white p-8">
+            <div>
+              <p className="text-sm font-bold text-pink-600">ADDRESS</p>
+              <h3 className="mt-2 text-2xl font-black leading-8 text-gray-950">
+                어은목마을 벽산 블루밍 아파트 상가동 105호
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                석성초, 초당초, 동백역 생활권에서 방문하기 좋은 위치입니다.
+                방문 전 전화로 상담 가능 시간과 주차 동선을 확인해 주세요.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={siteConfig.placeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center rounded-xl bg-pink-600 px-5 text-sm font-bold text-white"
+              >
+                네이버 지도 열기
+              </a>
+              <a
+                href={siteConfig.telHref}
+                className="inline-flex h-12 items-center justify-center rounded-xl border border-pink-200 px-5 text-sm font-bold text-pink-700"
+              >
+                전화 상담하기
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

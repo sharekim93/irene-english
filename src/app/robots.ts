@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { siteConfig } from "@/config/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -13,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://irene-english.com/sitemap.xml",
+    sitemap: `${siteConfig.domain}/sitemap.xml`,
   };
 }

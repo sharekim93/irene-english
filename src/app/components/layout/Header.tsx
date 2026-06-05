@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   Navbar,
   NavbarBrand,
@@ -16,16 +16,10 @@ import {
 } from "@heroui/react";
 import logoImage from "@/images/logo.png";
 import Image from "next/image";
+import { navItems, siteConfig } from "@/config/site";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems: { name: string; href: "string"; highlight: "string" }[] = [
-    // { name: "프로그램", href: "#programs", highlight: false },
-    // { name: "학습 시스템", href: "#features", highlight: false },
-    // { name: "학원 찾기", href: "#location", highlight: false },
-    // { name: "공지사항", href: "#notice", highlight: false },
-  ];
 
   return (
     <Navbar
@@ -33,7 +27,7 @@ const Header = () => {
       shouldHideOnScroll
       isBlurred={false}
       isMenuOpen={isMenuOpen}
-      className={`shadow-xs bg-transparent}`}
+      className="sticky top-0 z-50 border-b border-white/60 bg-white/80 shadow-sm backdrop-blur-xl"
       maxWidth="full"
       height="80px"
     >
@@ -41,23 +35,31 @@ const Header = () => {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden text-pink-600"
+          className="lg:hidden text-pink-600"
         />
 
         {/* Logo */}
         <NavbarBrand className="flex items-center gap-3 flex-none">
-          <Image src={logoImage} alt="logo" width={240} height={64} />
+          <Link href="/" aria-label="삼성영어 아이린 석성 홈">
+            <Image
+              src={logoImage}
+              alt="삼성영어 아이린 석성 로고"
+              width={240}
+              height={64}
+              priority
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       {/* Desktop Navigation */}
-      <NavbarContent className="hidden sm:flex gap-8" justify="center">
-        {menuItems.map((item, index) => (
+      <NavbarContent className="hidden lg:flex gap-6" justify="center">
+        {navItems.map((item, index) => (
           <NavbarItem key={index}>
             <Link
               href={item.href}
               className={`
-                text-lg font-medium transition-all duration-200 hover:scale-105
+                text-base font-nanum-square-bold font-bold transition-all duration-200 hover:scale-105
                 ${
                   item.highlight
                     ? "text-pink-600 hover:text-pink-700"
@@ -84,33 +86,32 @@ const Header = () => {
       {/* Right Side Content */}
       <NavbarContent justify="end">
         {/* Contact Info - Hidden on small screens */}
-        <NavbarItem
-          className="hidden md:flex items-center gap-4"
-          onClick={() => {
-            location.href = "tel:010-3421-4383";
-          }}
-        >
-          <div className="flex items-center gap-2 text-md text-gray-600">
+        <NavbarItem className="hidden md:flex items-center gap-4">
+          <Link
+            href={siteConfig.telHref}
+            aria-label={`전화 상담 ${siteConfig.phone}`}
+            className="flex items-center gap-2 text-md text-gray-600 hover:text-pink-600"
+          >
             <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
               <span className="text-green-600 text-xs">📞</span>
             </div>
             <span className="font-nanum-square-bold font-extrabold">
-              010-3421-4383
+              {siteConfig.phone}
             </span>
-          </div>
+          </Link>
         </NavbarItem>
 
         {/* Mobile Contact Button */}
         <NavbarItem className="md:hidden">
           <Button
+            as="a"
+            href={siteConfig.telHref}
             isIconOnly
             variant="flat"
             color="primary"
             size="sm"
             className="bg-pink-50 text-pink-600"
-            onClick={() => {
-              location.href = "tel:010-3421-4383";
-            }}
+            aria-label="전화 상담"
           >
             📞
           </Button>
@@ -121,7 +122,7 @@ const Header = () => {
       <NavbarMenu className="pt-6 bg-white">
         <div className="flex flex-col gap-4">
           {/* Mobile Menu Items */}
-          {menuItems.map((item, index) => (
+          {navItems.map((item, index) => (
             <NavbarMenuItem key={index}>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -159,24 +160,26 @@ const Header = () => {
           ))}
 
           {/* Mobile Contact Section */}
-          <div
-            className="mt-6 pt-6 border-t border-gray-200"
-            onClick={() => {
-              location.href = "tel:010-3421-4383";
-            }}
-          >
+          <div className="mt-6 border-t border-gray-200 pt-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
+              <Link
+                href={siteConfig.telHref}
+                className="flex items-center gap-3 text-gray-800 hover:text-pink-600"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label={`전화 상담 ${siteConfig.phone}`}
+              >
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <span className="text-green-600">📞</span>
                 </div>
                 <div>
                   <p className="text-lg font-medium text-gray-800">
-                    010-3421-4383
+                    {siteConfig.phone}
                   </p>
-                  <p className="text-xs text-gray-500">평일 13:00-18:00</p>
+                  <p className="text-xs text-gray-500">
+                    평일 {siteConfig.openingHoursText}
+                  </p>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

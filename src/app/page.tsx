@@ -1,46 +1,27 @@
-"use client";
-
-import { useState } from "react";
-import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
+import JsonLd from "./components/JsonLd";
+import SiteFrame from "./components/layout/SiteFrame";
+import BlogPreviewSection from "./components/section/BlogPreviewSection";
 import CarouselSection from "./components/section/CarouselSection";
 import CTASection from "./components/section/CTASection";
 import FeaturesSection from "./components/section/FeatureSection";
+import HeroSection from "./components/section/HeroSection";
 import Location from "./components/section/Location";
-import LandingPage from "./components/section/LandingPage";
+import ProgramsSection from "./components/section/ProgramSection";
+import { navigationJsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
-const SelenaEnglishHomepage = () => {
-  const [showHomepage, setShowHomepage] = useState(false);
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "삼성영어 셀레나 아이린 석성 교습소",
-    url: "https://www.irene-english.com",
-  };
-
-  if (!showHomepage) {
-    return <LandingPage onNavigateToHome={() => setShowHomepage(true)} />;
-  }
-
+const SelenaEnglishHomepage = async () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Add JSON-LD to your page */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
-      {/* ... */}
-      <Header />
-      <CarouselSection />
+    <SiteFrame>
+      <JsonLd data={organizationJsonLd()} />
+      <JsonLd data={websiteJsonLd()} />
+      <JsonLd data={navigationJsonLd()} />
+      <HeroSection />
+      <BlogPreviewSection />
+      <ProgramsSection />
       <FeaturesSection />
-      {/* <ProgramsSection /> */}
       <CTASection />
       <Location />
-      <Footer />
-    </div>
+    </SiteFrame>
   );
 };
 

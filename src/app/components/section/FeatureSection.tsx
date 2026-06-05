@@ -19,19 +19,19 @@ const FeaturesSection = () => {
         />
       ),
       title: "AI 셀레나 선생님",
-      description: `영어학원 최초 AI 도입! AI 원어민 셀레나 선생님`,
+      description: `오늘 배운 표현을 바로 말하고\n발음과 말하기를 확인합니다`,
     },
     {
       icon: <Image src={bookICon} alt="책 아이콘" width={75} height={75} />,
-      title: "학습 시스템",
-      description: "지금 시작하면 파닉스부터 수능 1등급 완성!",
+      title: "영어도서관 운영",
+      description: "읽기 경험을 넓히고 어휘와 문장 감각을 함께 키웁니다",
     },
     {
       icon: (
         <Image src={selenaIcon} alt="셀레나 아이콘" width={75} height={75} />
       ),
       title: "1:1 맞춤 수업",
-      description: "개인별 수준 분석을 통한 차별화된 교육",
+      description: "레벨 진단 후 아이에게 맞는 진도와 반복량으로 관리합니다",
     },
     {
       icon: (
@@ -50,25 +50,39 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "검증된 교육법",
-      description: "14년 연속 교육브랜드 대상 수상의 노하우",
+      title: "Creative Writing Program",
+      description: "생각을 영어 문장으로 정리하고 표현하는 힘을 기릅니다",
     },
   ];
 
   return (
-    <section id="features" className="py-20 bg-gray-50">
+    <section
+      id="features"
+      className="relative overflow-hidden bg-[#fcf9f8] px-5 py-24 sm:px-8"
+    >
+      <motion.div
+        aria-hidden
+        className="absolute left-0 top-20 h-64 w-64 -translate-x-1/3 rounded-full bg-violet-100 blur-3xl"
+        animate={{ y: [0, 18, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl font-nanum-square-bold font-bold text-gray-900 mb-4">
+          <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
+            FEATURE
+          </p>
+          <h2 className="text-3xl font-nanum-square-bold font-black text-gray-900 mb-4 sm:text-4xl">
             삼성영어 셀레나 아이린 석성 교습소
           </h2>
-          <p className="text-xl text-gray-600">
-            분당 영어유치원 10년 경력의 아이린 원장님이 직접 지도합니다
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600">
+            분당 영어유치원 10년 경력의 아이린 원장님이 직접 지도하고, 읽기와
+            쓰기까지 균형 있게 확장합니다.
           </p>
         </motion.div>
 
