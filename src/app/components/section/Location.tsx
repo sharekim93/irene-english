@@ -80,10 +80,6 @@ const Location = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="mb-8 text-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
             LOCATION
@@ -101,10 +97,6 @@ const Location = () => {
 
         <motion.div
           className="grid overflow-hidden rounded-2xl border border-pink-100 bg-[#fcf9f8] shadow-2xl shadow-pink-900/10 lg:grid-cols-[1fr_0.9fr]"
-          initial={{ opacity: 0, y: 52, scale: 0.97 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           {naverClientId ? (
             <NaverMapCard clientId={naverClientId} />

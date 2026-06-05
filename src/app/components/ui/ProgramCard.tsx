@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 // Program Card Component
 const ProgramCard = ({
   program,
-  index,
 }: {
   program: {
     color: string;
@@ -15,14 +14,9 @@ const ProgramCard = ({
     features: string[];
     href: string;
   };
-  index: number;
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 44, scale: 0.96 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.12, duration: 0.58, ease: "easeOut" }}
       whileHover={{ y: -10, scale: 1.02 }}
     >
       <Card className={`${program.color} h-full border-2 shadow-xl`}>

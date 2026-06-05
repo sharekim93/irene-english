@@ -17,10 +17,6 @@ const ProgramsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
             PROGRAM
@@ -35,8 +31,8 @@ const ProgramsSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {programSummaries.map((program, index) => (
-            <ProgramCard key={index} program={program} index={index} />
+          {programSummaries.map((program) => (
+            <ProgramCard key={program.href} program={program} />
           ))}
         </div>
       </div>

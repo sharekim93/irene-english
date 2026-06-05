@@ -24,10 +24,6 @@ const CTASection = () => {
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
         >
           <h2 className="text-4xl font-bold text-white mb-6">
             레벨 진단 후 아이에게 맞는 학습과정을 안내해 드립니다
