@@ -8,15 +8,21 @@ const CTASection = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-pink-500 px-5 py-24"
+      className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#b20b67_0%,#e94391_58%,#f973b4_100%)] px-5 py-24"
     >
       <motion.div
         aria-hidden
-        className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-3xl"
-        animate={{ scale: [1, 1.18, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute -right-24 -top-32 h-64 w-64 rounded-full bg-white/18 blur-3xl sm:-right-10"
+        animate={{ scale: [1, 1.12, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-40 -left-28 h-80 w-80 rounded-full bg-[#ffb0cb]/20 blur-3xl"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
