@@ -25,29 +25,25 @@ const HeroSection = () => {
           className="flex flex-col items-start"
         >
           <motion.h1
-            className="max-w-3xl text-4xl font-black leading-tight text-gray-950 sm:text-5xl lg:text-[3.4rem] mt-4"
+            className="mt-4 max-w-3xl break-keep text-[2.05rem] font-black leading-[1.15] text-gray-950 sm:text-5xl lg:text-[3.4rem]"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.65, ease: "easeOut" }}
           >
-            삼성영어 아이린 석성
-            <span className="block">
-              영어유치원 10년, 관리자 경력의 선생님이
-            </span>
-            <span className="block text-pink-600">매일 말하고 확인하는</span>
-            1:1 관리형 영어
+            <span className="block text-pink-600">영어유치원 10년 경력</span>
+            아이린 선생님과 함께
+            <span className="block">매일 말하고 성장하는</span>
+            <span className="block">1:1 관리형 영어</span>
           </motion.h1>
-
           <motion.p
             className="mt-5 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.38, duration: 0.65, ease: "easeOut" }}
           >
-            삼성영어 아이린 석성은 AI 셀레나 선생님과 원장 직강 코칭을 연결해
-            아이의 현재 수준에 맞는 매일 영어 습관을 만듭니다.
+            삼성영어 아이린 석성은 AI 셀레나 선생님과 원장 직강으로 아이의
+            현재 수준에 맞는 영어 습관을 만듭니다.
           </motion.p>
-
           <motion.div
             className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
             initial={{ opacity: 0, y: 24 }}
@@ -71,17 +67,7 @@ const HeroSection = () => {
             >
               블로그 보기
             </Button>
-            <Button
-              as="a"
-              href="/contact"
-              size="lg"
-              variant="light"
-              className="h-14 px-8 text-base font-nanum-square-bold font-bold text-pink-700"
-            >
-              오시는 길
-            </Button>
           </motion.div>
-
           <motion.div
             className="mt-7 grid w-full max-w-3xl grid-cols-2 overflow-hidden rounded-3xl border border-white/70 bg-white/65 shadow-xl shadow-pink-900/5 backdrop-blur sm:grid-cols-5"
             initial={{ opacity: 0, y: 26 }}
