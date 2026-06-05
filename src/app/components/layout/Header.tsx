@@ -25,14 +25,14 @@ const Header = () => {
     ? {}
     : {
         animate: {
-          rotate: [0, -12, 12, -8, 0],
-          scale: [1, 1.14, 1],
+          rotate: [0, -10, 10, -6, 0],
+          scale: [1, 1.1, 1],
         },
         transition: {
-          duration: 1.15,
+          duration: 0.9,
           ease: "easeInOut",
           repeat: Infinity,
-          repeatDelay: 2.4,
+          repeatDelay: 2.8,
         },
       };
 
