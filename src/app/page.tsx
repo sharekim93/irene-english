@@ -1,7 +1,6 @@
 import JsonLd from "./components/JsonLd";
 import SiteFrame from "./components/layout/SiteFrame";
 import BlogPreviewSection from "./components/section/BlogPreviewSection";
-import CarouselSection from "./components/section/CarouselSection";
 import CTASection from "./components/section/CTASection";
 import FeaturesSection from "./components/section/FeatureSection";
 import HeroSection from "./components/section/HeroSection";

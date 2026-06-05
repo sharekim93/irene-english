@@ -37,7 +37,13 @@ export const siteConfig = {
   ],
 };
 
-export const navItems = [
+type NavItem = {
+  name: string;
+  href: string;
+  highlight?: boolean;
+};
+
+export const navItems: NavItem[] = [
   { name: "학원소개", href: "/about" },
   { name: "프로그램", href: "/programs" },
   { name: "학원 특징", href: "/feature" },

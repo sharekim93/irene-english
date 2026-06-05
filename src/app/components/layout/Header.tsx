@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "motion/react";
+import type { MotionProps } from "motion/react";
 import {
   Navbar,
   NavbarBrand,
@@ -21,7 +22,7 @@ import { navItems, siteConfig } from "@/config/site";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const shouldReduceMotion = useReducedMotion();
-  const phoneIconMotion = shouldReduceMotion
+  const phoneIconMotion: MotionProps = shouldReduceMotion
     ? {}
     : {
         animate: {

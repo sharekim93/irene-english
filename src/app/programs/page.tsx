@@ -75,8 +75,8 @@ export default function ProgramsPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {programSummaries.map((program, index) => (
-              <ProgramCard key={program.slug} program={program} index={index} />
+            {programSummaries.map((program) => (
+              <ProgramCard key={program.slug} program={program} />
             ))}
           </div>
         </div>
