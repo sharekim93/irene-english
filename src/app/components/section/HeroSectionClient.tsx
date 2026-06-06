@@ -91,7 +91,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               size="lg"
               className="h-14 bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25"
             >
-              입학 상담
+              입학상담하기
             </Button>
             <Button
               as="a"
