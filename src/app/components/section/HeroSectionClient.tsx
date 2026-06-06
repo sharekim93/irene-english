@@ -1,0 +1,193 @@
+"use client";
+
+import { Button } from "@heroui/react";
+import { motion } from "motion/react";
+import { useEffect, useMemo, useState } from "react";
+import { siteConfig } from "@/config/site";
+import type { BlogPost } from "@/lib/blog/rss";
+
+const cardStates = [
+  {
+    className:
+      "z-30 translate-y-0 scale-100 rotate-0 opacity-100 shadow-2xl shadow-pink-900/10",
+    pointerClassName: "pointer-events-auto",
+  },
+  {
+    className:
+      "z-20 translate-y-7 scale-[0.94] -rotate-2 opacity-85 shadow-xl shadow-pink-900/10",
+    pointerClassName: "pointer-events-none sm:pointer-events-auto",
+  },
+  {
+    className:
+      "z-10 translate-y-14 scale-[0.88] rotate-2 opacity-70 shadow-lg shadow-pink-900/5",
+    pointerClassName: "pointer-events-none sm:pointer-events-auto",
+  },
+];
+
+function formatDate(value: string) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("ko-KR", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+}
+
+function getPrimaryTag(post: BlogPost, index: number) {
+  return post.tags[0] ?? ["최근 교실노트", "뉴스레터", "성장 이야기"][index] ?? "블로그";
+}
+
+function getRelativeCardPosition(index: number, activeIndex: number, total: number) {
+  return (index - activeIndex + total) % total;
+}
+
+type HeroSectionClientProps = {
+  posts: BlogPost[];
+};
+
+export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
+  const heroPosts = useMemo(() => posts.slice(0, 3), [posts]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (heroPosts.length < 2) {
+      return;
+    }
+
+    const interval = window.setInterval(() => {
+      setActiveIndex((currentIndex) => (currentIndex + 1) % heroPosts.length);
+    }, 4200);
+
+    return () => window.clearInterval(interval);
+  }, [heroPosts.length]);
+
+  return (
+    <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(233,67,145,0.13),transparent_34%),radial-gradient(circle_at_88%_78%,rgba(138,76,252,0.09),transparent_28%),linear-gradient(135deg,#fff,#fcf9f8_52%,#fff2f8)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+        <div className="flex flex-col items-start">
+          <h1
+            className="max-w-2xl break-keep text-[2rem] font-black leading-[1.16] text-gray-950 sm:text-[2.75rem] lg:text-[3.15rem]"
+          >
+            <span className="block text-pink-600">영어유치원 10년 경력</span>
+            아이린 선생님과 함께
+            <span className="block">매일 말하고 성장하세요</span>
+          </h1>
+          <p
+            className="mt-5 max-w-2xl break-keep text-base leading-8 text-gray-600 sm:text-lg"
+          >
+            삼성영어 아이린 석성은 AI 셀레나 선생님과 원장 직강으로 아이의 현재
+            수준에 맞는 영어 습관을 만듭니다.
+          </p>
+          <div
+            className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
+          >
+            <Button
+              as="a"
+              href={siteConfig.telHref}
+              size="lg"
+              className="h-14 bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25"
+            >
+              입학 상담
+            </Button>
+            <Button
+              as="a"
+              href="/blog"
+              size="lg"
+              variant="bordered"
+              className="h-14 border-pink-200 bg-white/85 px-8 text-base font-nanum-square-bold font-bold text-gray-800 backdrop-blur"
+            >
+              블로그 보기
+            </Button>
+          </div>
+        </div>
+
+        <div
+          className="relative mx-auto min-h-[430px] w-full max-w-[560px] py-4 sm:min-h-[470px]"
+        >
+          <div className="absolute inset-x-6 top-11 h-72 rounded-[2rem] bg-pink-200/40 blur-3xl" />
+          <div className="absolute inset-x-14 bottom-9 h-40 rounded-[2rem] bg-violet-200/30 blur-3xl" />
+
+          {heroPosts.map((post, index) => {
+            const position = getRelativeCardPosition(
+              index,
+              activeIndex,
+              heroPosts.length,
+            );
+            const state = cardStates[position] ?? cardStates[cardStates.length - 1];
+            const isActive = position === 0;
+            const tag = getPrimaryTag(post, index);
+
+            return (
+              <a
+                key={post.link}
+                href={post.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${post.title} 자세히 보기`}
+                className={`group absolute inset-x-0 top-6 flex min-h-[300px] flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-6 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:-translate-y-1 hover:border-pink-200 hover:bg-white sm:min-h-[330px] sm:p-8 ${state.className} ${state.pointerClassName}`}
+                style={{
+                  left: position * 14,
+                  right: position * 14,
+                }}
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="inline-flex h-8 max-w-[62%] items-center rounded-full border border-pink-200 bg-pink-50 px-3 text-xs font-black text-pink-700">
+                    <span className="truncate">#{tag}</span>
+                  </span>
+                  <time
+                    dateTime={post.pubDate}
+                    className="shrink-0 text-xs font-black text-gray-400"
+                  >
+                    {formatDate(post.pubDate)}
+                  </time>
+                </div>
+
+                <div className="mt-8 flex-1">
+                  <p className="text-4xl font-black leading-none text-pink-300 sm:text-5xl">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h2 className="mt-5 line-clamp-2 break-keep text-2xl font-black leading-snug text-gray-950 sm:text-[1.7rem]">
+                    {post.title}
+                  </h2>
+                  <p className="mt-4 line-clamp-3 break-keep text-sm font-semibold leading-6 text-gray-600 sm:text-base sm:leading-7">
+                    {post.summary}
+                  </p>
+                </div>
+
+                <span
+                  aria-hidden="true"
+                  className="mt-7 inline-flex h-11 w-fit items-center justify-center rounded-full bg-gray-950 px-5 text-sm font-bold text-white transition group-hover:bg-pink-600"
+                >
+                  자세히 보기
+                </span>
+
+                {isActive && (
+                  <motion.span
+                    aria-hidden="true"
+                    className="absolute inset-x-8 bottom-4 h-1 overflow-hidden rounded-full bg-pink-100"
+                  >
+                    <motion.span
+                      className="block h-full rounded-full bg-pink-500"
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "100%" }}
+                      transition={{
+                        duration: 4.2,
+                        ease: "linear",
+                        repeat: Infinity,
+                      }}
+                    />
+                  </motion.span>
+                )}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
