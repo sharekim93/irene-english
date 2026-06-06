@@ -6,14 +6,6 @@ import Image from "next/image";
 import selenaCharacter from "@/images/selena_character.webp";
 import { siteConfig } from "@/config/site";
 
-const stats = [
-  { value: "1:1", label: "개별 맞춤 수업" },
-  { value: "주 5회", label: "매일 영어 루틴" },
-  { value: "AI 셀레나", label: "말하기 피드백" },
-  { value: "13:00-18:00", label: "수업 시간" },
-  { value: "석성초", label: "초당초·동백역 생활권" },
-];
-
 const HeroSection = () => {
   return (
     <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#fff,#fcf9f8_48%,#fff2f8)] px-5 pt-8 pb-10 sm:px-8 lg:px-12">
@@ -32,8 +24,7 @@ const HeroSection = () => {
           >
             <span className="block text-pink-600">영어유치원 10년 경력</span>
             아이린 선생님과 함께
-            <span className="block">매일 말하고 성장하는</span>
-            <span className="block">1:1 관리형 영어</span>
+            <span className="block">매일 말하고 성장하세요</span>
           </motion.h1>
           <motion.p
             className="mt-5 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg"
@@ -41,8 +32,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.38, duration: 0.65, ease: "easeOut" }}
           >
-            삼성영어 아이린 석성은 AI 셀레나 선생님과 원장 직강으로 아이의
-            현재 수준에 맞는 영어 습관을 만듭니다.
+            삼성영어 아이린 석성은 AI 셀레나 선생님과 원장 직강으로 아이의 현재
+            수준에 맞는 영어 습관을 만듭니다.
           </motion.p>
           <motion.div
             className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
@@ -68,26 +59,14 @@ const HeroSection = () => {
               블로그 보기
             </Button>
           </motion.div>
-          <motion.div
-            className="mt-7 grid w-full max-w-3xl grid-cols-2 overflow-hidden rounded-3xl border border-white/70 bg-white/65 shadow-xl shadow-pink-900/5 backdrop-blur sm:grid-cols-5"
+          <motion.p
+            className="mt-4 text-sm font-bold text-gray-400 sm:text-base"
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.62, duration: 0.65, ease: "easeOut" }}
           >
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="min-w-0 border-r border-pink-100 px-3 py-4 text-center last:border-r-0 sm:px-5"
-              >
-                <p className="text-xl font-black text-pink-600 sm:text-2xl">
-                  {stat.value}
-                </p>
-                <p className="mt-1 break-keep text-xs font-bold text-gray-600 sm:text-sm">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </motion.div>
+            수업 시간 {siteConfig.openingHoursText}
+          </motion.p>
         </motion.div>
 
         <motion.div
