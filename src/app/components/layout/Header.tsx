@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useReducedMotion } from "motion/react";
-import type { MotionProps } from "motion/react";
+import { motion, useMotionValue } from "motion/react";
 import {
   Navbar,
   NavbarBrand,
@@ -21,29 +20,109 @@ import { navItems, siteConfig } from "@/config/site";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const shouldReduceMotion = useReducedMotion();
-  const phoneIconMotion: MotionProps = shouldReduceMotion
-    ? {}
-    : {
-        animate: {
-          rotate: [0, -10, 10, -6, 0],
-          scale: [1, 1.1, 1],
-        },
-        transition: {
-          duration: 0.9,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatDelay: 2.8,
-        },
-      };
+  const contactButtonClass =
+    "contact-cta-button h-11 min-h-11 gap-2.5 rounded-[18px] bg-[#e94391] px-4 font-nanum-square-bold font-extrabold text-white shadow-none transition data-[hover=true]:bg-[#d92d7f] data-[hover=true]:opacity-100";
+
+  const ContactButton = ({
+    className = "",
+  }: {
+    className?: string;
+  }) => (
+    <div className={`contact-ripple-anchor ${className}`}>
+      <Button
+        as="a"
+        href={siteConfig.telHref}
+        size="lg"
+        radius="lg"
+        className={`${contactButtonClass} contact-expand-button`}
+        aria-label={`전화 상담 ${siteConfig.phone}`}
+      >
+        <span
+          aria-hidden="true"
+          className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/95 text-sm text-[#e94391] shadow-inner shadow-pink-200"
+        >
+          📞
+        </span>
+        <span className="contact-expand-label" aria-hidden="true">
+          <span className="contact-short-label">상담하기</span>
+          <span className="contact-phone-label">{siteConfig.phone}</span>
+        </span>
+      </Button>
+    </div>
+  );
+
+  const MobileSlideContact = ({
+    className = "",
+    fullWidth = false,
+    onComplete,
+  }: {
+    className?: string;
+    fullWidth?: boolean;
+    onComplete?: () => void;
+  }) => {
+    const trackRef = React.useRef<HTMLDivElement>(null);
+    const dragX = useMotionValue(0);
+
+    const completeSlide = React.useCallback(() => {
+      onComplete?.();
+      window.location.href = siteConfig.telHref;
+    }, [onComplete]);
+
+    const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: { offset: { x: number }; velocity: { x: number } }) => {
+      const trackWidth = trackRef.current?.offsetWidth ?? 0;
+      const threshold = fullWidth ? trackWidth * 0.48 : trackWidth * 0.34;
+
+      if (info.offset.x >= threshold || info.velocity.x > 650) {
+        completeSlide();
+        return;
+      }
+
+      dragX.set(0);
+    };
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        completeSlide();
+      }
+    };
+
+    return (
+      <div
+        ref={trackRef}
+        className={`contact-ripple-anchor mobile-slide-contact ${
+          fullWidth ? "mobile-slide-contact-full" : ""
+        } ${className}`}
+        role="link"
+        tabIndex={0}
+        aria-label={`밀어서 전화 상담 ${siteConfig.phone}`}
+        onKeyDown={handleKeyDown}
+      >
+        <span className="mobile-slide-label">
+          {fullWidth ? "밀어서 상담하기" : "상담"}
+        </span>
+        <motion.span
+          drag="x"
+          dragConstraints={trackRef}
+          dragElastic={0.02}
+          dragMomentum={false}
+          onDragEnd={handleDragEnd}
+          style={{ x: dragX }}
+          className="mobile-slide-thumb"
+          aria-hidden="true"
+        >
+          📞
+        </motion.span>
+      </div>
+    );
+  };
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      shouldHideOnScroll
       isBlurred={false}
       isMenuOpen={isMenuOpen}
-      className="sticky top-0 z-50 border-b border-white/60 bg-white/80 shadow-sm backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/60 bg-white/80 shadow-sm backdrop-blur-xl"
       maxWidth="full"
       height="80px"
     >
@@ -62,6 +141,7 @@ const Header = () => {
               alt="삼성영어 아이린 석성 로고"
               width={240}
               height={64}
+              className="h-auto w-[180px] sm:w-[220px] lg:w-[240px]"
               priority
             />
           </Link>
@@ -102,40 +182,13 @@ const Header = () => {
       {/* Right Side Content */}
       <NavbarContent justify="end">
         {/* Contact Info - Hidden on small screens */}
-        <NavbarItem className="hidden md:flex items-center gap-4">
-          <Link
-            href={siteConfig.telHref}
-            aria-label={`전화 상담 ${siteConfig.phone}`}
-            className="flex min-h-11 items-center gap-2 rounded-full px-2 text-md text-gray-600 hover:text-pink-600"
-          >
-            <motion.div
-              {...phoneIconMotion}
-              className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center shadow-sm shadow-green-200"
-            >
-              <span className="text-green-600 text-xs">📞</span>
-            </motion.div>
-            <span className="font-nanum-square-bold font-extrabold">
-              {siteConfig.phone}
-            </span>
-          </Link>
+        <NavbarItem className="hidden md:flex items-center">
+          <ContactButton />
         </NavbarItem>
 
         {/* Mobile Contact Button */}
         <NavbarItem className="md:hidden">
-          <Button
-            as="a"
-            href={siteConfig.telHref}
-            isIconOnly
-            variant="flat"
-            color="primary"
-            size="md"
-            className="h-11 w-11 min-w-11 bg-pink-50 text-pink-600"
-            aria-label="전화 상담"
-          >
-            <motion.span {...phoneIconMotion} className="inline-block">
-              📞
-            </motion.span>
-          </Button>
+          <MobileSlideContact />
         </NavbarItem>
       </NavbarContent>
 
@@ -182,28 +235,15 @@ const Header = () => {
 
           {/* Mobile Contact Section */}
           <div className="mt-6 border-t border-gray-200 pt-6">
-            <div className="flex items-center justify-between mb-4">
-              <Link
-                href={siteConfig.telHref}
-                className="flex items-center gap-3 text-gray-800 hover:text-pink-600"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label={`전화 상담 ${siteConfig.phone}`}
-              >
-                <motion.div
-                  {...phoneIconMotion}
-                  className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shadow-sm shadow-green-200"
-                >
-                  <span className="text-green-600">📞</span>
-                </motion.div>
-                <div>
-                  <p className="text-lg font-medium text-gray-800">
-                    {siteConfig.phone}
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    평일 {siteConfig.openingHoursText}
-                  </p>
-                </div>
-              </Link>
+            <div className="flex flex-col items-start gap-3">
+              <MobileSlideContact
+                className="w-full"
+                fullWidth
+                onComplete={() => setIsMenuOpen(false)}
+              />
+              <p className="px-1 text-xs font-medium text-gray-500">
+                평일 {siteConfig.openingHoursText}
+              </p>
             </div>
           </div>
         </div>

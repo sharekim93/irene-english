@@ -70,7 +70,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div className="flex flex-col items-start">
           <h1
-            className="max-w-2xl break-keep text-[2rem] font-black leading-[1.16] text-gray-950 sm:text-[2.75rem] lg:text-[3.15rem]"
+            className="max-w-2xl break-keep text-[2rem] font-black leading-[1.28] text-gray-950 sm:text-[2.75rem] lg:text-[3.15rem]"
           >
             <span className="block text-pink-600">영어유치원 10년 경력</span>
             아이린 선생님과 함께
@@ -79,8 +79,8 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
           <p
             className="mt-5 max-w-2xl break-keep text-base leading-8 text-gray-600 sm:text-lg"
           >
-            삼성영어 아이린 석성은 AI 셀레나 선생님과 원장 직강으로 아이의 현재
-            수준에 맞는 영어 습관을 만듭니다.
+            삼성영어 아이린 석성 교습소에서 AI 셀레나 선생님과 원장 직강으로
+            아이의 현재 수준에 맞는 영어 습관을 만듭니다.
           </p>
           <div
             className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"

@@ -26,11 +26,10 @@ const CTASection = () => {
         <motion.div
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            레벨 진단 후 아이에게 맞는 학습과정을 안내해 드립니다
+            매일 달라지는 아이의 영어실력을 확인해보세요!
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            상담 가능 시간 {siteConfig.openingHoursText} · 전화 상담{" "}
-            {siteConfig.phone}
+            전화 상담 {siteConfig.phone}
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
@@ -40,15 +39,6 @@ const CTASection = () => {
               className="h-14 bg-white px-8 font-nanum-square-bold font-bold text-pink-600 hover:bg-gray-100"
             >
               전화 상담하기
-            </Button>
-            <Button
-              as="a"
-              href="/contact"
-              size="lg"
-              variant="bordered"
-              className="h-14 border-white px-8 font-nanum-square-bold font-bold text-white hover:bg-white hover:text-pink-600"
-            >
-              오시는 길 보기
             </Button>
           </div>
         </motion.div>

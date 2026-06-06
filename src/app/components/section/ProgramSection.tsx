@@ -8,13 +8,17 @@ const ProgramsSection = () => {
   return (
     <section
       id="programs"
-      className="relative overflow-hidden bg-white px-5 py-24 sm:px-8"
+      className="relative overflow-hidden bg-[#fffdf7] px-5 py-24 sm:px-8"
     >
       <div
         aria-hidden
-        className="absolute right-0 top-16 h-72 w-72 translate-x-1/3 rounded-full bg-pink-100 blur-3xl"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(233,67,145,0.14)_1px,transparent_1px),linear-gradient(0deg,rgba(14,165,233,0.09)_1px,transparent_1px)] bg-[size:120px_100%,100%_34px]"
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-[max(1.5rem,calc((100%_-_80rem)/2_+_2rem))] top-0 h-full w-px bg-pink-200/70"
+      />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
         >

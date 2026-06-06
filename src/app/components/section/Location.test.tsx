@@ -77,15 +77,12 @@ describe("Location", () => {
     expect(screen.queryByTestId("naver-map")).not.toBeInTheDocument();
   });
 
-  it("always renders the Naver map link and phone link", () => {
+  it("always renders the Naver map link", () => {
     render(<Location />);
 
     expect(
       screen.getByRole("link", { name: "네이버 지도 열기" }),
     ).toHaveAttribute("href", siteConfig.placeUrl);
-    expect(
-      screen.getByRole("link", { name: "전화 상담하기" }),
-    ).toHaveAttribute("href", siteConfig.telHref);
   });
 
   it("renders the mocked Naver map when the client id is present", () => {

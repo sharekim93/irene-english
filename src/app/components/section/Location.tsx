@@ -90,9 +90,6 @@ const Location = () => {
           <p className="py-4 text-lg font-black leading-8 text-gray-700 sm:text-xl">
             {siteConfig.address}
           </p>
-          <p className="text-base font-bold text-pink-600">
-            수업 시간 {siteConfig.openingHoursText} · 전화 {siteConfig.phone}
-          </p>
         </motion.div>
 
         <motion.div
@@ -112,7 +109,7 @@ const Location = () => {
               </h3>
               <p className="mt-4 text-base leading-7 text-gray-600">
                 석성초, 초당초, 동백역 생활권에서 방문하기 좋은 위치입니다.
-                방문 전 전화로 상담 가능 시간과 주차 동선을 확인해 주세요.
+                방문 전 전화로 주차 동선을 확인해 주세요.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -123,12 +120,6 @@ const Location = () => {
                 className="inline-flex h-12 items-center justify-center rounded-xl bg-pink-600 px-5 text-sm font-bold text-white"
               >
                 네이버 지도 열기
-              </a>
-              <a
-                href={siteConfig.telHref}
-                className="inline-flex h-12 items-center justify-center rounded-xl border border-pink-200 px-5 text-sm font-bold text-pink-700"
-              >
-                전화 상담하기
               </a>
             </div>
           </div>

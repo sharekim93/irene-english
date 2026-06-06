@@ -35,7 +35,7 @@ export default async function BlogPreviewSection() {
           <div>
             <p className="mb-3 text-sm font-bold text-pink-600">BLOG</p>
             <h2 className="text-3xl font-black text-gray-950 sm:text-4xl">
-              블로그 미리보기
+              블로그 소식
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-gray-600"></p>
           </div>

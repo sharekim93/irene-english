@@ -4,8 +4,87 @@ import { motion } from "motion/react";
 import FeatureCard from "../ui/FeatureCard";
 import Image from "next/image";
 import selenaStarIcon from "@/images/quick03.png";
-import bookICon from "@/images/quick02.png";
-import selenaIcon from "@/images/quick01.png";
+
+const featureIconClass = "h-11 w-11 text-[#b20b67]";
+
+const LibraryIcon = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 48 48"
+    className={featureIconClass}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path
+      d="M9 13.5c4.9-2.1 9.9-2 15 0v25c-5.1-2-10.1-2-15 0v-25Z"
+      strokeWidth="2"
+    />
+    <path
+      d="M24 13.5c5.1-2 10.1-2.1 15 0v25c-4.9-2-9.9-2-15 0v-25Z"
+      strokeWidth="2"
+    />
+    <path d="M16 20h3.5M16 26h3.5M30 20h3.5M30 26h3.5" strokeWidth="1.7" />
+    <path d="M24 13.5V40" strokeWidth="1.6" />
+  </svg>
+);
+
+const CustomLessonIcon = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 48 48"
+    className={featureIconClass}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle
+      cx="18.5"
+      cy="17.5"
+      r="6.5"
+      strokeWidth="2"
+    />
+    <path
+      d="M7.5 36.5c1.7-6.6 5.7-10.2 11-10.2 3.5 0 6.4 1.6 8.4 4.6"
+      strokeWidth="2"
+    />
+    <circle cx="34" cy="31" r="7.5" strokeWidth="2" />
+    <path
+      d="M34 27.5V31l2.4 2.1M31 39.5l-1.2 3M38.2 39.5l1.1 3"
+      strokeWidth="1.8"
+    />
+  </svg>
+);
+
+const WritingIcon = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 48 48"
+    className={featureIconClass}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path
+      d="M12 8.5h18.5L38 16v23.5H12v-31Z"
+      strokeWidth="2"
+    />
+    <path d="M30.5 8.5V16H38" strokeWidth="2" />
+    <path
+      d="M18 24h10M18 30h7"
+      strokeWidth="1.8"
+      className="text-[#8b7078]"
+    />
+    <path
+      d="m26.5 36 9.8-9.8a3 3 0 0 1 4.2 4.2l-9.8 9.8-5.5 1.4 1.3-5.6Z"
+      strokeWidth="2"
+    />
+    <path d="m34.6 27.9 4.2 4.2" strokeWidth="1.8" />
+  </svg>
+);
 
 const FeaturesSection = () => {
   const features = [
@@ -22,34 +101,17 @@ const FeaturesSection = () => {
       description: `오늘 배운 표현을 바로 말하고\n발음과 말하기를 확인합니다`,
     },
     {
-      icon: <Image src={bookICon} alt="책 아이콘" width={75} height={75} />,
+      icon: <LibraryIcon />,
       title: "영어도서관 운영",
       description: "읽기 경험을 넓히고 어휘와 문장 감각을 함께 키웁니다",
     },
     {
-      icon: (
-        <Image src={selenaIcon} alt="셀레나 아이콘" width={75} height={75} />
-      ),
+      icon: <CustomLessonIcon />,
       title: "1:1 맞춤 수업",
       description: "레벨 진단 후 아이에게 맞는 진도와 반복량으로 관리합니다",
     },
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="size-18"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
-          />
-        </svg>
-      ),
+      icon: <WritingIcon />,
       title: "Creative Writing Program",
       description: "생각을 영어 문장으로 정리하고 표현하는 힘을 기릅니다",
     },

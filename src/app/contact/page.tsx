@@ -53,7 +53,7 @@ export default function ContactPage() {
             ["주소", siteConfig.address],
             ["전화", siteConfig.phone],
             ["수업 시간", siteConfig.openingHoursText],
-            ["방문 안내", "방문 전 전화로 상담 가능 시간과 주차 동선을 확인해 주세요."],
+            ["방문 안내", "방문 전 전화로 주차 동선을 확인해 주세요."],
           ].map(([term, description]) => (
             <div key={term} className="rounded-xl border border-gray-100 p-5">
               <dt className="text-sm font-bold text-pink-600">{term}</dt>

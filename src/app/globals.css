@@ -30,6 +30,229 @@ html {
   background: rgba(233, 67, 145, 0.22);
 }
 
+.contact-ripple-anchor {
+  position: relative;
+  display: inline-flex;
+  isolation: isolate;
+}
+
+.contact-ripple-anchor::before,
+.contact-ripple-anchor::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border: 0;
+  border-radius: 1.35rem;
+  background: transparent;
+  box-shadow:
+    0 0 0 2px rgba(233, 67, 145, 0.24),
+    0 0 11px 3px rgba(233, 67, 145, 0.2);
+  filter: blur(1.2px);
+  opacity: 0.22;
+  transform: scale(1);
+  pointer-events: none;
+  animation: contact-pink-ripple 5.8s ease-out infinite;
+}
+
+.contact-ripple-anchor::after {
+  animation-delay: 2.9s;
+}
+
+.contact-cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-expand-button {
+  width: 8.25rem;
+  justify-content: flex-start;
+  transition:
+    width 260ms ease,
+    background-color 180ms ease;
+}
+
+.contact-ripple-anchor:hover .contact-expand-button,
+.contact-ripple-anchor:focus-within .contact-expand-button {
+  width: 12.5rem;
+}
+
+.contact-expand-label {
+  position: relative;
+  display: inline-flex;
+  width: 4.5rem;
+  align-items: center;
+  overflow: hidden;
+  line-height: 1;
+  transition: width 260ms ease;
+}
+
+.contact-ripple-anchor:hover .contact-expand-label,
+.contact-ripple-anchor:focus-within .contact-expand-label {
+  width: 7.6rem;
+}
+
+.contact-short-label,
+.contact-phone-label {
+  display: inline-block;
+  white-space: nowrap;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-phone-label {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: translateY(0.35rem);
+}
+
+.contact-ripple-anchor:hover .contact-short-label,
+.contact-ripple-anchor:focus-within .contact-short-label {
+  opacity: 0;
+  transform: translateY(-0.35rem);
+}
+
+.contact-ripple-anchor:hover .contact-phone-label,
+.contact-ripple-anchor:focus-within .contact-phone-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-cta-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.32),
+    rgba(255, 176, 203, 0.92),
+    rgba(233, 67, 145, 0.9),
+    rgba(255, 255, 255, 0.24)
+  );
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: contact-border-pulse 5.8s ease-out infinite;
+}
+
+.mobile-slide-contact {
+  position: relative;
+  width: 6.5rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 1.125rem;
+  background: #e94391;
+  color: #ffffff;
+  cursor: grab;
+  outline: none;
+  padding: 0 0.75rem 0 2.875rem;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.mobile-slide-contact:active {
+  cursor: grabbing;
+}
+
+.mobile-slide-contact:focus-visible {
+  box-shadow: 0 0 0 3px rgba(233, 67, 145, 0.24);
+}
+
+.mobile-slide-contact-full {
+  width: 100%;
+  height: 3.25rem;
+  justify-content: center;
+  padding-left: 3.5rem;
+  padding-right: 1rem;
+}
+
+.mobile-slide-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  font-family: var(--font-nanum-square-bold);
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.mobile-slide-contact-full .mobile-slide-label {
+  font-size: 0.875rem;
+}
+
+.mobile-slide-thumb {
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  z-index: 1;
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem;
+  background: rgba(255, 255, 255, 0.96);
+  color: #e94391;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px rgba(128, 20, 76, 0.16);
+}
+
+.mobile-slide-contact-full .mobile-slide-thumb {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1rem;
+}
+
+@keyframes contact-pink-ripple {
+  0% {
+    opacity: 0.22;
+    transform: scale(1);
+  }
+
+  14% {
+    opacity: 0.42;
+  }
+
+  42%,
+  100% {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes contact-border-pulse {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0.78;
+  }
+
+  24% {
+    opacity: 0.18;
+  }
+
+  36% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
