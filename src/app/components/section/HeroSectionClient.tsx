@@ -8,17 +8,17 @@ import type { BlogPost } from "@/lib/blog/rss";
 const cardStates = [
   {
     className:
-      "z-30 translate-y-0 scale-100 rotate-0 opacity-100 shadow-2xl shadow-pink-900/10",
+      "z-30 translate-x-0 translate-y-0 scale-100 rotate-0 opacity-100 shadow-2xl shadow-pink-900/10",
     pointerClassName: "pointer-events-auto",
   },
   {
     className:
-      "z-20 translate-y-7 scale-[0.94] -rotate-2 opacity-85 shadow-xl shadow-pink-900/10",
+      "z-20 translate-x-9 translate-y-3 scale-[0.94] rotate-6 opacity-80 shadow-xl shadow-pink-900/10",
     pointerClassName: "pointer-events-none sm:pointer-events-auto",
   },
   {
     className:
-      "z-10 translate-y-14 scale-[0.88] rotate-2 opacity-70 shadow-lg shadow-pink-900/5",
+      "z-10 -translate-x-9 translate-y-6 scale-[0.9] -rotate-6 opacity-65 shadow-lg shadow-pink-900/5",
     pointerClassName: "pointer-events-none sm:pointer-events-auto",
   },
 ];
@@ -127,11 +127,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${post.title} 자세히 보기`}
-                className={`group absolute inset-x-0 top-6 flex min-h-[280px] flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-5 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:-translate-y-1 hover:border-pink-200 hover:bg-white sm:min-h-[310px] sm:p-7 ${state.className} ${state.pointerClassName}`}
-                style={{
-                  left: position * 14,
-                  right: position * 14,
-                }}
+                className={`group absolute inset-x-0 top-6 flex min-h-[280px] origin-bottom flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-5 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:border-pink-200 hover:bg-white sm:min-h-[310px] sm:p-7 ${state.className} ${state.pointerClassName}`}
               >
                 <div className="flex items-center justify-between gap-3">
                   <span className="inline-flex h-8 max-w-[62%] items-center rounded-full border border-pink-200 bg-pink-50 px-3 text-xs font-black text-pink-700">
@@ -162,7 +158,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                 <div className="mt-6 flex justify-end">
                   <span
                     aria-hidden="true"
-                    className="inline-flex h-11 w-fit items-center justify-center rounded-full bg-gray-950 px-5 text-sm font-bold text-white transition group-hover:bg-pink-600"
+                    className="inline-flex h-11 w-fit items-center justify-center rounded-full bg-pink-600 px-5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition group-hover:bg-pink-700"
                   >
                     자세히 보기
                   </span>
