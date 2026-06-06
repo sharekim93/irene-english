@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import { motion } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 import { siteConfig } from "@/config/site";
 import type { BlogPost } from "@/lib/blog/rss";
@@ -119,7 +118,6 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               heroPosts.length,
             );
             const state = cardStates[position] ?? cardStates[cardStates.length - 1];
-            const isActive = position === 0;
             const tag = getPrimaryTag(post, index);
 
             return (
@@ -129,7 +127,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${post.title} 자세히 보기`}
-                className={`group absolute inset-x-0 top-6 flex min-h-[300px] flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-6 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:-translate-y-1 hover:border-pink-200 hover:bg-white sm:min-h-[330px] sm:p-8 ${state.className} ${state.pointerClassName}`}
+                className={`group absolute inset-x-0 top-6 flex min-h-[280px] flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-5 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:-translate-y-1 hover:border-pink-200 hover:bg-white sm:min-h-[310px] sm:p-7 ${state.className} ${state.pointerClassName}`}
                 style={{
                   left: position * 14,
                   right: position * 14,
@@ -147,42 +145,28 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                   </time>
                 </div>
 
-                <div className="mt-8 flex-1">
-                  <p className="text-4xl font-black leading-none text-pink-300 sm:text-5xl">
+                <div className="mt-7 flex flex-1 gap-4 sm:gap-5">
+                  <p className="w-11 shrink-0 pt-1 text-2xl font-black leading-none text-pink-300 sm:w-12 sm:text-3xl">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-5 line-clamp-2 break-keep text-2xl font-black leading-snug text-gray-950 sm:text-[1.7rem]">
-                    {post.title}
-                  </h2>
-                  <p className="mt-4 line-clamp-3 break-keep text-sm font-semibold leading-6 text-gray-600 sm:text-base sm:leading-7">
-                    {post.summary}
-                  </p>
+                  <div className="min-w-0 flex-1">
+                    <h2 className="line-clamp-2 break-keep text-xl font-black leading-snug text-gray-950 sm:text-[1.45rem]">
+                      {post.title}
+                    </h2>
+                    <p className="mt-3 line-clamp-3 break-keep text-sm font-semibold leading-6 text-gray-600">
+                      {post.summary}
+                    </p>
+                  </div>
                 </div>
 
-                <span
-                  aria-hidden="true"
-                  className="mt-7 inline-flex h-11 w-fit items-center justify-center rounded-full bg-gray-950 px-5 text-sm font-bold text-white transition group-hover:bg-pink-600"
-                >
-                  자세히 보기
-                </span>
-
-                {isActive && (
-                  <motion.span
+                <div className="mt-6 flex justify-end">
+                  <span
                     aria-hidden="true"
-                    className="absolute inset-x-8 bottom-4 h-1 overflow-hidden rounded-full bg-pink-100"
+                    className="inline-flex h-11 w-fit items-center justify-center rounded-full bg-gray-950 px-5 text-sm font-bold text-white transition group-hover:bg-pink-600"
                   >
-                    <motion.span
-                      className="block h-full rounded-full bg-pink-500"
-                      initial={{ x: "-100%" }}
-                      animate={{ x: "100%" }}
-                      transition={{
-                        duration: 4.2,
-                        ease: "linear",
-                        repeat: Infinity,
-                      }}
-                    />
-                  </motion.span>
-                )}
+                    자세히 보기
+                  </span>
+                </div>
               </a>
             );
           })}
