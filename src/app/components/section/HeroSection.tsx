@@ -60,7 +60,7 @@ const HeroSection = () => {
             </Button>
           </motion.div>
           <motion.p
-            className="mt-4 text-sm font-bold text-gray-400 sm:text-base"
+            className="mt-4 text-sm font-semibold text-gray-500 sm:text-base"
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.62, duration: 0.65, ease: "easeOut" }}
