@@ -7,8 +7,8 @@
     "node": ">=20.19.0"
   },
   "resolutions": {
-    "@typescript-eslint/eslint-plugin@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0": "npm:8.60.1",
-    "@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0": "npm:8.60.1",
+    "@typescript-eslint/eslint-plugin": "8.60.1",
+    "@typescript-eslint/parser": "8.60.1",
     "brace-expansion@npm:^1.1.7": "npm:1.1.13",
     "flatted@npm:^3.2.9": "npm:3.4.2",
     "minimatch@npm:^3.1.2": "npm:3.1.5",
