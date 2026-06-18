@@ -69,12 +69,13 @@ html {
   justify-content: flex-start;
   transition:
     width 260ms ease,
-    background-color 180ms ease;
+    background-color 180ms ease,
+    transform 180ms ease;
 }
 
 .contact-ripple-anchor:hover .contact-expand-button,
 .contact-ripple-anchor:focus-within .contact-expand-button {
-  width: 12.5rem;
+  width: 13.5rem;
 }
 
 .contact-expand-label {
@@ -89,7 +90,7 @@ html {
 
 .contact-ripple-anchor:hover .contact-expand-label,
 .contact-ripple-anchor:focus-within .contact-expand-label {
-  width: 7.6rem;
+  width: 8.6rem;
 }
 
 .contact-short-label,
