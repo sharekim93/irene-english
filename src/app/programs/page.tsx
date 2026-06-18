@@ -35,9 +35,9 @@ export default function ProgramsPage() {
       <PageHero
         eyebrow="PROGRAMS"
         title="처음 영어부터 중등 심화까지 이어지는 로드맵"
-        titleClassName="max-w-none whitespace-nowrap text-[clamp(1.35rem,5vw,3rem)]"
+        titleClassName="max-w-5xl text-4xl sm:text-5xl"
         description="아이의 현재 수준을 먼저 확인한 뒤 Hey! Hazel, 300만 문장 만들기, PREP31 중 필요한 단계부터 시작합니다."
-        descriptionClassName="max-w-none whitespace-nowrap text-[clamp(0.58rem,2.4vw,1.125rem)] leading-7 sm:leading-8"
+        descriptionClassName="max-w-4xl whitespace-pre-line text-base leading-7 sm:text-lg sm:leading-8"
       >
         <a
           href={siteConfig.telHref}
