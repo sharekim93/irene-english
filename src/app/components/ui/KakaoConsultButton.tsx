@@ -1,4 +1,4 @@
-import KakaoTalkIcon from "@/app/components/ui/KakaoTalkIcon";
+import { KakaoTalkBrandIcon } from "@/app/components/ui/BrandIcons";
 import { siteConfig } from "@/config/site";
 
 type KakaoConsultButtonProps = {
@@ -17,7 +17,7 @@ export default function KakaoConsultButton({
       rel="noopener noreferrer"
       className={`kakao-consult-button kakao-consult-button-${tone} ${className}`}
     >
-      <KakaoTalkIcon />
+      <KakaoTalkBrandIcon className="h-6 w-6" />
       <span>카카오톡 상담</span>
     </a>
   );

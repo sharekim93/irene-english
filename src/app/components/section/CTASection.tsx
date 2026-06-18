@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Button } from "@heroui/react";
 import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
+import NaverBookingIcon from "@/app/components/ui/NaverBookingIcon";
 import { siteConfig } from "@/config/site";
 
 const CTASection = () => {
@@ -30,18 +31,29 @@ const CTASection = () => {
             매일 달라지는 아이의 영어실력을 확인해보세요!
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            전화 상담 {siteConfig.phone}
+            {siteConfig.phone}
           </p>
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
             <Button
               as="a"
               href={siteConfig.telHref}
               size="lg"
-              className="h-14 bg-white px-8 font-nanum-square-bold font-bold text-pink-600 hover:bg-gray-100"
+              className="h-14 bg-white px-8 text-base font-nanum-square-bold font-bold text-pink-600 shadow-lg shadow-pink-950/15 hover:bg-gray-100"
             >
               전화 상담하기
             </Button>
             <KakaoConsultButton tone="dark" />
+            <Button
+              as="a"
+              href={siteConfig.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              className="h-14 border border-white/70 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-pink-950/15 transition-colors hover:border-white hover:bg-[#f4fff9]"
+            >
+              <NaverBookingIcon className="h-7 w-7" />
+              네이버 예약
+            </Button>
           </div>
         </motion.div>
       </div>

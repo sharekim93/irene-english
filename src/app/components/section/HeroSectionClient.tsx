@@ -107,10 +107,9 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              variant="bordered"
-              className="h-14 border-[#03c75a]/30 bg-white/85 px-8 text-base font-nanum-square-bold font-bold text-gray-800 backdrop-blur"
+              className="h-14 border border-[#03c75a]/45 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-[#03c75a]/15 transition-colors hover:border-[#03c75a] hover:bg-[#f4fff9]"
             >
-              <NaverBookingIcon />
+              <NaverBookingIcon className="h-7 w-7" />
               네이버 예약
             </Button>
           </div>
