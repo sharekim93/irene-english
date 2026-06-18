@@ -41,8 +41,8 @@ const socialLinks: {
     className: "text-[#19ce60]",
   },
   {
-    label: "카카오톡 상담",
-    href: siteConfig.kakaoChannelChatUrl,
+    label: "카카오톡 채널",
+    href: siteConfig.kakaoChannelUrl,
     icon: "kakao",
     className: "text-[#191919]",
   },
