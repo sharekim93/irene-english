@@ -33,23 +33,23 @@ const CTASection = () => {
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             {siteConfig.phone}
           </p>
-          <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
+          <div className="consult-cta-group">
             <Button
               as="a"
               href={siteConfig.telHref}
               size="lg"
-              className="h-14 bg-white px-8 text-base font-nanum-square-bold font-bold text-pink-600 shadow-lg shadow-pink-950/15 hover:bg-gray-100"
+              className="consult-cta-button bg-white px-8 text-base font-nanum-square-bold font-bold text-pink-600 shadow-lg shadow-pink-950/15 hover:bg-gray-100"
             >
               전화 상담하기
             </Button>
-            <KakaoConsultButton tone="dark" />
+            <KakaoConsultButton className="consult-cta-button" tone="dark" />
             <Button
               as="a"
               href={siteConfig.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              className="h-14 border border-white/70 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-pink-950/15 transition-colors hover:border-white hover:bg-[#f4fff9]"
+              className="consult-cta-button border border-white/70 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-pink-950/15 transition-colors hover:border-white hover:bg-[#f4fff9]"
             >
               <NaverBookingIcon className="h-7 w-7" />
               네이버 예약

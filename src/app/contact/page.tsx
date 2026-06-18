@@ -32,19 +32,19 @@ export default function ContactPage() {
         description="석성초, 초당초, 동백역 생활권에서 방문하기 좋은 어은목마을 벽산 블루밍 아파트 상가동 105호에 있습니다."
         descriptionClassName="max-w-4xl whitespace-pre-line text-base leading-7 sm:text-lg sm:leading-8"
       >
-        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+        <div className="consult-cta-group sm:justify-start">
           <a
             href={siteConfig.telHref}
-            className="inline-flex h-14 items-center justify-center rounded-xl bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25 transition-colors hover:bg-pink-700"
+            className="consult-cta-button inline-flex items-center justify-center rounded-xl bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25 transition-colors hover:bg-pink-700"
           >
             전화상담하기
           </a>
-          <KakaoConsultButton />
+          <KakaoConsultButton className="consult-cta-button" />
           <a
             href={siteConfig.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-[#03c75a] bg-[#03c75a] px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-[#03c75a]/25 transition-colors hover:border-[#02b350] hover:bg-[#02b350]"
+            className="consult-cta-button inline-flex items-center justify-center gap-2 rounded-xl border border-[#03c75a] bg-[#03c75a] px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-[#03c75a]/25 transition-colors hover:border-[#02b350] hover:bg-[#02b350]"
           >
             <NaverBookingIcon className="h-5 w-5 [&_path:first-of-type]:fill-[#03c75a] [&_path:last-of-type]:fill-none [&_path:last-of-type]:stroke-[#03c75a] [&_rect]:fill-white" />
             네이버 예약

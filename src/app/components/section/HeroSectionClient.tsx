@@ -91,23 +91,23 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
             <br />
             매일 하루 한 시간 영어 실력을 확실하게 쌓아갑니다
           </p>
-          <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+          <div className="consult-cta-group mt-7 sm:justify-start">
             <Button
               as="a"
               href={siteConfig.telHref}
               size="lg"
-              className="h-14 bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25"
+              className="consult-cta-button bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25"
             >
               전화상담하기
             </Button>
-            <KakaoConsultButton />
+            <KakaoConsultButton className="consult-cta-button" />
             <Button
               as="a"
               href={siteConfig.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              className="h-14 border border-[#03c75a]/45 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-[#03c75a]/15 transition-colors hover:border-[#03c75a] hover:bg-[#f4fff9]"
+              className="consult-cta-button border border-[#03c75a]/45 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-[#03c75a]/15 transition-colors hover:border-[#03c75a] hover:bg-[#f4fff9]"
             >
               <NaverBookingIcon className="h-7 w-7" />
               네이버 예약
