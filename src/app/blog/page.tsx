@@ -25,7 +25,7 @@ type BlogPageProps = {
 };
 
 function readQueryValue(value?: string | string[]) {
-  return Array.isArray(value) ? value[0] ?? "" : value ?? "";
+  return Array.isArray(value) ? (value[0] ?? "") : (value ?? "");
 }
 
 function blogFilterHref(params: { tag?: string; q?: string }) {
@@ -91,9 +91,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         }}
       />
       <PageHero
-        eyebrow="BLOG"
+        eyebrow="블로그"
         title="아이린 석성 학원 소식과 영어 학습 가이드"
-        description="네이버 블로그 최신 글을 RSS로 연동해 보여드립니다. 학원 소식, 파닉스와 초등 영어 루틴, 중등 대비 이야기를 원문으로 확인할 수 있습니다."
+        description="학원 소식, 파닉스와 초등 영어 루틴, 중등 대비 이야기 등 학원 소식을 살펴보세요"
       >
         <a
           href={siteConfig.blogUrl}
@@ -150,7 +150,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   {searchQuery} ×
                 </a>
               )}
-              <a href="/blog" className="text-pink-700 underline underline-offset-4">
+              <a
+                href="/blog"
+                className="text-pink-700 underline underline-offset-4"
+              >
                 전체 보기
               </a>
               <span className="text-gray-500">{filteredPosts.length}개 글</span>

@@ -32,9 +32,10 @@ export default function AboutPage() {
         ])}
       />
       <PageHero
-        eyebrow="ABOUT"
-        title="매일 확인하고, 아이에게 맞춰 조정하는 영어"
-        description="삼성영어 셀레나 아이린 석성은 석성초, 초당초, 초당중, 동백역 생활권 학생들이 파닉스부터 중등 영어까지 꾸준히 이어갈 수 있도록 원장 직강과 AI 셀레나 루틴을 함께 운영합니다."
+        eyebrow="학원소개"
+        title="영어를 잘 할 수밖에 없는 학습 시스템"
+        description={`학생중심 1:1 맞춤 수업에 최적화된 전문 선생님이
+학생의 학습 목표와 플랜에 맞게 꼼꼼히 지도합니다`}
       />
 
       <section className="bg-white px-5 py-20 sm:px-8">
@@ -45,9 +46,9 @@ export default function AboutPage() {
               루틴과 피드백이 쌓여야 영어가 오래 갑니다
             </h2>
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              아이린 석성은 한 번의 설명보다 매일의 확인을 중요하게 봅니다.
-              오늘 배운 표현을 말해 보고, 필요한 만큼 반복하고, 기록을 통해
-              다음 수업을 조정합니다.
+              아이린 석성은 한 번의 설명보다 매일의 확인을 중요하게 봅니다. 오늘
+              배운 표현을 말해 보고, 필요한 만큼 반복하고, 기록을 통해 다음
+              수업을 조정합니다.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
