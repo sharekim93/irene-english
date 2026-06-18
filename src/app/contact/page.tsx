@@ -30,6 +30,7 @@ export default function ContactPage() {
         eyebrow="CONTACT"
         title="상담과 방문 안내"
         description="석성초, 초당초, 동백역 생활권에서 방문하기 좋은 어은목마을 벽산 블루밍 아파트 상가동 105호에 있습니다."
+        descriptionClassName="max-w-none whitespace-nowrap text-[clamp(0.58rem,2.4vw,1.125rem)] leading-7 sm:leading-8"
       >
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
           <a

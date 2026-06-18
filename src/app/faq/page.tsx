@@ -30,6 +30,7 @@ export default function FaqPage() {
         eyebrow="FAQ"
         title="상담 전에 자주 묻는 질문"
         description="등록 상담, 1:1 개별 진도, AI 셀레나 수업, 숙제와 리포트, 중등 내신 대비, 운영 시간에 대한 질문을 정리했습니다."
+        descriptionClassName="max-w-none whitespace-nowrap text-[clamp(0.58rem,2.4vw,1.125rem)] leading-7 sm:leading-8"
       />
 
       <section className="bg-white px-5 py-20 sm:px-8">

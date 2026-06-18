@@ -49,6 +49,7 @@ export default function FeaturePage() {
         eyebrow="FEATURE"
         title="아이린 석성만의 관리 방식"
         description="원장 직강 1:1 맞춤 수업, AI 셀레나 말하기 루틴, 영어도서관과 Creative Writing까지 균형 있게 연결합니다."
+        descriptionClassName="max-w-none whitespace-nowrap text-[clamp(0.58rem,2.4vw,1.125rem)] leading-7 sm:leading-8"
       />
 
       <section className="bg-white px-5 py-20 sm:px-8">
