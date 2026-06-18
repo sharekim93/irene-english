@@ -40,12 +40,7 @@ const CustomLessonIcon = () => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <circle
-      cx="18.5"
-      cy="17.5"
-      r="6.5"
-      strokeWidth="2"
-    />
+    <circle cx="18.5" cy="17.5" r="6.5" strokeWidth="2" />
     <path
       d="M7.5 36.5c1.7-6.6 5.7-10.2 11-10.2 3.5 0 6.4 1.6 8.4 4.6"
       strokeWidth="2"
@@ -68,16 +63,9 @@ const WritingIcon = () => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <path
-      d="M12 8.5h18.5L38 16v23.5H12v-31Z"
-      strokeWidth="2"
-    />
+    <path d="M12 8.5h18.5L38 16v23.5H12v-31Z" strokeWidth="2" />
     <path d="M30.5 8.5V16H38" strokeWidth="2" />
-    <path
-      d="M18 24h10M18 30h7"
-      strokeWidth="1.8"
-      className="text-[#8b7078]"
-    />
+    <path d="M18 24h10M18 30h7" strokeWidth="1.8" className="text-[#8b7078]" />
     <path
       d="m26.5 36 9.8-9.8a3 3 0 0 1 4.2 4.2l-9.8 9.8-5.5 1.4 1.3-5.6Z"
       strokeWidth="2"
@@ -129,18 +117,16 @@ const FeaturesSection = () => {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center mb-16"
-        >
+        <motion.div className="text-center mb-16">
           <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
             FEATURE
           </p>
           <h2 className="text-3xl font-nanum-square-bold font-black text-gray-900 mb-4 sm:text-4xl">
-            삼성영어 셀레나 아이린 석성 교습소
+            삼성영어 셀레나 아이린 석성
           </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600">
-            분당 영어유치원 10년 경력의 아이린 원장님이 직접 지도하고, 읽기와
-            쓰기까지 균형 있게 확장합니다.
+          <p className="mx-auto max-w-4xl text-lg leading-8 text-gray-600">
+            분당 영어유치원 10년 경력의 아이린 원장님이 직접 지도하고 영어의 4대
+            영역을 균형 있게 학습합니다
           </p>
         </motion.div>
 

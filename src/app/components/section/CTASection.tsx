@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Button } from "@heroui/react";
+import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
 import { siteConfig } from "@/config/site";
 
 const CTASection = () => {
@@ -40,6 +41,7 @@ const CTASection = () => {
             >
               전화 상담하기
             </Button>
+            <KakaoConsultButton tone="dark" />
           </div>
         </motion.div>
       </div>

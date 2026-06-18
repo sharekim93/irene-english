@@ -4,13 +4,14 @@ import JsonLd from "@/app/components/JsonLd";
 import PageHero from "@/app/components/layout/PageHero";
 import SiteFrame from "@/app/components/layout/SiteFrame";
 import Location from "@/app/components/section/Location";
+import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
 import { siteConfig } from "@/config/site";
 import { breadcrumbJsonLd, organizationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "오시는 길",
   description:
-    "삼성영어 셀레나 아이린 석성 주소, 전화 상담, 수업 시간, 네이버 지도, 블로그 링크와 방문 안내입니다.",
+    "삼성영어 셀레나 아이린 석성 주소, 전화 상담, 카카오톡 채널, 수업 시간, 네이버 지도, 블로그 링크와 방문 안내입니다.",
   alternates: { canonical: "/contact" },
 };
 
@@ -36,6 +37,7 @@ export default function ContactPage() {
           >
             전화 상담 {siteConfig.phone}
           </a>
+          <KakaoConsultButton />
           <a
             href={siteConfig.blogUrl}
             target="_blank"
@@ -48,10 +50,11 @@ export default function ContactPage() {
       </PageHero>
 
       <section className="bg-white px-5 py-16 sm:px-8">
-        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-5 lg:px-8">
           {[
             ["주소", siteConfig.address],
             ["전화", siteConfig.phone],
+            ["카카오톡", siteConfig.kakaoChannelId],
             ["수업 시간", siteConfig.openingHoursText],
             ["방문 안내", "방문 전 전화로 주차 동선을 확인해 주세요."],
           ].map(([term, description]) => (

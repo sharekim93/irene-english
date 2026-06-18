@@ -14,6 +14,12 @@ export const siteConfig = {
   openingHoursText: "13:00 ~ 18:00",
   openingHoursSchema: "Mo-Fr 13:00-18:00",
   blogUrl: "https://blog.naver.com/da_num",
+  bookingUrl: "https://m.booking.naver.com/booking/6/bizes/1456434/items/6925790",
+  kakaoChannelUrl: "https://pf.kakao.com/_auFFn",
+  kakaoChannelChatUrl: "https://pf.kakao.com/_auFFn/chat",
+  kakaoChannelId: "_auFFn",
+  instagramUrl: "https://www.instagram.com/selenaenglish_irene",
+  youtubeUrl: "https://www.youtube.com/@selena_englishtv",
   blogRssUrl: "https://rss.blog.naver.com/da_num.xml",
   placeUrl:
     "https://map.naver.com/p/search/%EC%82%BC%EC%84%B1%EC%98%81%EC%96%B4%20%EC%85%80%EB%A0%88%EB%82%98%20%EC%95%84%EC%9D%B4%EB%A6%B0%20%EC%84%9D%EC%84%B1",

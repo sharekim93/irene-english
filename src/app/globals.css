@@ -147,6 +147,44 @@ html {
   animation: contact-border-pulse 5.8s ease-out infinite;
 }
 
+.kakao-consult-button {
+  display: inline-flex;
+  width: 10.75rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(254, 229, 0, 0.78);
+  border-radius: 0.75rem;
+  background: #fee500;
+  color: #191919;
+  font-family: var(--font-nanum-square-bold);
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(234, 179, 8, 0.18);
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.kakao-consult-button:hover {
+  background: #f7dc00;
+  box-shadow: 0 12px 28px rgba(234, 179, 8, 0.22);
+  transform: translateY(-1px);
+}
+
+.kakao-consult-button:focus-visible {
+  outline: 3px solid rgba(25, 25, 25, 0.24);
+  outline-offset: 3px;
+}
+
+.kakao-consult-button-dark {
+  box-shadow: none;
+}
+
 .mobile-slide-contact {
   position: relative;
   width: 6.5rem;

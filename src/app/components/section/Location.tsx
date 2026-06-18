@@ -108,8 +108,8 @@ const Location = () => {
                 어은목마을 벽산 블루밍 아파트 상가동 105호
               </h3>
               <p className="mt-4 text-base leading-7 text-gray-600">
-                석성초, 초당초, 동백역 생활권에서 방문하기 좋은 위치입니다.
-                방문 전 전화로 주차 동선을 확인해 주세요.
+                석성초, 초당초, 동백역에서 가까운 벽산 블루밍 아파트 상가에
+                위치해 있습니다.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">

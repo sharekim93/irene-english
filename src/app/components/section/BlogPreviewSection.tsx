@@ -33,9 +33,9 @@ export default async function BlogPreviewSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="mb-3 text-sm font-bold text-pink-600">BLOG</p>
+            <p className="mb-3 text-sm font-bold text-pink-600">NEWS LETTER</p>
             <h2 className="text-3xl font-black text-gray-950 sm:text-4xl">
-              블로그 소식
+              학원 소식
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-gray-600"></p>
           </div>

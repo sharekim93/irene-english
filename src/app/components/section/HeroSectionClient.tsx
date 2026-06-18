@@ -2,6 +2,8 @@
 
 import { Button } from "@heroui/react";
 import { useEffect, useMemo, useState } from "react";
+import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
+import NaverBookingIcon from "@/app/components/ui/NaverBookingIcon";
 import { siteConfig } from "@/config/site";
 import type { BlogPost } from "@/lib/blog/rss";
 
@@ -38,10 +40,18 @@ function formatDate(value: string) {
 }
 
 function getPrimaryTag(post: BlogPost, index: number) {
-  return post.tags[0] ?? ["최근 교실노트", "뉴스레터", "성장 이야기"][index] ?? "블로그";
+  return (
+    post.tags[0] ??
+    ["최근 교실노트", "뉴스레터", "성장 이야기"][index] ??
+    "블로그"
+  );
 }
 
-function getRelativeCardPosition(index: number, activeIndex: number, total: number) {
+function getRelativeCardPosition(
+  index: number,
+  activeIndex: number,
+  total: number,
+) {
   return (index - activeIndex + total) % total;
 }
 
@@ -69,45 +79,44 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
     <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(233,67,145,0.13),transparent_34%),radial-gradient(circle_at_88%_78%,rgba(138,76,252,0.09),transparent_28%),linear-gradient(135deg,#fff,#fcf9f8_52%,#fff2f8)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div className="flex flex-col items-start">
-          <h1
-            className="max-w-2xl break-keep text-[2rem] font-black leading-[1.28] text-gray-950 sm:text-[2.75rem] lg:text-[3.15rem]"
-          >
-            <span className="block text-pink-600">영어유치원 10년 경력</span>
-            아이린 선생님과 함께
-            <span className="block">매일 말하고 성장하세요</span>
+          <h1 className="max-w-2xl break-keep text-[1.65rem] font-black leading-[1.6] text-gray-950 sm:text-[2.1rem] lg:text-[2.35rem]">
+            <span className="block text-pink-600">
+              영어를 잘 할 수밖에 없는 학습 시스템
+            </span>
+            <span className="block"></span>
+            <span className="block">원장 직강 1:1 개별 맞춤 수업</span>
           </h1>
-          <p
-            className="mt-5 max-w-2xl break-keep text-base leading-8 text-gray-600 sm:text-lg"
-          >
-            삼성영어 셀레나 아이린 석성 교습소에서 AI 셀레나 선생님과 원장 직강으로
-            아이의 현재 수준에 맞는 영어 습관을 만듭니다.
+          <p className="mt-5 max-w-2xl break-keep text-base leading-8 text-gray-600 sm:text-lg">
+            파닉스부터 수능 1등급 완성까지 아이의 현재 실력을 정확하게 진단하고
+            <br />
+            매일 하루 한 시간 영어 실력을 확실하게 쌓아갑니다
           </p>
-          <div
-            className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
-          >
+          <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
             <Button
               as="a"
               href={siteConfig.telHref}
               size="lg"
               className="h-14 bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25"
             >
-              입학상담하기
+              전화상담하기
             </Button>
+            <KakaoConsultButton />
             <Button
               as="a"
-              href="/blog"
+              href={siteConfig.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               size="lg"
               variant="bordered"
-              className="h-14 border-pink-200 bg-white/85 px-8 text-base font-nanum-square-bold font-bold text-gray-800 backdrop-blur"
+              className="h-14 border-[#03c75a]/30 bg-white/85 px-8 text-base font-nanum-square-bold font-bold text-gray-800 backdrop-blur"
             >
-              블로그 보기
+              <NaverBookingIcon />
+              네이버 예약
             </Button>
           </div>
         </div>
 
-        <div
-          className="relative mx-auto min-h-[430px] w-full max-w-[560px] py-4 sm:min-h-[470px]"
-        >
+        <div className="relative mx-auto min-h-[430px] w-full max-w-[560px] py-4 sm:min-h-[470px]">
           <div className="absolute inset-x-6 top-11 h-72 rounded-[2rem] bg-pink-200/40 blur-3xl" />
           <div className="absolute inset-x-14 bottom-9 h-40 rounded-[2rem] bg-violet-200/30 blur-3xl" />
 
@@ -117,7 +126,8 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               activeIndex,
               heroPosts.length,
             );
-            const state = cardStates[position] ?? cardStates[cardStates.length - 1];
+            const state =
+              cardStates[position] ?? cardStates[cardStates.length - 1];
             const tag = getPrimaryTag(post, index);
 
             return (

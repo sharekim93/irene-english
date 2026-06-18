@@ -39,7 +39,13 @@ export function organizationJsonLd() {
         closes: "18:00",
       },
     ],
-    sameAs: [siteConfig.blogUrl, siteConfig.placeUrl],
+    sameAs: [
+      siteConfig.blogUrl,
+      siteConfig.placeUrl,
+      siteConfig.kakaoChannelUrl,
+      siteConfig.instagramUrl,
+      siteConfig.youtubeUrl,
+    ],
   };
 }
 

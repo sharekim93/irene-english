@@ -29,7 +29,13 @@ describe("seo JSON-LD helpers", () => {
         longitude: siteConfig.coordinates.longitude,
       },
       openingHours: siteConfig.openingHoursSchema,
-      sameAs: [siteConfig.blogUrl, siteConfig.placeUrl],
+      sameAs: [
+        siteConfig.blogUrl,
+        siteConfig.placeUrl,
+        siteConfig.kakaoChannelUrl,
+        siteConfig.instagramUrl,
+        siteConfig.youtubeUrl,
+      ],
     });
     expect(jsonLd["@type"]).toEqual(
       expect.arrayContaining(["EducationalOrganization", "LocalBusiness"]),
