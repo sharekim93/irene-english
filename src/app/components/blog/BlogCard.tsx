@@ -15,6 +15,23 @@ function formatDate(value: string) {
   }).format(date);
 }
 
+function BlogImageFallback() {
+  return (
+    <div className="absolute inset-0 flex items-end overflow-hidden bg-[linear-gradient(135deg,#fff7fb_0%,#ffe3f0_46%,#eaf8ff_100%)] px-6 pb-6">
+      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full border border-white/70 bg-white/45" />
+      <div className="absolute -bottom-14 left-6 h-28 w-28 rounded-full border border-pink-200/60 bg-white/40" />
+      <div className="relative">
+        <p className="text-xs font-bold uppercase tracking-[0.12em] text-pink-600">
+          Irene English Note
+        </p>
+        <p className="mt-2 max-w-48 text-lg font-black leading-snug text-gray-950">
+          아이린 석성 학습 이야기
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function BlogCard({ post }: { post: BlogPost }) {
   const tagKeywords = post.tags.join(", ");
   const displayTags = post.tags.slice(0, 8);
@@ -29,6 +46,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       {tagKeywords && <meta itemProp="keywords" content={tagKeywords} />}
       {post.thumbnail ? (
         <div className="relative h-44 w-full">
+          <BlogImageFallback />
           <Image
             src={post.thumbnail}
             alt={`${post.title} 썸네일`}
@@ -39,8 +57,8 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           />
         </div>
       ) : (
-        <div className="flex h-44 items-center justify-center bg-gradient-to-br from-pink-50 via-white to-sky-50 px-6 text-center text-sm font-bold text-pink-600">
-          삼성영어 셀레나 아이린 석성 블로그
+        <div className="relative h-44 w-full">
+          <BlogImageFallback />
         </div>
       )}
       <div className="flex flex-1 flex-col p-6">
