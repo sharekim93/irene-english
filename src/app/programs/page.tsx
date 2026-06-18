@@ -35,13 +35,15 @@ export default function ProgramsPage() {
       <PageHero
         eyebrow="PROGRAMS"
         title="처음 영어부터 중등 심화까지 이어지는 로드맵"
+        titleClassName="max-w-none whitespace-nowrap text-[clamp(1.35rem,5vw,3rem)]"
         description="아이의 현재 수준을 먼저 확인한 뒤 Hey! Hazel, 300만 문장 만들기, PREP31 중 필요한 단계부터 시작합니다."
+        descriptionClassName="max-w-none whitespace-nowrap text-[clamp(0.58rem,2.4vw,1.125rem)] leading-7 sm:leading-8"
       >
         <a
           href={siteConfig.telHref}
           className="inline-flex h-12 items-center justify-center rounded-xl bg-pink-600 px-6 font-bold text-white shadow-lg shadow-pink-500/20"
         >
-          Evaluation Test 상담
+          레벨 테스트 상담
         </a>
       </PageHero>
 
