@@ -32,7 +32,7 @@ export default function AboutPage() {
         ])}
       />
       <PageHero
-        eyebrow="학원소개"
+        eyebrow="INTRODUCE"
         title="영어를 잘 할 수밖에 없는 학습 시스템"
         description={`학생중심 1:1 맞춤 수업에 최적화된 전문 선생님이
 학생의 학습 목표와 플랜에 맞게 꼼꼼히 지도합니다`}

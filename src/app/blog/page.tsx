@@ -91,7 +91,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         }}
       />
       <PageHero
-        eyebrow="블로그"
+        eyebrow="BLOG"
         title="아이린 석성 학원 소식과 영어 학습 가이드"
         description="학원 소식, 파닉스와 초등 영어 루틴, 중등 대비 이야기 등 학원 소식을 살펴보세요"
       >
