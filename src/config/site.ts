@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "삼성영어 아이린 석성",
+  name: "삼성영어 셀레나 아이린 석성",
   legalName: "삼성영어 셀레나 아이린 석성 교습소",
   domain: "https://irene-english.com",
   phone: "010-3421-4383",
@@ -16,9 +16,9 @@ export const siteConfig = {
   blogUrl: "https://blog.naver.com/da_num",
   blogRssUrl: "https://rss.blog.naver.com/da_num.xml",
   placeUrl:
-    "https://map.naver.com/p/search/%EC%82%BC%EC%84%B1%EC%98%81%EC%96%B4%20%EC%95%84%EC%9D%B4%EB%A6%B0%20%EC%84%9D%EC%84%B1",
+    "https://map.naver.com/p/search/%EC%82%BC%EC%84%B1%EC%98%81%EC%96%B4%20%EC%85%80%EB%A0%88%EB%82%98%20%EC%95%84%EC%9D%B4%EB%A6%B0%20%EC%84%9D%EC%84%B1",
   keywords: [
-    "삼성영어 아이린 석성",
+    "삼성영어 셀레나 아이린 석성",
     "삼성영어셀레나 아이린석성",
     "아이린 석성 교습소",
     "석성초 영어학원",
@@ -184,4 +184,4 @@ export const topicPages = [
 ];
 
 export const pageDescription =
-  "석성초, 초당초, 동백역 생활권의 삼성영어 아이린 석성은 파닉스부터 중등 영어까지 AI 셀레나와 원장 직강으로 매일 말하고 확인하는 1:1 관리형 영어 수업을 운영합니다.";
+  "석성초, 초당초, 동백역 생활권의 삼성영어 셀레나 아이린 석성은 파닉스부터 중등 영어까지 AI 셀레나와 원장 직강으로 매일 말하고 확인하는 1:1 관리형 영어 수업을 운영합니다.";

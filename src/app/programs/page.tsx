@@ -10,7 +10,7 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "프로그램 | Hey! Hazel · 300만 문장 만들기 · PREP31",
   description:
-    "삼성영어 아이린 석성의 Hey! Hazel, 300만 문장 만들기, PREP31 프로그램과 학년별 로드맵을 안내합니다.",
+    "삼성영어 셀레나 아이린 석성의 Hey! Hazel, 300만 문장 만들기, PREP31 프로그램과 학년별 로드맵을 안내합니다.",
   alternates: { canonical: "/programs" },
 };
 

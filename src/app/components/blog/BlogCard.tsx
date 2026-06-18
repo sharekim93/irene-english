@@ -40,7 +40,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         </div>
       ) : (
         <div className="flex h-44 items-center justify-center bg-gradient-to-br from-pink-50 via-white to-sky-50 px-6 text-center text-sm font-bold text-pink-600">
-          삼성영어 아이린 석성 블로그
+          삼성영어 셀레나 아이린 석성 블로그
         </div>
       )}
       <div className="flex flex-1 flex-col p-6">

@@ -44,7 +44,7 @@ const NaverMapCard = ({ clientId }: { clientId: string }) => {
 
   return (
     <div
-      aria-label="삼성영어 아이린 석성 네이버 지도"
+      aria-label="삼성영어 셀레나 아이린 석성 네이버 지도"
       className="relative min-h-[360px] bg-pink-50"
     >
       <NavermapsProvider ncpKeyId={clientId}>

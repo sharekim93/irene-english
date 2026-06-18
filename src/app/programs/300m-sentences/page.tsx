@@ -14,7 +14,7 @@ const program = programSummaries.find(
 export const metadata: Metadata = {
   title: "300만 문장 만들기 | 청크 학습 정규 과정",
   description:
-    "삼성영어 아이린 석성의 300만 문장 만들기는 청크 단위로 문장을 이해하고 직접 만들어 보는 초등·중등 핵심 정규 과정입니다.",
+    "삼성영어 셀레나 아이린 석성의 300만 문장 만들기는 청크 단위로 문장을 이해하고 직접 만들어 보는 초등·중등 핵심 정규 과정입니다.",
   alternates: { canonical: "/programs/300m-sentences" },
 };
 

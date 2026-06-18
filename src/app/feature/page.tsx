@@ -9,7 +9,7 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "학원 특징 | 1:1 맞춤 · AI 셀레나 · 매일 루틴",
   description:
-    "삼성영어 아이린 석성의 1:1 개별 맞춤, 매일 영어 루틴, AI 셀레나와 선생님 관리, 지역 접근성을 안내합니다.",
+    "삼성영어 셀레나 아이린 석성의 1:1 개별 맞춤, 매일 영어 루틴, AI 셀레나와 선생님 관리, 지역 접근성을 안내합니다.",
   alternates: { canonical: "/feature" },
 };
 

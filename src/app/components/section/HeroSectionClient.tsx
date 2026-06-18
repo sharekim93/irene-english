@@ -79,7 +79,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
           <p
             className="mt-5 max-w-2xl break-keep text-base leading-8 text-gray-600 sm:text-lg"
           >
-            삼성영어 아이린 석성 교습소에서 AI 셀레나 선생님과 원장 직강으로
+            삼성영어 셀레나 아이린 석성 교습소에서 AI 셀레나 선생님과 원장 직강으로
             아이의 현재 수준에 맞는 영어 습관을 만듭니다.
           </p>
           <div

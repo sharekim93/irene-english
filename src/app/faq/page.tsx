@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "FAQ | 상담·수업 방식·관리·중등 대비",
   description:
-    "삼성영어 아이린 석성 등록 상담, AI 셀레나 수업 방식, 숙제와 리포트, 중등 내신 대비, 운영 시간 FAQ입니다.",
+    "삼성영어 셀레나 아이린 석성 등록 상담, AI 셀레나 수업 방식, 숙제와 리포트, 중등 내신 대비, 운영 시간 FAQ입니다.",
   alternates: { canonical: "/faq" },
 };
 

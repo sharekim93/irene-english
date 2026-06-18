@@ -15,7 +15,7 @@ const fallbackPosts: BlogPost[] = [
     link: `${siteConfig.blogUrl}?fromRss=true&trackingCode=rss`,
     pubDate: "2026-06-05",
     summary:
-      "삼성영어 아이린 석성의 수업 소식, 파닉스와 초등 영어 루틴, 중등 대비 이야기를 블로그에서 확인해 보세요.",
+      "삼성영어 셀레나 아이린 석성의 수업 소식, 파닉스와 초등 영어 루틴, 중등 대비 이야기를 블로그에서 확인해 보세요.",
     tags: ["학원소식", "초등영어", "동백영어"],
   },
   {

@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, organizationJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "학원소개",
   description:
-    "석성초, 초당초, 동백역 생활권의 삼성영어 아이린 석성 운영 철학과 1:1 맞춤 수업 방식을 소개합니다.",
+    "석성초, 초당초, 동백역 생활권의 삼성영어 셀레나 아이린 석성 운영 철학과 1:1 맞춤 수업 방식을 소개합니다.",
   alternates: { canonical: "/about" },
 };
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="ABOUT"
         title="매일 확인하고, 아이에게 맞춰 조정하는 영어"
-        description="삼성영어 아이린 석성은 석성초, 초당초, 초당중, 동백역 생활권 학생들이 파닉스부터 중등 영어까지 꾸준히 이어갈 수 있도록 원장 직강과 AI 셀레나 루틴을 함께 운영합니다."
+        description="삼성영어 셀레나 아이린 석성은 석성초, 초당초, 초당중, 동백역 생활권 학생들이 파닉스부터 중등 영어까지 꾸준히 이어갈 수 있도록 원장 직강과 AI 셀레나 루틴을 함께 운영합니다."
       />
 
       <section className="bg-white px-5 py-20 sm:px-8">

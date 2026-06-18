@@ -13,7 +13,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "블로그 | 아이린 석성 학원 소식과 영어 학습 가이드",
   description:
-    "네이버 블로그 RSS로 연동한 삼성영어 아이린 석성 최신 글, 학원 소식, 파닉스·초등·중등 영어 학습 가이드입니다.",
+    "네이버 블로그 RSS로 연동한 삼성영어 셀레나 아이린 석성 최신 글, 학원 소식, 파닉스·초등·중등 영어 학습 가이드입니다.",
   alternates: { canonical: "/blog" },
 };
 

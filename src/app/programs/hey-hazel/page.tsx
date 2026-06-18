@@ -12,7 +12,7 @@ const program = programSummaries.find((item) => item.slug === "hey-hazel")!;
 export const metadata: Metadata = {
   title: "Hey! Hazel | 유아·예비초 첫 영어",
   description:
-    "삼성영어 아이린 석성의 Hey! Hazel은 Chant, Song, Game으로 영어 흥미와 기초 음가를 준비하는 첫 영어 프로그램입니다.",
+    "삼성영어 셀레나 아이린 석성의 Hey! Hazel은 Chant, Song, Game으로 영어 흥미와 기초 음가를 준비하는 첫 영어 프로그램입니다.",
   alternates: { canonical: "/programs/hey-hazel" },
 };
 

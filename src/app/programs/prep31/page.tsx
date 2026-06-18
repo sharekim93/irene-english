@@ -12,7 +12,7 @@ const program = programSummaries.find((item) => item.slug === "prep31")!;
 export const metadata: Metadata = {
   title: "PREP31 | 중등 내신·수능형 영어 대비",
   description:
-    "삼성영어 아이린 석성의 PREP31은 DK 원서, 문법, 어휘, 성취도 평가 루틴으로 중등 이후 영어를 준비합니다.",
+    "삼성영어 셀레나 아이린 석성의 PREP31은 DK 원서, 문법, 어휘, 성취도 평가 루틴으로 중등 이후 영어를 준비합니다.",
   alternates: { canonical: "/programs/prep31" },
 };
 

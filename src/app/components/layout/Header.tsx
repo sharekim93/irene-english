@@ -135,10 +135,10 @@ const Header = () => {
 
         {/* Logo */}
         <NavbarBrand className="flex items-center gap-3 flex-none">
-          <Link href="/" aria-label="삼성영어 아이린 석성 홈">
+          <Link href="/" aria-label="삼성영어 셀레나 아이린 석성 홈">
             <Image
               src={logoImage}
-              alt="삼성영어 아이린 석성 로고"
+              alt="삼성영어 셀레나 아이린 석성 로고"
               width={240}
               height={64}
               className="h-auto w-[180px] sm:w-[220px] lg:w-[240px]"

@@ -20,9 +20,8 @@ const NanumQuareB = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default:
-      "삼성영어 아이린 석성 | 석성초·초당초·동백역 영어학원",
-    template: "%s | 삼성영어 아이린 석성",
+    default: "삼성영어 셀레나 아이린 석성 | 석성초·초당초·동백역 영어학원",
+    template: "%s | 삼성영어 셀레나 아이린 석성",
   },
   description: pageDescription,
   keywords: siteConfig.keywords,
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     siteName: siteConfig.name,
-    title: "삼성영어 아이린 석성",
+    title: "삼성영어 셀레나 아이린 석성",
     description: pageDescription,
     images: [{ url: "/og-image.webp", width: 2835, height: 2835 }],
     url: siteConfig.domain,
@@ -47,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "삼성영어 아이린 석성",
+    title: "삼성영어 셀레나 아이린 석성",
     description: pageDescription,
     images: [{ url: "/og-image.webp", width: 2835, height: 2835 }],
   },

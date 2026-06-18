@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, organizationJsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "오시는 길",
   description:
-    "삼성영어 아이린 석성 주소, 전화 상담, 수업 시간, 네이버 지도, 블로그 링크와 방문 안내입니다.",
+    "삼성영어 셀레나 아이린 석성 주소, 전화 상담, 수업 시간, 네이버 지도, 블로그 링크와 방문 안내입니다.",
   alternates: { canonical: "/contact" },
 };
 
