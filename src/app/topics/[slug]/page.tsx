@@ -42,14 +42,32 @@ export async function generateMetadata({
     return {};
   }
 
+  const pagePath = `/topics/${topic.slug}`;
+  const pageTitle =
+    topic.intent === "local" ? topic.primaryKeyword : topic.title;
+  const socialTitle =
+    topic.intent === "local" ? `${topic.primaryKeyword} | ${siteConfig.name}` : topic.title;
+
   return {
-    title:
-      topic.intent === "local"
-        ? `${topic.primaryKeyword} | ${siteConfig.name}`
-        : topic.title,
+    title: pageTitle,
     description: topic.description,
     keywords: topic.keywords,
-    alternates: { canonical: `/topics/${topic.slug}` },
+    alternates: { canonical: pagePath },
+    openGraph: {
+      title: socialTitle,
+      description: topic.description,
+      url: absoluteUrl(pagePath),
+      images: [{ url: "/og-image.webp", width: 2835, height: 2835 }],
+      type: "article",
+      locale: "ko_KR",
+      siteName: siteConfig.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description: topic.description,
+      images: [{ url: "/og-image.webp", width: 2835, height: 2835 }],
+    },
   };
 }
 
