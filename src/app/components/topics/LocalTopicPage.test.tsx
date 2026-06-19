@@ -57,7 +57,7 @@ describe("LocalTopicPage", () => {
       }),
     ).toBeInTheDocument();
     expect(screen.getByText("010-3421-4383")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "전화 상담하기" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "전화 상담하기" })).toHaveAttribute(
       "href",
       "tel:010-3421-4383",
     );

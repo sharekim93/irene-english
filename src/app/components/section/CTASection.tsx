@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Button } from "@heroui/react";
 import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
 import NaverBookingButton from "@/app/components/ui/NaverBookingButton";
 import { siteConfig } from "@/config/site";
@@ -34,14 +33,12 @@ const CTASection = () => {
             {siteConfig.phone}
           </p>
           <div className="consult-cta-group">
-            <Button
-              as="a"
+            <a
               href={siteConfig.telHref}
-              size="lg"
-              className="consult-cta-button bg-white px-8 text-base font-bold text-pink-600 shadow-lg shadow-pink-950/15 hover:bg-gray-100"
+              className="consult-cta-button inline-flex h-12 min-w-24 items-center justify-center rounded-xl bg-white px-8 text-base font-bold text-pink-600 shadow-lg shadow-pink-950/15 transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/35"
             >
               전화 상담하기
-            </Button>
+            </a>
             <KakaoConsultButton className="consult-cta-button" tone="dark" />
             <NaverBookingButton className="consult-cta-button border-white/70 px-8 text-base shadow-md shadow-pink-950/10 hover:border-white" />
           </div>
