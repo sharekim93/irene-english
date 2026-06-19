@@ -5,8 +5,9 @@ import JsonLd from "@/app/components/JsonLd";
 import PageHero from "@/app/components/layout/PageHero";
 import SiteFrame from "@/app/components/layout/SiteFrame";
 import CTASection from "@/app/components/section/CTASection";
+import LocalTopicPage from "@/app/components/topics/LocalTopicPage";
 import { siteConfig, topicPages } from "@/config/site";
-import { absoluteUrl, breadcrumbJsonLd } from "@/lib/seo";
+import { absoluteUrl, breadcrumbJsonLd, organizationJsonLd } from "@/lib/seo";
 
 type TopicParams = {
   params: Promise<{ slug: string }>;
@@ -14,6 +15,21 @@ type TopicParams = {
 
 export function generateStaticParams() {
   return topicPages.map((topic) => ({ slug: topic.slug }));
+}
+
+function localFaqJsonLd(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
 }
 
 export async function generateMetadata({
@@ -27,7 +43,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: topic.title,
+    title:
+      topic.intent === "local"
+        ? `${topic.primaryKeyword} | ${siteConfig.name}`
+        : topic.title,
     description: topic.description,
     keywords: topic.keywords,
     alternates: { canonical: `/topics/${topic.slug}` },
@@ -42,6 +61,35 @@ export default async function TopicPage({ params }: TopicParams) {
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: topic.title,
+    description: topic.description,
+    url: absoluteUrl(`/topics/${topic.slug}`),
+    publisher: {
+      "@type": "EducationalOrganization",
+      name: siteConfig.name,
+    },
+  };
+
+  if (topic.intent === "local") {
+    return (
+      <SiteFrame>
+        <JsonLd
+          data={breadcrumbJsonLd([
+            { name: "홈", href: "/" },
+            { name: topic.title, href: `/topics/${topic.slug}` },
+          ])}
+        />
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={articleJsonLd} />
+        <JsonLd data={localFaqJsonLd(topic.localFaqs)} />
+        <LocalTopicPage topic={topic} />
+      </SiteFrame>
+    );
+  }
+
   return (
     <SiteFrame>
       <JsonLd
@@ -50,19 +98,7 @@ export default async function TopicPage({ params }: TopicParams) {
           { name: topic.title, href: `/topics/${topic.slug}` },
         ])}
       />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: topic.title,
-          description: topic.description,
-          url: absoluteUrl(`/topics/${topic.slug}`),
-          publisher: {
-            "@type": "EducationalOrganization",
-            name: siteConfig.name,
-          },
-        }}
-      />
+      <JsonLd data={articleJsonLd} />
       <PageHero
         eyebrow="LOCAL GUIDE"
         title={topic.title}
