@@ -108,15 +108,15 @@ const FeaturesSection = () => {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-[#fcf9f8] px-5 py-24 sm:px-8"
+      className="relative isolate overflow-hidden bg-[#fcf9f8] px-5 py-24 sm:px-8"
     >
       <motion.div
         aria-hidden
-        className="absolute left-0 top-20 h-64 w-64 -translate-x-1/3 rounded-full bg-violet-100 blur-3xl"
+        className="pointer-events-none absolute left-0 top-20 z-0 h-64 w-64 -translate-x-1/3 rounded-full bg-violet-100 blur-3xl"
         animate={{ y: [0, 18, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-16">
           <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
             FEATURE

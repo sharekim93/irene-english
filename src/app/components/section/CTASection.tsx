@@ -14,13 +14,13 @@ const CTASection = () => {
     >
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -right-24 -top-32 h-64 w-64 rounded-full bg-white/18 blur-3xl sm:-right-10"
+        className="pointer-events-none absolute -right-24 -top-32 z-0 h-64 w-64 rounded-full bg-white/18 blur-3xl sm:-right-10"
         animate={{ scale: [1, 1.12, 1] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-28 h-80 w-80 rounded-full bg-[#ffb0cb]/20 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 -left-28 z-0 h-80 w-80 rounded-full bg-[#ffb0cb]/20 blur-3xl"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
