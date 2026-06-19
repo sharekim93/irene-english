@@ -21,4 +21,15 @@ describe("sitemap", () => {
       expect(urls).toContain(expectedUrl);
     }
   });
+
+  it("includes dedicated local SEO topic pages", () => {
+    const urls = sitemap().map((entry) => entry.url);
+
+    expect(urls).toEqual(
+      expect.arrayContaining([
+        `${siteConfig.domain}/topics/suksung-elementary-english`,
+        `${siteConfig.domain}/topics/dongbaek-station-english`,
+      ]),
+    );
+  });
 });
