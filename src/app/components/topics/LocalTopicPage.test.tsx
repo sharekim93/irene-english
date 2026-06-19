@@ -11,6 +11,18 @@ if (!seokseongTopic || seokseongTopic.intent !== "local") {
   throw new Error("Missing local SEO test fixture");
 }
 
+function expectLinkWithHref(name: string, href: string | RegExp) {
+  const links = screen.getAllByRole("link", { name });
+
+  expect(
+    links.some((link) => {
+      const actualHref = link.getAttribute("href") ?? "";
+
+      return typeof href === "string" ? actualHref === href : href.test(actualHref);
+    }),
+  ).toBe(true);
+}
+
 describe("LocalTopicPage", () => {
   it("renders local SEO content, program links, FAQs, nearby links, and CTAs", () => {
     render(<LocalTopicPage topic={seokseongTopic} />);
@@ -30,21 +42,12 @@ describe("LocalTopicPage", () => {
     expect(
       screen.getByRole("link", { name: "동백역 영어학원 안내" }),
     ).toHaveAttribute("href", "/topics/dongbaek-station-english");
-    expect(screen.getByRole("link", { name: "전화상담하기" })).toHaveAttribute(
-      "href",
-      "tel:010-3421-4383",
-    );
-    expect(screen.getByRole("link", { name: "카카오 상담" })).toHaveAttribute(
-      "href",
-      "https://pf.kakao.com/_auFFn/chat",
-    );
-    expect(screen.getByRole("link", { name: "네이버 예약" })).toHaveAttribute(
-      "href",
+    expectLinkWithHref("전화상담하기", "tel:010-3421-4383");
+    expectLinkWithHref("카카오 상담", "https://pf.kakao.com/_auFFn/chat");
+    expectLinkWithHref(
+      "네이버 예약",
       "https://m.booking.naver.com/booking/6/bizes/1456434/items/6925790",
     );
-    expect(screen.getByRole("link", { name: "네이버 지도" })).toHaveAttribute(
-      "href",
-      expect.stringContaining("map.naver.com"),
-    );
+    expectLinkWithHref("네이버 지도", /map\.naver\.com/);
   });
 });

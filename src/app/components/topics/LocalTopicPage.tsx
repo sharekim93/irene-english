@@ -145,9 +145,7 @@ export default function LocalTopicPage({ topic }: LocalTopicPageProps) {
         </div>
       </section>
 
-      <div aria-hidden="true">
-        <CTASection />
-      </div>
+      <CTASection />
     </>
   );
 }
