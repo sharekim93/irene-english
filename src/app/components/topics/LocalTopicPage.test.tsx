@@ -18,7 +18,9 @@ function expectLinkWithHref(name: string, href: string | RegExp) {
     links.some((link) => {
       const actualHref = link.getAttribute("href") ?? "";
 
-      return typeof href === "string" ? actualHref === href : href.test(actualHref);
+      return typeof href === "string"
+        ? actualHref === href
+        : href.test(actualHref);
     }),
   ).toBe(true);
 }
@@ -49,5 +51,16 @@ describe("LocalTopicPage", () => {
       "https://m.booking.naver.com/booking/6/bizes/1456434/items/6925790",
     );
     expectLinkWithHref("네이버 지도", /map\.naver\.com/);
+    expect(
+      screen.getByRole("heading", {
+        name: "매일 달라지는 아이의 영어실력을 확인해보세요!",
+      }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("010-3421-4383")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "전화 상담하기" })).toHaveAttribute(
+      "href",
+      "tel:010-3421-4383",
+    );
+    expect(screen.getAllByRole("link", { name: "네이버 예약" })).toHaveLength(2);
   });
 });
