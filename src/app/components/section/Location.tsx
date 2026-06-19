@@ -54,7 +54,7 @@ const NaverMapCard = ({ clientId }: { clientId: string }) => {
         >
           <NaverMap
             defaultCenter={center}
-            defaultZoom={17}
+            defaultZoom={15}
             minZoom={12}
             scrollWheel={false}
             draggable
@@ -78,23 +78,12 @@ const Location = () => {
   return (
     <section id="location" className="bg-white px-5 py-24 sm:px-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="mb-8 text-center"
-        >
-          <p className="mb-3 text-sm font-bold text-pink-600">
-            LOCATION
-          </p>
-          <h2 className="mb-4 text-3xl font-bold text-gray-900">
-            오시는 길
-          </h2>
-          <p className="py-4 text-lg font-extrabold leading-8 text-gray-700 sm:text-xl">
-            {siteConfig.address}
-          </p>
+        <motion.div className="mb-8 text-center">
+          <p className="mb-3 text-sm font-bold text-pink-600">LOCATION</p>
+          <h2 className="mb-4 text-3xl font-bold text-gray-900">오시는 길</h2>
         </motion.div>
 
-        <motion.div
-          className="grid overflow-hidden rounded-2xl border border-pink-100 bg-surface-page shadow-lg shadow-pink-900/10 lg:grid-cols-[1fr_0.9fr]"
-        >
+        <motion.div className="grid overflow-hidden rounded-2xl border border-pink-100 bg-surface-page shadow-lg shadow-pink-900/10 lg:grid-cols-[1fr_0.9fr]">
           {naverClientId ? (
             <NaverMapCard clientId={naverClientId} />
           ) : (
