@@ -88,9 +88,16 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
             </span>
           </h1>
           <p className="mt-5 max-w-2xl break-keep text-[0.95rem] leading-7 text-gray-600 sm:text-lg sm:leading-8">
-            파닉스부터 수능 1등급 완성까지 아이의 현재 실력을 정확하게 진단하고
-            <br />
-            매일 하루 한 시간 영어 실력을 확실하게 쌓아갑니다
+            <span className="block sm:inline">
+              파닉스부터 수능 1등급 완성까지
+            </span>{" "}
+            <span className="block sm:inline">
+              아이의 현재 실력을 정확하게 진단하고
+            </span>
+            <br className="hidden sm:block" />
+            <span className="block">
+              매일 하루 한 시간 영어 실력을 확실하게 쌓아갑니다
+            </span>
           </p>
           <div className="consult-cta-group mt-7 sm:justify-start">
             <Button
