@@ -103,7 +103,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           rel="noreferrer"
           className="mt-6 inline-flex h-11 items-center justify-center rounded-xl bg-gray-950 px-4 text-sm font-bold text-white transition hover:bg-pink-600"
         >
-          원문 보기
+          자세히 보기
         </a>
       </div>
     </article>
