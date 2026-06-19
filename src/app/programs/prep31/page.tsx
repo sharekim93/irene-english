@@ -34,7 +34,7 @@ export default function Prep31Page() {
 
       <section className="bg-white px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">
+          <h2 className="text-3xl font-extrabold text-gray-950">
             수능 1등급 수준을 목표로 한 훈련
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-600">
@@ -44,7 +44,7 @@ export default function Prep31Page() {
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {["DK 원서", "문법", "어휘", "성취도 평가"].map((item) => (
               <div key={item} className="rounded-xl bg-[#fcf9f8] p-6">
-                <h3 className="text-xl font-black text-gray-950">{item}</h3>
+                <h3 className="text-xl font-extrabold text-gray-950">{item}</h3>
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   읽고 이해한 내용을 다시 확인하며 중등 이후 학습 밀도에
                   적응합니다.

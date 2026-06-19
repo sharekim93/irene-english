@@ -41,7 +41,7 @@ export default function HeyHazelPage() {
           ].map(([title, text]) => (
             <div key={title} className="rounded-xl border border-pink-100 p-6">
               <h2 className="text-sm font-bold text-pink-600">{title}</h2>
-              <p className="mt-3 text-xl font-black leading-8 text-gray-950">
+              <p className="mt-3 text-xl font-extrabold leading-8 text-gray-950">
                 {text}
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function HeyHazelPage() {
 
       <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">
+          <h2 className="text-3xl font-extrabold text-gray-950">
             Hazel 이후에는 Pre-level로 자연스럽게 이어집니다
           </h2>
           <p className="mt-5 text-lg leading-8 text-gray-600">

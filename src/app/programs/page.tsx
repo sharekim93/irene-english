@@ -49,17 +49,17 @@ export default function ProgramsPage() {
 
       <section className="bg-white px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">전체 로드맵</h2>
+          <h2 className="text-3xl font-extrabold text-gray-950">전체 로드맵</h2>
           <div className="mt-8 grid gap-3 md:grid-cols-6">
             {roadmap.map((step, index) => (
               <div
                 key={step}
                 className="rounded-xl border border-pink-100 bg-[#fcf9f8] p-5 text-center"
               >
-                <p className="text-xs font-black text-pink-600">
+                <p className="text-xs font-extrabold text-pink-600">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <p className="mt-2 break-keep text-lg font-black text-gray-950">
+                <p className="mt-2 break-keep text-lg font-extrabold text-gray-950">
                   {step}
                 </p>
               </div>
@@ -72,7 +72,7 @@ export default function ProgramsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <p className="text-sm font-bold text-pink-600">COMPARISON</p>
-            <h2 className="mt-3 text-3xl font-black text-gray-950">
+            <h2 className="mt-3 text-3xl font-extrabold text-gray-950">
               프로그램 비교
             </h2>
           </div>

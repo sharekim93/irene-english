@@ -184,7 +184,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </div>
           ) : (
             <div className="rounded-2xl border border-pink-100 bg-pink-50/60 px-6 py-12 text-center">
-              <p className="text-lg font-black text-gray-950">
+              <p className="text-lg font-extrabold text-gray-950">
                 조건에 맞는 블로그 글이 없습니다.
               </p>
               <a

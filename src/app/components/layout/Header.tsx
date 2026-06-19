@@ -21,7 +21,7 @@ import { navItems, siteConfig } from "@/config/site";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const contactButtonClass =
-    "contact-cta-button h-11 min-h-11 gap-2.5 rounded-[18px] bg-[#e94391] px-4 font-nanum-square-bold font-extrabold text-white shadow-none transition data-[hover=true]:bg-[#d92d7f] data-[hover=true]:opacity-100";
+    "contact-cta-button h-11 min-h-11 gap-2.5 rounded-[18px] bg-[#e94391] px-4 font-extrabold text-white shadow-none transition data-[hover=true]:bg-[#d92d7f] data-[hover=true]:opacity-100";
 
   const ContactButton = ({
     className = "",
@@ -118,7 +118,7 @@ const Header = () => {
             <Link
               href={item.href}
               className={`
-                text-base font-nanum-square-bold font-bold transition-all duration-200 hover:scale-105
+                text-base font-bold transition-all duration-200 hover:scale-105
                 ${
                   item.highlight
                     ? "text-pink-600 hover:text-pink-700"

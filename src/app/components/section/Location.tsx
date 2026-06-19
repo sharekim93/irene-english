@@ -24,7 +24,7 @@ const StaticLocationCard = () => (
           height={94}
           className="mx-auto"
         />
-        <p className="mt-5 text-2xl font-black text-gray-950">
+        <p className="mt-5 text-2xl font-extrabold text-gray-950">
           {siteConfig.name}
         </p>
         <p className="mt-2 text-sm font-bold text-gray-600">
@@ -81,13 +81,13 @@ const Location = () => {
         <motion.div
           className="mb-8 text-center"
         >
-          <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
+          <p className="mb-3 text-sm font-bold text-pink-600">
             LOCATION
           </p>
-          <h2 className="mb-4 text-3xl font-nanum-square-bold font-bold text-gray-900">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900">
             오시는 길
           </h2>
-          <p className="py-4 text-lg font-black leading-8 text-gray-700 sm:text-xl">
+          <p className="py-4 text-lg font-extrabold leading-8 text-gray-700 sm:text-xl">
             {siteConfig.address}
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ const Location = () => {
           <div className="flex flex-col justify-center gap-5 bg-white p-8">
             <div>
               <p className="text-sm font-bold text-pink-600">ADDRESS</p>
-              <h3 className="mt-2 text-2xl font-black leading-8 text-gray-950">
+              <h3 className="mt-2 text-2xl font-extrabold leading-8 text-gray-950">
                 어은목마을 벽산 블루밍 아파트 상가동 105호
               </h3>
               <p className="mt-4 text-base leading-7 text-gray-600">

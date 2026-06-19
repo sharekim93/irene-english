@@ -2,20 +2,7 @@ import type { Metadata } from "next";
 
 import CustomHeroUiProvider from "@/app/components/CustomHeroUiProvider";
 import { pageDescription, siteConfig } from "@/config/site";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const NanumQuareR = localFont({
-  src: "../fonts/NanumSquareR.woff",
-  display: "swap",
-  variable: "--font-nanum-square",
-});
-
-const NanumQuareB = localFont({
-  src: "../fonts/NanumSquareB.woff",
-  display: "swap",
-  variable: "--font-nanum-square-bold",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -59,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="ko">
-      <body className={`${NanumQuareR.variable} ${NanumQuareB.variable}`}>
+      <body className="font-pretendard">
         <CustomHeroUiProvider>{children}</CustomHeroUiProvider>
       </body>
     </html>

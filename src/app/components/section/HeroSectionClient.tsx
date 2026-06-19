@@ -79,7 +79,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
     <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(233,67,145,0.13),transparent_34%),radial-gradient(circle_at_88%_78%,rgba(138,76,252,0.09),transparent_28%),linear-gradient(135deg,#fff,#fcf9f8_52%,#fff2f8)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div className="flex flex-col items-start">
-          <h1 className="max-w-2xl break-keep font-black leading-tight text-gray-950">
+          <h1 className="max-w-2xl break-keep font-extrabold leading-tight text-gray-950">
             <span className="block whitespace-nowrap text-[clamp(1.08rem,5.05vw,1.95rem)] leading-[1.15] text-pink-600 sm:text-[2.1rem] lg:text-[2.35rem]">
               영어를 잘 할 수밖에 없는 학습 시스템
             </span>
@@ -104,7 +104,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               as="a"
               href={siteConfig.telHref}
               size="lg"
-              className="consult-cta-button bg-pink-600 px-8 text-base font-nanum-square-bold font-bold text-white shadow-lg shadow-pink-500/25"
+              className="consult-cta-button bg-pink-600 px-8 text-base font-bold text-white shadow-lg shadow-pink-500/25"
             >
               전화상담하기
             </Button>
@@ -115,7 +115,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              className="consult-cta-button border border-[#03c75a]/45 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-[#03c75a]/15 transition-colors hover:border-[#03c75a] hover:bg-[#f4fff9]"
+              className="consult-cta-button border border-[#03c75a]/45 bg-white px-8 text-base font-bold text-[#03c75a] shadow-lg shadow-[#03c75a]/15 transition-colors hover:border-[#03c75a] hover:bg-[#f4fff9]"
             >
               <NaverBookingIcon className="h-7 w-7" />
               네이버 예약
@@ -147,23 +147,23 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                 className={`group absolute inset-x-0 top-6 flex min-h-[280px] origin-bottom flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-5 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:border-pink-200 hover:bg-white sm:min-h-[310px] sm:p-7 ${state.className} ${state.pointerClassName}`}
               >
                 <div className="flex items-center justify-between gap-3">
-                  <span className="inline-flex h-8 max-w-[62%] items-center rounded-full border border-pink-200 bg-pink-50 px-3 text-xs font-black text-pink-700">
+                  <span className="inline-flex h-8 max-w-[62%] items-center rounded-full border border-pink-200 bg-pink-50 px-3 text-xs font-extrabold text-pink-700">
                     <span className="truncate">#{tag}</span>
                   </span>
                   <time
                     dateTime={post.pubDate}
-                    className="shrink-0 text-xs font-black text-gray-400"
+                    className="shrink-0 text-xs font-extrabold text-gray-400"
                   >
                     {formatDate(post.pubDate)}
                   </time>
                 </div>
 
                 <div className="mt-7 flex flex-1 gap-4 sm:gap-5">
-                  <p className="w-11 shrink-0 pt-1 text-2xl font-black leading-none text-pink-300 sm:w-12 sm:text-3xl">
+                  <p className="w-11 shrink-0 pt-1 text-2xl font-extrabold leading-none text-pink-300 sm:w-12 sm:text-3xl">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <div className="min-w-0 flex-1">
-                    <h2 className="line-clamp-2 break-keep text-xl font-black leading-snug text-gray-950 sm:text-[1.45rem]">
+                    <h2 className="line-clamp-2 break-keep text-xl font-extrabold leading-snug text-gray-950 sm:text-[1.45rem]">
                       {post.title}
                     </h2>
                     <p className="mt-3 line-clamp-3 break-keep text-sm font-semibold leading-6 text-gray-600">

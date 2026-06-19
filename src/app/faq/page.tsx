@@ -37,13 +37,13 @@ export default function FaqPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {categories.map((category) => (
             <div key={category} className="mb-12 last:mb-0">
-              <h2 className="text-2xl font-black text-gray-950">{category}</h2>
+              <h2 className="text-2xl font-extrabold text-gray-950">{category}</h2>
               <div className="mt-5 divide-y divide-gray-100 rounded-xl border border-gray-100 bg-[#fcf9f8]">
                 {faqItems
                   .filter((item) => item.category === category)
                   .map((item) => (
                     <details key={item.question} className="group p-6">
-                      <summary className="cursor-pointer list-none text-lg font-black text-gray-950">
+                      <summary className="cursor-pointer list-none text-lg font-extrabold text-gray-950">
                         {item.question}
                         <span className="float-right text-pink-600 group-open:rotate-45">
                           +

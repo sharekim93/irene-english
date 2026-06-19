@@ -59,7 +59,7 @@ export default function FeaturePage() {
               key={feature.title}
               className="rounded-xl border border-pink-100 bg-[#fcf9f8] p-7"
             >
-              <h2 className="text-2xl font-black text-gray-950">
+              <h2 className="text-2xl font-extrabold text-gray-950">
                 {feature.title}
               </h2>
               <p className="mt-4 text-base leading-7 text-gray-600">

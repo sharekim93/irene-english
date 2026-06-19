@@ -24,7 +24,7 @@ function BlogImageFallback() {
         <p className="text-xs font-bold uppercase tracking-[0.12em] text-pink-600">
           Irene English Note
         </p>
-        <p className="mt-2 max-w-48 text-lg font-black leading-snug text-gray-950">
+        <p className="mt-2 max-w-48 text-lg font-extrabold leading-snug text-gray-950">
           아이린 석성 학습 이야기
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         </time>
         <h3
           itemProp="headline"
-          className="mt-3 line-clamp-3 break-keep text-lg font-black leading-snug text-gray-950 sm:text-xl"
+          className="mt-3 line-clamp-3 break-keep text-lg font-extrabold leading-snug text-gray-950 sm:text-xl"
         >
           {post.title}
         </h3>

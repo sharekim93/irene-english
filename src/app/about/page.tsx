@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
             <p className="text-sm font-bold text-pink-600">PHILOSOPHY</p>
-            <h2 className="mt-3 text-3xl font-black text-gray-950">
+            <h2 className="mt-3 text-3xl font-extrabold text-gray-950">
               루틴과 피드백이 쌓여야 영어가 오래 갑니다
             </h2>
             <p className="mt-5 text-lg leading-8 text-gray-600">
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 key={item}
                 className="rounded-xl border border-pink-100 bg-[#fcf9f8] p-6"
               >
-                <p className="text-lg font-black leading-7 text-gray-900">
+                <p className="text-lg font-extrabold leading-7 text-gray-900">
                   {item}
                 </p>
               </div>
@@ -68,15 +68,15 @@ export default function AboutPage() {
 
       <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">수업 흐름</h2>
+          <h2 className="text-3xl font-extrabold text-gray-950">수업 흐름</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {["레벨 진단", "개별 진도", "매일 루틴", "피드백/상담"].map(
               (step, index) => (
                 <div key={step} className="rounded-xl bg-white p-6 shadow-sm">
-                  <p className="text-sm font-black text-pink-600">
+                  <p className="text-sm font-extrabold text-pink-600">
                     STEP {index + 1}
                   </p>
-                  <h3 className="mt-3 text-xl font-black text-gray-950">
+                  <h3 className="mt-3 text-xl font-extrabold text-gray-950">
                     {step}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-gray-600">
@@ -98,7 +98,7 @@ export default function AboutPage() {
 
       <section className="bg-white px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">학원 기본 정보</h2>
+          <h2 className="text-3xl font-extrabold text-gray-950">학원 기본 정보</h2>
           <dl className="mt-8 grid gap-4 md:grid-cols-2">
             {[
               ["학원명", siteConfig.legalName],

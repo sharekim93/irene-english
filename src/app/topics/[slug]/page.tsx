@@ -71,7 +71,7 @@ export default async function TopicPage({ params }: TopicParams) {
 
       <section className="bg-white px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">
+          <h2 className="text-3xl font-extrabold text-gray-950">
             아이에게 맞는 시작점을 찾는 것이 먼저입니다
           </h2>
           <p className="mt-5 text-lg leading-8 text-gray-600">
@@ -83,7 +83,7 @@ export default async function TopicPage({ params }: TopicParams) {
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {["레벨 진단", "개별 진도", "피드백 관리"].map((item) => (
               <div key={item} className="rounded-xl bg-[#fcf9f8] p-6">
-                <h3 className="text-xl font-black text-gray-950">{item}</h3>
+                <h3 className="text-xl font-extrabold text-gray-950">{item}</h3>
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   매일 확인할 수 있는 작은 단위로 학습 흐름을 설계합니다.
                 </p>

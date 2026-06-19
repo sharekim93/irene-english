@@ -18,7 +18,7 @@ export default function PageHero({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="mb-4 text-sm font-bold text-pink-600">{eyebrow}</p>
         <h1
-          className={`font-black leading-tight text-gray-950 ${titleClassName ?? "max-w-4xl text-4xl sm:text-5xl"}`}
+          className={`font-extrabold leading-tight text-gray-950 ${titleClassName ?? "max-w-4xl text-4xl sm:text-5xl"}`}
         >
           {title}
         </h1>

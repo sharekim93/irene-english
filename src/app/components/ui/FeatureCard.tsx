@@ -17,7 +17,7 @@ const FeatureCard = ({
         {feature.icon}
       </div>
       <hgroup>
-        <h3 className="mb-2 text-lg font-black leading-snug text-gray-950 sm:text-xl">
+        <h3 className="mb-2 text-lg font-extrabold leading-snug text-gray-950 sm:text-xl">
           {feature.title}
         </h3>
         <p className="whitespace-pre-wrap break-keep text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">

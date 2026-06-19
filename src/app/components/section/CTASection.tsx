@@ -10,17 +10,17 @@ const CTASection = () => {
   return (
     <section
       id="contact"
-      className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#b20b67_0%,#e94391_58%,#f973b4_100%)] px-5 py-24"
+      className="relative isolate overflow-hidden bg-[#e94391] px-5 py-24 sm:bg-[linear-gradient(135deg,#b20b67_0%,#e94391_58%,#f973b4_100%)]"
     >
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -right-24 -top-32 z-0 h-64 w-64 rounded-full bg-white/18 blur-3xl sm:-right-10"
+        className="pointer-events-none absolute -right-24 -top-32 z-0 hidden h-64 w-64 rounded-full bg-white/18 blur-3xl sm:-right-10 sm:block"
         animate={{ scale: [1, 1.12, 1] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-28 z-0 h-80 w-80 rounded-full bg-[#ffb0cb]/20 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 -left-28 z-0 hidden h-80 w-80 rounded-full bg-[#ffb0cb]/20 blur-3xl sm:block"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -38,7 +38,7 @@ const CTASection = () => {
               as="a"
               href={siteConfig.telHref}
               size="lg"
-              className="consult-cta-button bg-white px-8 text-base font-nanum-square-bold font-bold text-pink-600 shadow-lg shadow-pink-950/15 hover:bg-gray-100"
+              className="consult-cta-button bg-white px-8 text-base font-bold text-pink-600 shadow-lg shadow-pink-950/15 hover:bg-gray-100"
             >
               전화 상담하기
             </Button>
@@ -49,7 +49,7 @@ const CTASection = () => {
               target="_blank"
               rel="noopener noreferrer"
               size="lg"
-              className="consult-cta-button border border-white/70 bg-white px-8 text-base font-nanum-square-bold font-bold text-[#03c75a] shadow-lg shadow-pink-950/15 transition-colors hover:border-white hover:bg-[#f4fff9]"
+              className="consult-cta-button border border-white/70 bg-white px-8 text-base font-bold text-[#03c75a] shadow-lg shadow-pink-950/15 transition-colors hover:border-white hover:bg-[#f4fff9]"
             >
               <NaverBookingIcon className="h-7 w-7" />
               네이버 예약

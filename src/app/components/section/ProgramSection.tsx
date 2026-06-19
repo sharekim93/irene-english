@@ -22,10 +22,10 @@ const ProgramsSection = () => {
         <motion.div
           className="text-center mb-16"
         >
-          <p className="mb-3 text-sm font-nanum-square-bold font-bold text-pink-600">
+          <p className="mb-3 text-sm font-bold text-pink-600">
             PROGRAM
           </p>
-          <h2 className="text-3xl font-black text-gray-900 mb-4 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-4 sm:text-4xl">
             우리 아이 단계에 맞는 커리큘럼
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600">

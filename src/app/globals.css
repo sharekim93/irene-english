@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css");
 @import "tailwindcss";
 @plugin './hero.ts';
 
@@ -6,20 +7,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --app-font-pretendard: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-nanum-square: var(--font-nanum-square);
-  --font-nanum-square-bold: var(--font-nanum-square-bold);
+  --font-pretendard: var(--app-font-pretendard);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  @apply font-nanum-square;
+  font-family: var(--app-font-pretendard);
+  @apply font-pretendard;
 }
 
 html {
@@ -158,8 +160,8 @@ html {
   border-radius: 0.75rem;
   background: #fee500;
   color: #191919;
-  font-family: var(--font-nanum-square-bold);
-  font-weight: 900;
+  font-family: var(--app-font-pretendard);
+  font-weight: 800;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
@@ -204,9 +206,9 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: var(--font-nanum-square-bold);
+  font-family: var(--app-font-pretendard);
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1;
   white-space: nowrap;
 }
@@ -241,8 +243,8 @@ html {
   cursor: pointer;
   outline: none;
   padding: 0 0.875rem;
-  font-family: var(--font-nanum-square-bold);
-  font-weight: 900;
+  font-family: var(--app-font-pretendard);
+  font-weight: 800;
   box-shadow: none;
   transition:
     background-color 160ms ease,

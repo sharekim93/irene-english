@@ -36,14 +36,14 @@ export default function SentencesPage() {
 
       <section className="bg-white px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-gray-950">
+          <h2 className="text-3xl font-extrabold text-gray-950">
             정규 과정의 핵심 루틴
           </h2>
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {["단어", "듣기·읽기", "말하기·쓰기", "평가·피드백"].map(
               (item) => (
                 <div key={item} className="rounded-xl bg-[#fcf9f8] p-6">
-                  <h3 className="text-xl font-black text-gray-950">{item}</h3>
+                  <h3 className="text-xl font-extrabold text-gray-950">{item}</h3>
                   <p className="mt-3 text-sm leading-6 text-gray-600">
                     문장을 만드는 데 필요한 입력과 출력을 매일 짧게 반복합니다.
                   </p>
@@ -59,7 +59,7 @@ export default function SentencesPage() {
           {["Pre-level", "Basic", "Intermediate", "Advanced"].map((level) => (
             <div key={level} className="rounded-xl border border-sky-100 bg-white p-6">
               <p className="text-sm font-bold text-sky-600">LEVEL</p>
-              <h3 className="mt-3 text-2xl font-black text-gray-950">
+              <h3 className="mt-3 text-2xl font-extrabold text-gray-950">
                 {level}
               </h3>
               <p className="mt-3 text-sm leading-6 text-gray-600">
