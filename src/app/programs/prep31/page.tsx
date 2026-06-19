@@ -43,7 +43,7 @@ export default function Prep31Page() {
           </p>
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {["DK 원서", "문법", "어휘", "성취도 평가"].map((item) => (
-              <div key={item} className="rounded-xl bg-[#fcf9f8] p-6">
+              <div key={item} className="rounded-xl bg-surface-page p-6">
                 <h3 className="text-xl font-extrabold text-gray-950">{item}</h3>
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   읽고 이해한 내용을 다시 확인하며 중등 이후 학습 밀도에

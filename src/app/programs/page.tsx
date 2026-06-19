@@ -54,7 +54,7 @@ export default function ProgramsPage() {
             {roadmap.map((step, index) => (
               <div
                 key={step}
-                className="rounded-xl border border-pink-100 bg-[#fcf9f8] p-5 text-center"
+                className="rounded-xl border border-pink-100 bg-surface-page p-5 text-center"
               >
                 <p className="text-xs font-extrabold text-pink-600">
                   {String(index + 1).padStart(2, "0")}
@@ -68,7 +68,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
+      <section className="bg-surface-page px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <p className="text-sm font-bold text-pink-600">COMPARISON</p>

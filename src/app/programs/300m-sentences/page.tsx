@@ -42,7 +42,7 @@ export default function SentencesPage() {
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {["단어", "듣기·읽기", "말하기·쓰기", "평가·피드백"].map(
               (item) => (
-                <div key={item} className="rounded-xl bg-[#fcf9f8] p-6">
+                <div key={item} className="rounded-xl bg-surface-page p-6">
                   <h3 className="text-xl font-extrabold text-gray-950">{item}</h3>
                   <p className="mt-3 text-sm leading-6 text-gray-600">
                     문장을 만드는 데 필요한 입력과 출력을 매일 짧게 반복합니다.
@@ -54,7 +54,7 @@ export default function SentencesPage() {
         </div>
       </section>
 
-      <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
+      <section className="bg-surface-page px-5 py-20 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
           {["Pre-level", "Basic", "Intermediate", "Advanced"].map((level) => (
             <div key={level} className="rounded-xl border border-sky-100 bg-white p-6">

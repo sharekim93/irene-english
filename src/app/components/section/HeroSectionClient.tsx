@@ -3,19 +3,19 @@
 import { Button } from "@heroui/react";
 import { useEffect, useMemo, useState } from "react";
 import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
-import NaverBookingIcon from "@/app/components/ui/NaverBookingIcon";
+import NaverBookingButton from "@/app/components/ui/NaverBookingButton";
 import { siteConfig } from "@/config/site";
 import type { BlogPost } from "@/lib/blog/rss";
 
 const cardStates = [
   {
     className:
-      "z-30 translate-x-0 translate-y-0 scale-100 rotate-0 opacity-100 shadow-2xl shadow-pink-900/10",
+      "z-30 translate-x-0 translate-y-0 scale-100 rotate-0 opacity-100 shadow-lg shadow-pink-900/10",
     pointerClassName: "pointer-events-auto",
   },
   {
     className:
-      "z-20 translate-x-9 translate-y-3 scale-[0.94] rotate-6 opacity-80 shadow-xl shadow-pink-900/10",
+      "z-20 translate-x-9 translate-y-3 scale-[0.94] rotate-6 opacity-80 shadow-lg shadow-pink-900/10",
     pointerClassName: "pointer-events-none sm:pointer-events-auto",
   },
   {
@@ -76,14 +76,14 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
   }, [heroPosts.length]);
 
   return (
-    <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(233,67,145,0.13),transparent_34%),radial-gradient(circle_at_88%_78%,rgba(138,76,252,0.09),transparent_28%),linear-gradient(135deg,#fff,#fcf9f8_52%,#fff2f8)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
+    <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(233,67,145,0.13),transparent_34%),linear-gradient(135deg,#fff,var(--surface-page)_52%,#fff2f8)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div className="flex flex-col items-start">
           <h1 className="max-w-2xl break-keep font-extrabold leading-tight text-gray-950">
-            <span className="block whitespace-nowrap text-[clamp(1.08rem,5.05vw,1.95rem)] leading-[1.15] text-pink-600 sm:text-[2.1rem] lg:text-[2.35rem]">
+            <span className="block text-[1.55rem] leading-[1.16] text-pink-600 text-balance sm:text-[2.1rem] lg:text-[2.35rem]">
               영어를 잘 할 수밖에 없는 학습 시스템
             </span>
-            <span className="mt-2 block text-[1.05rem] leading-[1.35] text-gray-800 sm:text-[1.85rem] sm:leading-[1.2] lg:text-[2rem]">
+            <span className="mt-2 block text-[1.35rem] leading-[1.24] text-gray-800 text-balance sm:text-[1.85rem] lg:text-[2rem]">
               원장 직강 1:1 개별 맞춤 수업
             </span>
           </h1>
@@ -109,17 +109,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
               전화상담하기
             </Button>
             <KakaoConsultButton className="consult-cta-button" />
-            <Button
-              as="a"
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              className="consult-cta-button border border-[#03c75a]/45 bg-white px-8 text-base font-bold text-[#03c75a] shadow-lg shadow-[#03c75a]/15 transition-colors hover:border-[#03c75a] hover:bg-[#f4fff9]"
-            >
-              <NaverBookingIcon className="h-7 w-7" />
-              네이버 예약
-            </Button>
+            <NaverBookingButton className="consult-cta-button px-8 text-base shadow-md shadow-[#03c75a]/15" />
           </div>
         </div>
 
@@ -144,7 +134,7 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${post.title} 자세히 보기`}
-                className={`group absolute inset-x-0 top-6 flex min-h-[280px] origin-bottom flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-5 text-left no-underline backdrop-blur-xl transition-all duration-700 ease-out hover:border-pink-200 hover:bg-white sm:min-h-[310px] sm:p-7 ${state.className} ${state.pointerClassName}`}
+                className={`group absolute inset-x-0 top-6 flex min-h-[280px] origin-bottom flex-col rounded-[1.75rem] border border-pink-100/90 bg-white/95 p-5 text-left no-underline backdrop-blur-xl transition-[background-color,border-color,box-shadow,opacity,transform] duration-500 ease-out hover:border-pink-200 hover:bg-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300/35 sm:min-h-[310px] sm:p-7 ${state.className} ${state.pointerClassName}`}
               >
                 <div className="flex items-center justify-between gap-3">
                   <span className="inline-flex h-8 max-w-[62%] items-center rounded-full border border-pink-200 bg-pink-50 px-3 text-xs font-extrabold text-pink-700">
@@ -173,11 +163,8 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
                 </div>
 
                 <div className="mt-6 flex justify-end">
-                  <span
-                    aria-hidden="true"
-                    className="inline-flex h-11 w-fit items-center justify-center rounded-full bg-pink-600 px-5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition group-hover:bg-pink-700"
-                  >
-                    자세히 보기
+                  <span className="inline-flex h-11 w-fit items-center justify-center rounded-full bg-pink-600 px-5 text-sm font-bold text-white shadow-md shadow-pink-500/15 transition-colors group-hover:bg-pink-700">
+                    글 자세히 보기
                   </span>
                 </div>
               </a>

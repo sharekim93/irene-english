@@ -3,14 +3,14 @@
 import { motion } from "motion/react";
 import { Button } from "@heroui/react";
 import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
-import NaverBookingIcon from "@/app/components/ui/NaverBookingIcon";
+import NaverBookingButton from "@/app/components/ui/NaverBookingButton";
 import { siteConfig } from "@/config/site";
 
 const CTASection = () => {
   return (
     <section
       id="contact"
-      className="relative isolate overflow-hidden bg-[#e94391] px-5 py-24 sm:bg-[linear-gradient(135deg,#b20b67_0%,#e94391_58%,#f973b4_100%)]"
+      className="relative isolate overflow-hidden bg-brand px-5 py-24 sm:bg-[linear-gradient(135deg,var(--brand-deep)_0%,var(--brand)_58%,#f973b4_100%)]"
     >
       <motion.div
         aria-hidden
@@ -20,7 +20,7 @@ const CTASection = () => {
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-28 z-0 hidden h-80 w-80 rounded-full bg-[#ffb0cb]/20 blur-3xl sm:block"
+        className="pointer-events-none absolute -bottom-40 -left-28 z-0 hidden h-80 w-80 rounded-full bg-brand-soft/20 blur-3xl sm:block"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -43,17 +43,7 @@ const CTASection = () => {
               전화 상담하기
             </Button>
             <KakaoConsultButton className="consult-cta-button" tone="dark" />
-            <Button
-              as="a"
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
-              className="consult-cta-button border border-white/70 bg-white px-8 text-base font-bold text-[#03c75a] shadow-lg shadow-pink-950/15 transition-colors hover:border-white hover:bg-[#f4fff9]"
-            >
-              <NaverBookingIcon className="h-7 w-7" />
-              네이버 예약
-            </Button>
+            <NaverBookingButton className="consult-cta-button border-white/70 px-8 text-base shadow-md shadow-pink-950/10 hover:border-white" />
           </div>
         </motion.div>
       </div>

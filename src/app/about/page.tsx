@@ -55,7 +55,7 @@ export default function AboutPage() {
             {philosophy.map((item) => (
               <div
                 key={item}
-                className="rounded-xl border border-pink-100 bg-[#fcf9f8] p-6"
+                className="rounded-xl border border-pink-100 bg-surface-page p-6"
               >
                 <p className="text-lg font-extrabold leading-7 text-gray-900">
                   {item}
@@ -66,7 +66,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
+      <section className="bg-surface-page px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-950">수업 흐름</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-4">

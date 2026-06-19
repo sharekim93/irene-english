@@ -8,7 +8,7 @@ const ProgramsSection = () => {
   return (
     <section
       id="programs"
-      className="relative overflow-hidden bg-[#fffdf7] px-5 py-24 sm:px-8"
+      className="relative overflow-hidden bg-surface-cream px-5 py-24 sm:px-8"
     >
       <div
         aria-hidden

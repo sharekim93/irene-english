@@ -49,7 +49,7 @@ export default function HeyHazelPage() {
         </div>
       </section>
 
-      <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
+      <section className="bg-surface-page px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="break-keep text-2xl font-extrabold leading-snug text-gray-950 sm:text-3xl">
             Hazel 이후에는 Pre-level로 자연스럽게 이어집니다

@@ -23,7 +23,7 @@ const CarouselSection = () => {
     // adaptiveHeight: true,
   };
   return (
-    <section className="overflow-hidden bg-[#ff89bc] px-5 py-16">
+    <section className="overflow-hidden bg-brand-bright px-5 py-16">
       <motion.div
         className="slider-container mx-auto flex max-w-5xl items-center justify-center"
         initial={{ opacity: 0, y: 54, scale: 0.97 }}
@@ -34,7 +34,7 @@ const CarouselSection = () => {
         <Slider {...settings} className="w-full">
           <div className="flex items-center justify-center">
             <Image
-              className="mx-auto w-full max-w-xl rounded-3xl shadow-2xl shadow-pink-950/20"
+              className="mx-auto w-full max-w-xl rounded-3xl shadow-lg shadow-pink-950/10"
               src={promotion1}
               alt="삼성영어 셀레나 아이린 석성 프로모션 안내"
               width={1920}
@@ -43,7 +43,7 @@ const CarouselSection = () => {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              className="mx-auto w-full max-w-xl rounded-3xl shadow-2xl shadow-pink-950/20"
+              className="mx-auto w-full max-w-xl rounded-3xl shadow-lg shadow-pink-950/10"
               src={promotion2}
               alt="삼성영어 셀레나 아이린 석성 수업 안내"
               width={1920}

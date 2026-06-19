@@ -38,7 +38,7 @@ export default function FaqPage() {
           {categories.map((category) => (
             <div key={category} className="mb-12 last:mb-0">
               <h2 className="text-2xl font-extrabold text-gray-950">{category}</h2>
-              <div className="mt-5 divide-y divide-gray-100 rounded-xl border border-gray-100 bg-[#fcf9f8]">
+              <div className="mt-5 divide-y divide-gray-100 rounded-xl border border-gray-100 bg-surface-page">
                 {faqItems
                   .filter((item) => item.category === category)
                   .map((item) => (

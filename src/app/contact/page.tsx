@@ -5,7 +5,7 @@ import PageHero from "@/app/components/layout/PageHero";
 import SiteFrame from "@/app/components/layout/SiteFrame";
 import Location from "@/app/components/section/Location";
 import KakaoConsultButton from "@/app/components/ui/KakaoConsultButton";
-import NaverBookingIcon from "@/app/components/ui/NaverBookingIcon";
+import NaverBookingButton from "@/app/components/ui/NaverBookingButton";
 import { siteConfig } from "@/config/site";
 import { breadcrumbJsonLd, organizationJsonLd } from "@/lib/seo";
 
@@ -40,15 +40,11 @@ export default function ContactPage() {
             전화상담하기
           </a>
           <KakaoConsultButton className="consult-cta-button" />
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="consult-cta-button inline-flex items-center justify-center gap-2 rounded-xl border border-[#03c75a] bg-[#03c75a] px-8 text-base font-bold text-white shadow-lg shadow-[#03c75a]/25 transition-colors hover:border-[#02b350] hover:bg-[#02b350]"
-          >
-            <NaverBookingIcon className="h-5 w-5 [&_path:first-of-type]:fill-[#03c75a] [&_path:last-of-type]:fill-none [&_path:last-of-type]:stroke-[#03c75a] [&_rect]:fill-white" />
-            네이버 예약
-          </a>
+          <NaverBookingButton
+            tone="solid"
+            className="consult-cta-button rounded-xl px-8 text-base shadow-md shadow-[#03c75a]/20"
+            iconClassName="h-5 w-5"
+          />
         </div>
       </PageHero>
 

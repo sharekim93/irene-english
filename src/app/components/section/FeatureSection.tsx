@@ -5,7 +5,7 @@ import FeatureCard from "../ui/FeatureCard";
 import Image from "next/image";
 import selenaStarIcon from "@/images/quick03.png";
 
-const featureIconClass = "h-11 w-11 text-[#b20b67]";
+const featureIconClass = "h-11 w-11 text-brand-deep";
 
 const LibraryIcon = () => (
   <svg
@@ -65,7 +65,7 @@ const WritingIcon = () => (
   >
     <path d="M12 8.5h18.5L38 16v23.5H12v-31Z" strokeWidth="2" />
     <path d="M30.5 8.5V16H38" strokeWidth="2" />
-    <path d="M18 24h10M18 30h7" strokeWidth="1.8" className="text-[#8b7078]" />
+    <path d="M18 24h10M18 30h7" strokeWidth="1.8" className="text-text-muted-brand" />
     <path
       d="m26.5 36 9.8-9.8a3 3 0 0 1 4.2 4.2l-9.8 9.8-5.5 1.4 1.3-5.6Z"
       strokeWidth="2"
@@ -108,7 +108,7 @@ const FeaturesSection = () => {
   return (
     <section
       id="features"
-      className="relative isolate overflow-hidden bg-[#fcf9f8] px-5 py-24 sm:px-8"
+      className="relative isolate overflow-hidden bg-surface-page px-5 py-24 sm:px-8"
     >
       <motion.div
         aria-hidden

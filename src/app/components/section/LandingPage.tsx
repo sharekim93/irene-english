@@ -19,12 +19,12 @@ const LandingPage = ({ onNavigateToHome }: LandingPageProps) => {
 
       <main className="w-full max-w-md relative z-10 flex flex-col items-center">
         <div
-          className={`${styles.glassCard} p-10 rounded-2xl shadow-2xl text-center w-full transform transition-all duration-500 hover:shadow-pink-200/50`}
+          className={`${styles.glassCard} p-10 rounded-2xl shadow-lg shadow-pink-900/10 text-center w-full transform transition-shadow duration-300 hover:shadow-pink-200/40`}
         >
           {/* 프로필 영역 */}
           <div className="mb-8 flex flex-col items-center">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full blur-xl transition-all flex items-center justify-center " />
+              <div className="absolute inset-0 rounded-full blur-xl transition-opacity flex items-center justify-center " />
                 <Image
                   src={logoImage}
                   alt="삼성영어 셀레나 로고"
@@ -41,14 +41,14 @@ const LandingPage = ({ onNavigateToHome }: LandingPageProps) => {
               href={BLOG_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${styles.glowPulse} group flex items-center justify-center gap-3 w-full py-4 bg-pink-500 text-white font-bold rounded-xl shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:-translate-y-0.5 transition-all duration-300`}
+              className={`${styles.glowPulse} group flex items-center justify-center gap-3 w-full py-4 bg-pink-500 text-white font-bold rounded-xl shadow-md shadow-pink-500/25 hover:shadow-pink-500/35 hover:-translate-y-0.5 transition-[background-color,box-shadow,transform] duration-300`}
             >
               <span className="text-lg">블로그로 이동</span>
             </a>
             <button
               type="button"
               onClick={onNavigateToHome}
-              className="group flex items-center justify-center gap-3 w-full py-4 bg-white text-zinc-700 font-bold rounded-xl border-2 border-pink-100 hover:border-pink-500 hover:bg-pink-50 transition-all duration-300"
+              className="group flex items-center justify-center gap-3 w-full py-4 bg-white text-zinc-700 font-bold rounded-xl border-2 border-pink-100 hover:border-pink-500 hover:bg-pink-50 transition-colors duration-300"
             >
               <span className="text-lg">홈페이지로 이동</span>
             </button>

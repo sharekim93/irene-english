@@ -93,7 +93,7 @@ const Location = () => {
         </motion.div>
 
         <motion.div
-          className="grid overflow-hidden rounded-2xl border border-pink-100 bg-[#fcf9f8] shadow-2xl shadow-pink-900/10 lg:grid-cols-[1fr_0.9fr]"
+          className="grid overflow-hidden rounded-2xl border border-pink-100 bg-surface-page shadow-lg shadow-pink-900/10 lg:grid-cols-[1fr_0.9fr]"
         >
           {naverClientId ? (
             <NaverMapCard clientId={naverClientId} />

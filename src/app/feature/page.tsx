@@ -57,7 +57,7 @@ export default function FeaturePage() {
           {features.map((feature) => (
             <article
               key={feature.title}
-              className="rounded-xl border border-pink-100 bg-[#fcf9f8] p-7"
+              className="rounded-xl border border-pink-100 bg-surface-page p-7"
             >
               <h2 className="text-2xl font-extrabold text-gray-950">
                 {feature.title}

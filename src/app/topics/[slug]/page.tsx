@@ -82,7 +82,7 @@ export default async function TopicPage({ params }: TopicParams) {
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {["레벨 진단", "개별 진도", "피드백 관리"].map((item) => (
-              <div key={item} className="rounded-xl bg-[#fcf9f8] p-6">
+              <div key={item} className="rounded-xl bg-surface-page p-6">
                 <h3 className="text-xl font-extrabold text-gray-950">{item}</h3>
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   매일 확인할 수 있는 작은 단위로 학습 흐름을 설계합니다.

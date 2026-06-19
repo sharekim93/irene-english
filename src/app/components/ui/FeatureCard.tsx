@@ -10,7 +10,7 @@ const FeatureCard = ({
 }) => {
   return (
     <motion.div
-      className="flex min-h-36 flex-col gap-4 rounded-3xl border border-white/80 bg-white/75 p-5 text-left shadow-xl shadow-pink-900/5 backdrop-blur sm:flex-row sm:gap-6 sm:p-6"
+      className="flex min-h-36 flex-col gap-4 rounded-3xl border border-white/80 bg-white/75 p-5 text-left shadow-lg shadow-pink-900/5 backdrop-blur sm:flex-row sm:gap-6 sm:p-6"
       whileHover={{ y: -8, scale: 1.02 }}
     >
       <div className="flex h-16 w-16 flex-none items-center justify-center rounded-2xl bg-pink-50 text-5xl sm:h-20 sm:w-20 sm:rounded-3xl sm:text-6xl">

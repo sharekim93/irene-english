@@ -21,7 +21,7 @@ import { navItems, siteConfig } from "@/config/site";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const contactButtonClass =
-    "contact-cta-button h-11 min-h-11 gap-2.5 rounded-[18px] bg-[#e94391] px-4 font-extrabold text-white shadow-none transition data-[hover=true]:bg-[#d92d7f] data-[hover=true]:opacity-100";
+    "contact-cta-button h-11 min-h-11 gap-2.5 rounded-[18px] bg-brand px-4 font-extrabold text-white shadow-none transition data-[hover=true]:bg-brand-hover data-[hover=true]:opacity-100";
 
   const ContactButton = ({
     className = "",
@@ -39,7 +39,7 @@ const Header = () => {
       >
         <span
           aria-hidden="true"
-          className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/95 text-sm text-[#e94391] shadow-inner shadow-pink-200"
+          className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/95 text-sm text-brand shadow-inner shadow-pink-200"
         >
           📞
         </span>
@@ -92,7 +92,7 @@ const Header = () => {
       {/* Mobile Menu Toggle */}
       <NavbarContent>
         <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
           className="h-11 w-11 min-w-11 rounded-full text-pink-600 lg:hidden"
         />
 
@@ -118,7 +118,7 @@ const Header = () => {
             <Link
               href={item.href}
               className={`
-                text-base font-bold transition-all duration-200 hover:scale-105
+                text-base font-bold transition-[color,transform] duration-200 hover:scale-[1.03]
                 ${
                   item.highlight
                     ? "text-pink-600 hover:text-pink-700"
@@ -169,7 +169,7 @@ const Header = () => {
                 <Link
                   href={item.href}
                   className={`
-                    text-lg font-medium w-full block py-3 px-4 rounded-lg transition-all
+                    text-lg font-medium w-full block py-3 px-4 rounded-lg transition-colors
                     ${
                       item.highlight
                         ? "text-pink-600 bg-pink-50 border border-pink-200"

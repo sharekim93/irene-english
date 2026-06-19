@@ -169,3 +169,22 @@ Small, fully rounded elements. Use Secondary Pink backgrounds with Primary Pink 
 
 ### Progress Bars
 Thick (12px+) pill-shaped tracks. The "filled" portion should use the Primary Pink color, potentially with a subtle horizontal gradient to indicate movement/progress.
+
+## StyleSeed Operating Rules for Future UI Work
+
+Source: https://styleseed-demo.vercel.app/llms.txt and the linked full context at https://styleseed-demo.vercel.app/llms-full.txt.
+
+Apply these rules whenever Codex creates or changes UI in this project. They should refine the existing Luminous Learning direction, not replace it.
+
+- Use one primary accent family. Irene English's accent is Electric Pink; violet may stay as a tertiary supporting tone, and Kakao/Naver colors are allowed only for their branded actions.
+- Prefer semantic project tokens, shared classes, and HeroUI variants over one-off component styling. Avoid hardcoded hex values in React components except for required third-party brand colors.
+- Avoid pure black and heavy elevation. Text should use the existing charcoal/foreground scale, and shadows should stay soft enough to feel like ambient depth rather than decoration.
+- Keep typography explicit and context-driven. Use stable text sizes for headings, body, labels, buttons, dates, and metrics; avoid viewport-scaled text unless a responsive hero lockup truly needs it and has been visually checked.
+- Keep spacing rhythmic. Use the project 8px scale, 24px gutters, and generous section spacing; do not introduce arbitrary near-miss values for page padding or card gaps.
+- Use cards and contained surfaces for grouped information, repeated items, forms, and CTAs. Do not turn whole page sections into nested decorative cards; section rhythm should come from layout, contrast, and content hierarchy.
+- Do not repeat the same section composition back-to-back. Alternate dense lists, editorial text, proof points, CTAs, media, and location/contact surfaces to create scan rhythm.
+- Make every interactive target at least 44x44px. Buttons must have clear hover/focus states, and focus-visible treatment must be obvious enough for keyboard users.
+- Use calm, human Korean UX writing. Button labels should name the action, errors should explain the fix, empty states should invite the next step, and one concept should keep one name across the site.
+- Every UI state needs a designed state: loading, empty, error, success, disabled, hover, focus, and mobile wrapping where relevant.
+- Use motion intentionally and consistently. Prefer subtle Spring/Silk/Snap-style movement; avoid generic fades, overactive glow effects, or motion that slows the user's task.
+- Before calling UI work done, review against StyleSeed's visual/verbal judgment: accent discipline, hierarchy, spacing, radius/shadow coherence, text fit, accessibility, and Korean copy quality.
