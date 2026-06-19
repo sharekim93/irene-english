@@ -79,14 +79,14 @@ export default function HeroSectionClient({ posts }: HeroSectionClientProps) {
     <section className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(233,67,145,0.13),transparent_34%),radial-gradient(circle_at_88%_78%,rgba(138,76,252,0.09),transparent_28%),linear-gradient(135deg,#fff,#fcf9f8_52%,#fff2f8)] px-5 py-14 sm:px-8 sm:py-16 lg:px-12">
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div className="flex flex-col items-start">
-          <h1 className="max-w-2xl break-keep text-[1.65rem] font-black leading-[1.6] text-gray-950 sm:text-[2.1rem] lg:text-[2.35rem]">
+          <h1 className="max-w-2xl break-keep text-[1.45rem] font-black leading-[1.35] text-gray-950 sm:text-[2.1rem] sm:leading-[1.2] lg:text-[2.35rem]">
             <span className="block text-pink-600">
               영어를 잘 할 수밖에 없는 학습 시스템
             </span>
             <span className="block"></span>
             <span className="block">원장 직강 1:1 개별 맞춤 수업</span>
           </h1>
-          <p className="mt-5 max-w-2xl break-keep text-base leading-8 text-gray-600 sm:text-lg">
+          <p className="mt-5 max-w-2xl break-keep text-[0.95rem] leading-7 text-gray-600 sm:text-lg sm:leading-8">
             파닉스부터 수능 1등급 완성까지 아이의 현재 실력을 정확하게 진단하고
             <br />
             매일 하루 한 시간 영어 실력을 확실하게 쌓아갑니다

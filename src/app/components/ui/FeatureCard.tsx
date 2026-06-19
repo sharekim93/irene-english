@@ -10,17 +10,17 @@ const FeatureCard = ({
 }) => {
   return (
     <motion.div
-      className="flex min-h-36 gap-6 rounded-3xl border border-white/80 bg-white/75 p-6 text-left shadow-xl shadow-pink-900/5 backdrop-blur"
+      className="flex min-h-36 flex-col gap-4 rounded-3xl border border-white/80 bg-white/75 p-5 text-left shadow-xl shadow-pink-900/5 backdrop-blur sm:flex-row sm:gap-6 sm:p-6"
       whileHover={{ y: -8, scale: 1.02 }}
     >
-      <div className="flex h-20 w-20 flex-none items-center justify-center rounded-3xl bg-pink-50 text-6xl">
+      <div className="flex h-16 w-16 flex-none items-center justify-center rounded-2xl bg-pink-50 text-5xl sm:h-20 sm:w-20 sm:rounded-3xl sm:text-6xl">
         {feature.icon}
       </div>
       <hgroup>
-        <h3 className="mb-2 text-xl font-black text-gray-950">
+        <h3 className="mb-2 text-lg font-black leading-snug text-gray-950 sm:text-xl">
           {feature.title}
         </h3>
-        <p className="whitespace-pre-wrap break-keep leading-7 text-gray-600">
+        <p className="whitespace-pre-wrap break-keep text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
           {feature.description}
         </p>
       </hgroup>

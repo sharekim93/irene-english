@@ -27,10 +27,10 @@ const CTASection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
         >
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="mb-6 break-keep text-[1.75rem] font-bold leading-tight text-white sm:text-4xl">
             매일 달라지는 아이의 영어실력을 확인해보세요!
           </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-white sm:text-xl">
             {siteConfig.phone}
           </p>
           <div className="consult-cta-group">

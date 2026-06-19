@@ -71,13 +71,13 @@ export default function BlogCard({ post }: { post: BlogPost }) {
         </time>
         <h3
           itemProp="headline"
-          className="mt-3 text-xl font-black leading-snug text-gray-950"
+          className="mt-3 line-clamp-3 break-keep text-lg font-black leading-snug text-gray-950 sm:text-xl"
         >
           {post.title}
         </h3>
         <p
           itemProp="description"
-          className="mt-3 flex-1 text-sm leading-6 text-gray-600"
+          className="mt-3 line-clamp-4 flex-1 break-keep text-sm leading-6 text-gray-600"
         >
           {post.summary}
         </p>
