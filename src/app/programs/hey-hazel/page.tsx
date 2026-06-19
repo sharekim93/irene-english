@@ -51,10 +51,10 @@ export default function HeyHazelPage() {
 
       <section className="bg-[#fcf9f8] px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-950">
+          <h2 className="break-keep text-2xl font-extrabold leading-snug text-gray-950 sm:text-3xl">
             Hazel 이후에는 Pre-level로 자연스럽게 이어집니다
           </h2>
-          <p className="mt-5 text-lg leading-8 text-gray-600">
+          <p className="mt-5 break-keep text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
             영어를 처음 배우는 아이에게 중요한 것은 빠른 진도보다 긍정적인
             첫 경험입니다. 짧은 표현을 듣고 따라 말하고, 놀이 활동 속에서
             반복하며, 이후 삼성영어셀레나 정규 과정으로 넘어갈 수 있는 기초를

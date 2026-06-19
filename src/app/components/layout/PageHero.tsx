@@ -18,12 +18,12 @@ export default function PageHero({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="mb-4 text-sm font-bold text-pink-600">{eyebrow}</p>
         <h1
-          className={`font-extrabold leading-tight text-gray-950 ${titleClassName ?? "max-w-4xl text-4xl sm:text-5xl"}`}
+          className={`break-keep font-extrabold leading-[1.18] text-gray-950 sm:leading-tight ${titleClassName ?? "max-w-4xl text-[2rem] sm:text-5xl"}`}
         >
           {title}
         </h1>
         <p
-          className={`mt-6 text-gray-600 ${descriptionClassName ?? "max-w-3xl whitespace-pre-line text-lg leading-8"}`}
+          className={`mt-6 break-keep text-gray-600 ${descriptionClassName ?? "max-w-3xl whitespace-pre-line text-base leading-7 sm:text-lg sm:leading-8"}`}
         >
           {description}
         </p>
