@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useMotionValue } from "motion/react";
+import { motion } from "motion/react";
 import {
   Navbar,
   NavbarBrand,
@@ -51,71 +51,34 @@ const Header = () => {
     </div>
   );
 
-  const MobileSlideContact = ({
+  const MobileContactButton = ({
     className = "",
     fullWidth = false,
-    onComplete,
+    onClick,
   }: {
     className?: string;
     fullWidth?: boolean;
-    onComplete?: () => void;
-  }) => {
-    const trackRef = React.useRef<HTMLDivElement>(null);
-    const dragX = useMotionValue(0);
-
-    const completeSlide = React.useCallback(() => {
-      onComplete?.();
-      window.location.href = siteConfig.telHref;
-    }, [onComplete]);
-
-    const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: { offset: { x: number }; velocity: { x: number } }) => {
-      const trackWidth = trackRef.current?.offsetWidth ?? 0;
-      const threshold = fullWidth ? trackWidth * 0.48 : trackWidth * 0.34;
-
-      if (info.offset.x >= threshold || info.velocity.x > 650) {
-        completeSlide();
-        return;
-      }
-
-      dragX.set(0);
-    };
-
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        completeSlide();
-      }
-    };
-
-    return (
-      <div
-        ref={trackRef}
-        className={`contact-ripple-anchor mobile-slide-contact ${
-          fullWidth ? "mobile-slide-contact-full" : ""
-        } ${className}`}
-        role="link"
-        tabIndex={0}
-        aria-label={`밀어서 전화 상담 ${siteConfig.phone}`}
-        onKeyDown={handleKeyDown}
+    onClick?: () => void;
+  }) => (
+    <div className={`contact-ripple-anchor ${className}`}>
+      <Button
+        as="a"
+        href={siteConfig.telHref}
+        size={fullWidth ? "lg" : "md"}
+        radius="lg"
+        className={`mobile-touch-contact ${
+          fullWidth ? "mobile-touch-contact-full" : ""
+        }`}
+        aria-label={`전화 상담 ${siteConfig.phone}`}
+        onClick={onClick}
       >
-        <span className="mobile-slide-label">
-          {fullWidth ? "밀어서 상담하기" : "상담"}
-        </span>
-        <motion.span
-          drag="x"
-          dragConstraints={trackRef}
-          dragElastic={0.02}
-          dragMomentum={false}
-          onDragEnd={handleDragEnd}
-          style={{ x: dragX }}
-          className="mobile-slide-thumb"
-          aria-hidden="true"
-        >
+        <span aria-hidden="true" className="mobile-touch-icon">
           📞
-        </motion.span>
-      </div>
-    );
-  };
+        </span>
+        <span className="mobile-touch-label">전화상담</span>
+      </Button>
+    </div>
+  );
 
   return (
     <Navbar
@@ -188,7 +151,7 @@ const Header = () => {
 
         {/* Mobile Contact Button */}
         <NavbarItem className="md:hidden">
-          <MobileSlideContact />
+          <MobileContactButton />
         </NavbarItem>
       </NavbarContent>
 
@@ -236,10 +199,10 @@ const Header = () => {
           {/* Mobile Contact Section */}
           <div className="mt-6 border-t border-gray-200 pt-6">
             <div className="flex flex-col items-start gap-3">
-              <MobileSlideContact
+              <MobileContactButton
                 className="w-full"
                 fullWidth
-                onComplete={() => setIsMenuOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               />
               <p className="px-1 text-xs font-medium text-gray-500">
                 평일 {siteConfig.openingHoursText}
