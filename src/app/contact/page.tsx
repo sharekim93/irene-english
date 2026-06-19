@@ -32,7 +32,7 @@ export default function ContactPage() {
         description="석성초, 초당초, 동백역 생활권에서 방문하기 좋은 어은목마을 벽산 블루밍 아파트 상가동 105호에 있습니다."
         descriptionClassName="max-w-4xl whitespace-pre-line text-base leading-7 sm:text-lg sm:leading-8"
       >
-        <div className="consult-cta-group sm:justify-start">
+        <div className="consult-cta-group !items-start !justify-start">
           <a
             href={siteConfig.telHref}
             className="consult-cta-button inline-flex items-center justify-center rounded-xl bg-pink-600 px-8 text-base font-bold text-white shadow-lg shadow-pink-500/25 transition-colors hover:bg-pink-700"
