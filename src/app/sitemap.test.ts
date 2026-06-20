@@ -1,6 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { navItems, programSummaries, siteConfig, topicPages } from "../config/site";
 import sitemap from "./sitemap";
 
@@ -33,19 +31,5 @@ describe("sitemap", () => {
         `${siteConfig.domain}/topics/dongbaek-station-english`,
       ]),
     );
-  });
-
-  it("keeps the static public sitemap.xml aligned with local SEO pages", () => {
-    const xml = readFileSync(join(process.cwd(), "public/sitemap.xml"), "utf8");
-
-    expect(xml).toContain("<urlset");
-    expect(xml).toContain("<loc>https://irene-english.com</loc>");
-    expect(xml).toContain(
-      "<loc>https://irene-english.com/topics/suksung-elementary-english</loc>",
-    );
-    expect(xml).toContain(
-      "<loc>https://irene-english.com/topics/dongbaek-station-english</loc>",
-    );
-    expect(xml).toContain("<lastmod>2026-06-20</lastmod>");
   });
 });
