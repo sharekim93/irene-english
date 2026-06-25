@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PageHero Text Slider Mockups</title>
+    <style>
+      :root {
+        --surface: #fcf9f8;
+        --surface-lowest: #ffffff;
+        --surface-low: #f6f3f2;
+        --surface-mid: #f0eded;
+        --surface-high: #eae7e7;
+        --on-surface: #1c1b1b;
+        --on-surface-variant: #584048;
+        --outline: #8b7078;
+        --outline-variant: #dfbec7;
+        --primary: #e94391;
+        --primary-deep: #b20b67;
+        --primary-soft: #ffb0cb;
+        --primary-fixed: #ffd9e4;
+        --shadow-soft: 0 18px 48px rgba(233, 67, 145, 0.08);
+        --shadow-button: 0 12px 28px rgba(233, 67, 145, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--surface);
+        color: var(--on-surface);
+        font-family:
+          Pretendard,
+          "Plus Jakarta Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          system-ui,
+          sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        word-break: keep-all;
+      }
+
+      .page {
+        padding: 32px 20px 64px;
+      }
+
+      .intro,
+      .mockup,
+      .notes {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .intro {
+        margin-bottom: 32px;
+      }
+
+      .intro h1 {
+        margin: 0;
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 850;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+      }
+
+      .intro p {
+        max-width: 760px;
+        margin: 10px 0 0;
+        color: var(--on-surface-variant);
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .mockup {
+        margin-bottom: 56px;
+      }
+
+      .mockup-label {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      .mockup-label h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.25;
+      }
+
+      .mockup-label p {
+        max-width: 540px;
+        margin: 0;
+        color: var(--on-surface-variant);
+        font-size: 14px;
+        line-height: 1.55;
+        text-align: right;
+      }
+
+      .hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: 560px;
+        border: 1px solid var(--outline-variant);
+        border-radius: 32px;
+        background: var(--surface-low);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 24px 24px auto auto;
+        z-index: -1;
+        width: min(40vw, 430px);
+        height: min(40vw, 430px);
+        border-radius: 999px;
+        background: var(--primary-fixed);
+        opacity: 0.72;
+      }
+
+      .hero-grid {
+        display: grid;
+        min-height: inherit;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+        gap: 32px;
+        align-items: center;
+        padding: clamp(28px, 5vw, 64px);
+      }
+
+      .text-area {
+        max-width: 780px;
+      }
+
+      .eyebrow {
+        margin: 0 0 16px;
+        color: var(--primary-deep);
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-title {
+        margin: 0;
+        color: var(--on-surface);
+        font-size: clamp(34px, 5.2vw, 60px);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-copy {
+        max-width: 660px;
+        margin: 22px 0 0;
+        color: var(--on-surface-variant);
+        font-size: clamp(16px, 1.8vw, 19px);
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0 26px;
+        font-size: 15px;
+        font-weight: 850;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .button.primary {
+        background: var(--primary);
+        color: #ffffff;
+        box-shadow: var(--shadow-button);
+      }
+
+      .button.secondary {
+        border: 1px solid var(--outline-variant);
+        background: var(--surface-lowest);
+        color: var(--primary-deep);
+      }
+
+      .button.secondary.brand-filled {
+        border-color: var(--primary-deep);
+        background: var(--primary-deep);
+        color: #ffffff;
+        box-shadow: 0 12px 28px rgba(178, 11, 103, 0.16);
+      }
+
+      .mascot {
+        position: relative;
+        align-self: end;
+        justify-self: center;
+        width: min(100%, 340px);
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .mascot-plate {
+        display: none;
+      }
+
+      .mascot img {
+        width: min(100%, 286px);
+        height: auto;
+        margin: -6px auto 0;
+        object-fit: contain;
+      }
+
+      .slider-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--outline-variant);
+      }
+
+      .dot.active {
+        width: 36px;
+        background: var(--primary);
+      }
+
+      .arrow {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--outline-variant);
+        border-radius: 999px;
+        background: var(--surface-lowest);
+        color: var(--primary-deep);
+        font-size: 20px;
+        font-weight: 850;
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .pill {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+        border-radius: 999px;
+        background: var(--primary-fixed);
+        padding: 0 14px;
+        color: var(--primary-deep);
+        font-size: 13px;
+        font-weight: 850;
+      }
+
+      .slide-card {
+        margin-top: 30px;
+        border: 1px solid var(--outline-variant);
+        border-radius: 24px;
+        background: var(--surface-lowest);
+        padding: 22px;
+      }
+
+      .slide-card span {
+        color: var(--primary-deep);
+        font-size: 13px;
+        font-weight: 850;
+      }
+
+      .slide-card strong {
+        display: block;
+        margin-top: 10px;
+        color: var(--on-surface);
+        font-size: 23px;
+        line-height: 1.34;
+      }
+
+      .slide-card p {
+        margin: 10px 0 0;
+        color: var(--on-surface-variant);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .deck {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .deck-item {
+        min-height: 128px;
+        border: 1px solid var(--outline-variant);
+        border-radius: 22px;
+        background: var(--surface-lowest);
+        padding: 18px;
+      }
+
+      .deck-item.is-active {
+        border-color: var(--primary-soft);
+        background: #fff7fb;
+      }
+
+      .deck-item span {
+        color: var(--primary-deep);
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      .deck-item strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 17px;
+        line-height: 1.35;
+      }
+
+      .deck-item p {
+        margin: 8px 0 0;
+        color: var(--on-surface-variant);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .hero-a .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
+      }
+
+      .hero-a {
+        min-height: 500px;
+        background: var(--surface);
+      }
+
+      .hero-a .text-area {
+        max-width: 720px;
+      }
+
+      .hero-a .hero-title {
+        white-space: nowrap;
+        font-size: 42px;
+      }
+
+      .hero-b {
+        background: var(--surface-lowest);
+      }
+
+      .hero-b .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
+        align-items: end;
+      }
+
+      .hero-b .text-area {
+        align-self: center;
+      }
+
+      .hero-b .slide-card {
+        max-width: 680px;
+      }
+
+      .hero-c {
+        min-height: 500px;
+        background: var(--surface-mid);
+      }
+
+      .hero-c .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(230px, 290px);
+        padding-top: 48px;
+        padding-bottom: 28px;
+      }
+
+      .hero-c .hero-title {
+        max-width: 740px;
+        font-size: clamp(32px, 4.6vw, 52px);
+      }
+
+      .hero-c .footer-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 36px;
+        border-top: 1px solid var(--outline-variant);
+        padding-top: 18px;
+      }
+
+      .notes {
+        border: 1px solid var(--outline-variant);
+        border-radius: 28px;
+        background: var(--surface-lowest);
+        padding: 24px;
+      }
+
+      .notes h2 {
+        margin: 0 0 12px;
+      }
+
+      .notes ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--on-surface-variant);
+        line-height: 1.75;
+      }
+
+      @media (max-width: 860px) {
+        .mockup-label {
+          display: block;
+        }
+
+        .mockup-label p {
+          margin-top: 8px;
+          text-align: left;
+        }
+
+        .hero {
+          min-height: auto;
+          border-radius: 26px;
+        }
+
+        .hero::before {
+          inset: auto -80px 120px auto;
+          width: 260px;
+          height: 260px;
+        }
+
+        .hero-grid,
+        .hero-a .hero-grid,
+        .hero-b .hero-grid,
+        .hero-c .hero-grid {
+          display: block;
+          padding: 28px;
+        }
+
+        .hero-title,
+        .hero-c .hero-title {
+          font-size: clamp(31px, 9vw, 42px);
+        }
+
+        .hero-a .hero-title {
+          font-size: 23px;
+        }
+
+        .mascot {
+          width: min(74%, 260px);
+          height: 300px;
+          margin: 28px 0 0 auto;
+        }
+
+        .deck {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-c .footer-bar {
+          display: block;
+        }
+
+        .hero-c .slider-controls {
+          margin-top: 16px;
+        }
+      }
+
+      @media (max-width: 430px) {
+        .hero-a .hero-title {
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <h1>PageHero 텍스트 중심 확정안</h1>
+        <p>
+          하단 블로그 카드 없이 페이지 제목과 설명, 상담 CTA, 우측 셀레나 캐릭터만 남긴
+          공용 히어로 후보입니다. 배경은 DESIGN.md의 surface 계열만 사용했습니다.
+        </p>
+      </header>
+
+      <section class="mockup">
+        <div class="mockup-label">
+          <h2>Main Text Hero</h2>
+          <p>현재 PageHero와 가장 가까운 형태입니다. 텍스트와 CTA를 중심에 두고 캐릭터는 우측에서 신뢰감을 보조합니다.</p>
+        </div>
+        <article class="hero hero-a">
+          <div class="hero-grid">
+            <div class="text-area">
+              <h3 class="hero-title">영어를 잘 할 수밖에 없는 학습 시스템</h3>
+              <p class="hero-copy">
+                학생중심 1:1 맞춤 수업에 최적화된 전문 선생님이 매일 확인하고<br />
+                AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다.
+              </p>
+              <div class="actions">
+                <a class="button primary" href="#">
+                  전화상담하기
+                </a>
+                <a class="button secondary brand-filled" href="#">
+                  네이버 예약
+                </a>
+              </div>
+            </div>
+            <div class="mascot" aria-hidden="true">
+              <div class="mascot-plate"></div>
+              <img src="../../src/images/2021selena_magic.png" alt="" />
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="notes">
+        <h2>구현 메모</h2>
+        <ul>
+          <li>공용 PageHero에 맞춰 제목, 설명, children CTA, 우측 캐릭터 영역으로 구성합니다.</li>
+          <li>헤드라인은 한 줄로 보여주고, eyebrow와 하단 블로그 카드는 사용하지 않습니다.</li>
+          <li>배경은 DESIGN.md의 off-white surface를 사용하고 이미지 배경이나 그라데이션은 넣지 않습니다.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -13,6 +13,7 @@
   --brand-soft: #ffb0cb;
   --brand-bright: #ff89bc;
   --surface-page: #fcf9f8;
+  --surface-container-low: #f6f3f2;
   --surface-cream: #fffdf7;
   --surface-paper: #fffefa;
   --border-warm: #eadfd3;
@@ -30,6 +31,7 @@
   --color-brand-soft: var(--brand-soft);
   --color-brand-bright: var(--brand-bright);
   --color-surface-page: var(--surface-page);
+  --color-surface-container-low: var(--surface-container-low);
   --color-surface-cream: var(--surface-cream);
   --color-surface-paper: var(--surface-paper);
   --color-border-warm: var(--border-warm);
