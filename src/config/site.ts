@@ -70,7 +70,6 @@ export const programSummaries = [
       "Chant, Song, Game으로 영어의 첫 경험을 즐겁게 만들고, 삼성영어셀레나 Pre-level로 이어지는 기초를 다집니다.",
     features: ["기초 음가", "파닉스 준비", "흥미 중심 활동"],
     href: "/programs/hey-hazel",
-    color: "bg-white/85 border-pink-200 shadow-pink-900/5",
   },
   {
     slug: "300m-sentences",
@@ -83,7 +82,6 @@ export const programSummaries = [
       "청크 단위로 문장을 이해하고 직접 만들어 보며 Pre-level부터 Advanced까지 개별 진도로 관리합니다.",
     features: ["청크 학습", "4대 영역 루틴", "개별 진도 관리"],
     href: "/programs/300m-sentences",
-    color: "bg-white/85 border-sky-200 shadow-sky-900/5",
   },
   {
     slug: "prep31",
@@ -96,7 +94,6 @@ export const programSummaries = [
       "원서, 문법, 어휘, 평가 루틴으로 중등 내신과 수능형 영어의 기초 체력을 준비합니다.",
     features: ["중등 내신 대비", "원서 독해", "수능형 기초 체력"],
     href: "/programs/prep31",
-    color: "bg-white/85 border-violet-200 shadow-violet-900/5",
   },
 ];
 
