@@ -11,11 +11,6 @@ export default function HeroSectionClient() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-8 right-0 hidden w-[38vw] rounded-l-[4rem] bg-primary-fixed/65 lg:block"
       />
-      <div
-        data-testid="hero-character-backdrop"
-        aria-hidden="true"
-        className="pointer-events-none absolute right-[8vw] top-1/2 hidden h-80 w-80 -translate-y-1/2 rounded-[3.5rem] bg-white/55 lg:block"
-      />
       <div className="relative mx-auto grid min-h-[420px] max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:px-8">
         <div className="relative z-10 max-w-[720px]">
           <h1 className="break-keep text-[1.7rem] font-extrabold leading-[1.14] text-gray-950 sm:text-[2.25rem] lg:text-[2.35rem]">
@@ -46,8 +41,10 @@ AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다.`}
           className="relative z-10 ml-auto h-[300px] w-[74%] max-w-[260px] overflow-hidden lg:h-[400px] lg:w-full lg:max-w-[340px]"
           aria-hidden="true"
         >
-          <div className="absolute inset-x-5 bottom-8 h-40 rounded-full bg-primary-fixed/75" />
-          <div className="absolute right-5 top-10 h-24 w-24 rounded-full bg-white/70" />
+          <div
+            data-testid="hero-character-backdrop"
+            className="absolute right-[6%] top-[45%] h-[220px] w-[220px] -translate-y-1/2 rounded-full bg-primary-fixed/75 sm:h-[240px] sm:w-[240px] lg:h-[300px] lg:w-[300px]"
+          />
           <Image
             src={selenaMagic}
             alt=""

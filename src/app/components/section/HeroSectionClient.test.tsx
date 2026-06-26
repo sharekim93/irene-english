@@ -32,6 +32,12 @@ describe("HeroSectionClient", () => {
     expect(
       container.querySelector('[data-testid="hero-character-backdrop"]'),
     ).toBeInTheDocument();
+    expect(
+      container.querySelector('[data-testid="hero-character-backdrop"]'),
+    ).toHaveClass("rounded-full");
+    expect(
+      container.querySelector(".rounded-\\[3\\.5rem\\]"),
+    ).not.toBeInTheDocument();
     expect(container.querySelector(".blur-3xl")).not.toBeInTheDocument();
     expect(container.querySelector("section")).toHaveClass(
       "bg-surface-container-low",
