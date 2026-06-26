@@ -24,4 +24,13 @@ describe("global Irene English design system", () => {
     expect(globalsCss).toContain(".section-shell");
     expect(globalsCss).toContain(".section-container");
   });
+
+  it("keeps the focus indicator independent from hover shadows", () => {
+    expect(globalsCss).toContain(
+      ".brand-focus-ring:focus-visible {\n  outline: 4px solid rgba(233, 67, 145, 0.24);\n  outline-offset: 3px;\n}",
+    );
+    expect(globalsCss).not.toContain(
+      ".brand-focus-ring:focus-visible {\n  box-shadow",
+    );
+  });
 });
