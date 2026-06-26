@@ -38,7 +38,7 @@ AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다.`}
           </div>
         </div>
         <div
-          className="relative z-10 ml-auto h-[300px] w-[74%] max-w-[260px] overflow-hidden lg:h-[400px] lg:w-full lg:max-w-[340px]"
+          className="relative z-10 ml-auto h-[260px] w-[74%] max-w-[260px] overflow-hidden lg:h-[356px] lg:w-full lg:max-w-[340px]"
           aria-hidden="true"
         >
           <div
@@ -50,7 +50,7 @@ AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다.`}
             alt=""
             width={977}
             height={2762}
-            className="relative mx-auto -mt-1.5 h-auto w-[min(100%,286px)] object-contain"
+            className="relative h-full w-full object-cover object-top"
             priority
           />
         </div>

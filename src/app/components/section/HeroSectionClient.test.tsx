@@ -46,6 +46,13 @@ describe("HeroSectionClient", () => {
     expect(container.querySelector("section")).toHaveClass("pt-12", "pb-8");
     expect(container.querySelector("section")).not.toHaveClass("py-14");
     expect(container.querySelector(".min-h-\\[500px\\]")).not.toBeInTheDocument();
-    expect(container.querySelector('img[alt=""]')).toBeInTheDocument();
+    const characterImage = container.querySelector('img[alt=""]');
+    expect(characterImage).toBeInTheDocument();
+    expect(characterImage).toHaveClass(
+      "h-full",
+      "w-full",
+      "object-cover",
+      "object-top",
+    );
   });
 });
