@@ -16,8 +16,8 @@ const SelenaEnglishHomepage = async () => {
       <JsonLd data={navigationJsonLd()} />
       <HeroSection />
       <BlogPreviewSection />
-      <ProgramsSection />
       <FeaturesSection />
+      <ProgramsSection />
       <CTASection />
       <Location />
     </SiteFrame>
