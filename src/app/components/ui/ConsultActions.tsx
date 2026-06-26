@@ -55,7 +55,7 @@ export default function ConsultActions({
           href={siteConfig.placeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`brand-secondary-action brand-focus-ring ${actionClassName}`}
+          className={`brand-secondary-action brand-naver-action brand-focus-ring ${actionClassName}`}
         >
           네이버 지도
         </a>

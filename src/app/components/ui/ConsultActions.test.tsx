@@ -49,5 +49,11 @@ describe("ConsultActions", () => {
       "brand-naver-action",
       "brand-focus-ring",
     );
+    expect(screen.getByRole("link", { name: "네이버 지도" })).toHaveClass(
+      "min-h-11",
+      "brand-secondary-action",
+      "brand-naver-action",
+      "brand-focus-ring",
+    );
   });
 });
