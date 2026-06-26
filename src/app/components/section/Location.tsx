@@ -98,7 +98,7 @@ const Location = () => {
               </h3>
               <p className="mt-4 text-base leading-7 text-gray-600">
                 석성초, 초당초, 동백역에서 가까운 벽산 블루밍 아파트 상가에
-                위치해 있습니다.
+                위치해 있습니다
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
