@@ -31,7 +31,7 @@ AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다`);
     expect(container.querySelector('[data-testid="consult-actions"]')).toBeInTheDocument();
     expect(container.querySelector('[data-testid="hero-character-backdrop"]')).toHaveClass(
       "rounded-full",
-      "bg-brand-soft",
+      "bg-brand-soft/65",
     );
     expect(container.querySelector("section")).toHaveClass(
       "bg-surface-container-low",

@@ -28,7 +28,7 @@ AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다`}
         >
           <div
             data-testid="hero-character-backdrop"
-            className="absolute right-[6%] top-[45%] h-[220px] w-[220px] -translate-y-1/2 rounded-full bg-brand-soft bg-brand-soft/65 sm:h-[240px] sm:w-[240px] lg:h-[300px] lg:w-[300px]"
+            className="absolute right-[6%] top-[45%] h-[220px] w-[220px] -translate-y-1/2 rounded-full bg-brand-soft/65 sm:h-[240px] sm:w-[240px] lg:h-[300px] lg:w-[300px]"
           />
           <Image
             src={selenaMagic}
