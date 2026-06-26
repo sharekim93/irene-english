@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="ko">
-      <body className="font-pretendard">
+      <body className="font-noto-sans-kr">
         <CustomHeroUiProvider>{children}</CustomHeroUiProvider>
       </body>
     </html>

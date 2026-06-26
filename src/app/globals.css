@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @plugin './hero.ts';
 
@@ -18,8 +18,8 @@
   --surface-paper: #fffefa;
   --border-warm: #eadfd3;
   --text-muted-brand: #8b7078;
-  --app-font-pretendard: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, sans-serif;
+  --app-font-noto-sans-kr: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
 }
 
 @theme inline {
@@ -36,14 +36,14 @@
   --color-surface-paper: var(--surface-paper);
   --color-border-warm: var(--border-warm);
   --color-text-muted-brand: var(--text-muted-brand);
-  --font-pretendard: var(--app-font-pretendard);
+  --font-noto-sans-kr: var(--app-font-noto-sans-kr);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--app-font-pretendard);
-  @apply font-pretendard;
+  font-family: var(--app-font-noto-sans-kr);
+  @apply font-noto-sans-kr;
 }
 
 html {
@@ -156,7 +156,7 @@ html {
   border-radius: 0.75rem;
   background: #fee500;
   color: #191919;
-  font-family: var(--app-font-pretendard);
+  font-family: var(--app-font-noto-sans-kr);
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
@@ -202,7 +202,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: var(--app-font-pretendard);
+  font-family: var(--app-font-noto-sans-kr);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1;
@@ -239,7 +239,7 @@ html {
   cursor: pointer;
   outline: none;
   padding: 0 0.875rem;
-  font-family: var(--app-font-pretendard);
+  font-family: var(--app-font-noto-sans-kr);
   font-weight: 800;
   box-shadow: none;
   transition:
