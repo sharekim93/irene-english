@@ -17,14 +17,20 @@ function formatDate(value: string) {
 
 function BlogImageFallback() {
   return (
-    <div className="absolute inset-0 flex items-end overflow-hidden bg-[linear-gradient(135deg,#fff7fb_0%,#ffe3f0_46%,#eaf8ff_100%)] px-6 pb-6">
-      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full border border-white/70 bg-white/45" />
-      <div className="absolute -bottom-14 left-6 h-28 w-28 rounded-full border border-pink-200/60 bg-white/40" />
+    <div className="absolute inset-0 flex items-end overflow-hidden bg-surface-cream px-6 pb-6">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(233,67,145,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(14,165,233,0.08)_1px,transparent_1px)] bg-[size:42px_100%,100%_32px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute left-6 top-0 h-full w-px bg-pink-200/70"
+      />
       <div className="relative">
-        <p className="text-xs font-bold uppercase tracking-[0.12em] text-pink-600">
+        <p className="text-xs font-bold uppercase text-pink-600">
           Irene English Note
         </p>
-        <p className="mt-2 max-w-48 text-lg font-extrabold leading-snug text-gray-950">
+        <p className="mt-2 max-w-48 break-keep text-lg font-extrabold leading-snug text-gray-950">
           아이린 석성 학습 이야기
         </p>
       </div>
@@ -90,7 +96,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
               <a
                 key={tag}
                 href={`/blog?tag=${encodeURIComponent(tag)}`}
-                className="whitespace-nowrap rounded-full bg-pink-50 px-3 py-1 text-xs font-bold leading-4 text-pink-700"
+                className="whitespace-nowrap rounded-lg bg-pink-50 px-3 py-1 text-xs font-bold leading-4 text-pink-700"
               >
                 #{tag}
               </a>
