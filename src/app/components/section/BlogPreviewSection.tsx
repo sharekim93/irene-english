@@ -31,7 +31,7 @@ export default async function BlogPreviewSection() {
         }}
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div className="mb-12">
           <div>
             <p className="mb-3 text-sm font-bold text-pink-600">NEWS LETTER</p>
             <h2 className="text-3xl font-extrabold text-gray-950 sm:text-4xl">
@@ -39,18 +39,21 @@ export default async function BlogPreviewSection() {
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-gray-600"></p>
           </div>
-          <a
-            href="/blog"
-            className="inline-flex h-12 items-center justify-center rounded-xl border border-pink-200 px-5 text-sm font-bold text-pink-700 transition hover:bg-pink-50"
-          >
-            블로그 더 보기
-          </a>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {posts.map((post) => (
             <BlogCard key={post.link} post={post} />
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="/blog"
+            className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-xl border border-pink-200 px-5 text-sm font-bold text-pink-700 transition hover:bg-pink-50 sm:h-14 sm:w-auto sm:max-w-none sm:px-8 sm:text-base"
+          >
+            블로그 더 보기
+          </a>
         </div>
       </div>
     </section>
