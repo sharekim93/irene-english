@@ -28,13 +28,13 @@ const Header = () => {
   }: {
     className?: string;
   }) => (
-    <div className={`contact-ripple-anchor ${className}`}>
+    <div className={`inline-flex ${className}`}>
       <Button
         as="a"
         href={siteConfig.telHref}
         size="lg"
         radius="lg"
-        className={`${contactButtonClass} contact-expand-button`}
+        className={contactButtonClass}
         aria-label={`전화 상담 ${siteConfig.phone}`}
       >
         <span
@@ -60,7 +60,7 @@ const Header = () => {
     fullWidth?: boolean;
     onClick?: () => void;
   }) => (
-    <div className={`contact-ripple-anchor ${className}`}>
+    <div className={`inline-flex ${className}`}>
       <Button
         as="a"
         href={siteConfig.telHref}

@@ -54,52 +54,9 @@ html {
   background: rgba(233, 67, 145, 0.22);
 }
 
-.contact-ripple-anchor {
-  position: relative;
-  display: inline-flex;
-  isolation: isolate;
-}
-
-.contact-ripple-anchor::before,
-.contact-ripple-anchor::after {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  z-index: -1;
-  border: 0;
-  border-radius: 1.35rem;
-  background: transparent;
-  box-shadow:
-    0 0 0 2px rgba(233, 67, 145, 0.24),
-    0 0 11px 3px rgba(233, 67, 145, 0.2);
-  filter: blur(1.2px);
-  opacity: 0.22;
-  transform: scale(1);
-  pointer-events: none;
-  animation: contact-pink-ripple 5.8s ease-out infinite;
-}
-
-.contact-ripple-anchor::after {
-  animation-delay: 2.9s;
-}
-
 .contact-cta-button {
   position: relative;
   overflow: hidden;
-}
-
-.contact-expand-button {
-  width: 8.25rem;
-  justify-content: flex-start;
-  transition:
-    width 260ms ease,
-    background-color 180ms ease,
-    transform 180ms ease;
-}
-
-.contact-ripple-anchor:hover .contact-expand-button,
-.contact-ripple-anchor:focus-within .contact-expand-button {
-  width: 13.5rem;
 }
 
 .contact-expand-label {
@@ -109,40 +66,18 @@ html {
   align-items: center;
   overflow: hidden;
   line-height: 1;
-  transition: width 260ms ease;
-}
-
-.contact-ripple-anchor:hover .contact-expand-label,
-.contact-ripple-anchor:focus-within .contact-expand-label {
-  width: 8.6rem;
 }
 
 .contact-short-label,
 .contact-phone-label {
   display: inline-block;
   white-space: nowrap;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
 }
 
 .contact-phone-label {
   position: absolute;
   left: 0;
   opacity: 0;
-  transform: translateY(0.35rem);
-}
-
-.contact-ripple-anchor:hover .contact-short-label,
-.contact-ripple-anchor:focus-within .contact-short-label {
-  opacity: 0;
-  transform: translateY(-0.35rem);
-}
-
-.contact-ripple-anchor:hover .contact-phone-label,
-.contact-ripple-anchor:focus-within .contact-phone-label {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .kakao-consult-button {
@@ -293,23 +228,6 @@ html {
   width: 2rem;
   height: 2rem;
   border-radius: 0.875rem;
-}
-
-@keyframes contact-pink-ripple {
-  0% {
-    opacity: 0.22;
-    transform: scale(1);
-  }
-
-  14% {
-    opacity: 0.42;
-  }
-
-  42%,
-  100% {
-    opacity: 0;
-    transform: scale(1.06);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
