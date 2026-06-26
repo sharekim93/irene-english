@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import HeroSectionClient from "./HeroSectionClient";
 
 describe("HeroSectionClient", () => {
-  it("renders the text-first hero with the Selena character and no blog card deck", () => {
+  it("renders the text-first hero with Selena imagery and canonical consultation actions", () => {
     const { container } = render(<HeroSectionClient />);
 
     expect(
@@ -19,40 +19,27 @@ describe("HeroSectionClient", () => {
       "href",
       "tel:010-3421-4383",
     );
+    expect(screen.getByRole("link", { name: "카카오톡 상담" })).toHaveAttribute(
+      "href",
+      "https://pf.kakao.com/_auFFn/chat",
+    );
     expect(screen.getByRole("link", { name: "네이버 예약" })).toHaveAttribute(
       "href",
       "https://m.booking.naver.com/booking/6/bizes/1456434/items/6925790",
     );
-    expect(
-      screen.queryByRole("link", {
-        name: "처음 영어를 시작하는 아이에게 필요한 루틴 자세히 보기",
-      }),
-    ).not.toBeInTheDocument();
-    expect(container.querySelector(".rounded-\\[2rem\\]")).not.toBeInTheDocument();
-    expect(
-      container.querySelector('[data-testid="hero-character-backdrop"]'),
-    ).toBeInTheDocument();
-    expect(
-      container.querySelector('[data-testid="hero-character-backdrop"]'),
-    ).toHaveClass("rounded-full");
-    expect(
-      container.querySelector(".rounded-\\[3\\.5rem\\]"),
-    ).not.toBeInTheDocument();
-    expect(container.querySelector(".blur-3xl")).not.toBeInTheDocument();
+    expect(container.querySelector('[data-testid="consult-actions"]')).toBeInTheDocument();
+    expect(container.querySelector('[data-testid="hero-character-backdrop"]')).toHaveClass(
+      "rounded-full",
+      "bg-brand-soft",
+    );
     expect(container.querySelector("section")).toHaveClass(
       "bg-surface-container-low",
+      "px-5",
+      "pt-12",
+      "pb-8",
     );
-    expect(container.querySelector("section")).not.toHaveClass("bg-surface-page");
-    expect(container.querySelector("section")).toHaveClass("pt-12", "pb-8");
-    expect(container.querySelector("section")).not.toHaveClass("py-14");
-    expect(container.querySelector(".min-h-\\[500px\\]")).not.toBeInTheDocument();
+    expect(container.querySelector(".blur-3xl")).not.toBeInTheDocument();
     const characterImage = container.querySelector('img[alt=""]');
-    expect(characterImage).toBeInTheDocument();
-    expect(characterImage).toHaveClass(
-      "h-full",
-      "w-full",
-      "object-cover",
-      "object-top",
-    );
+    expect(characterImage).toHaveClass("h-full", "w-full", "object-cover", "object-top");
   });
 });
