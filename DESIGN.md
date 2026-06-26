@@ -1,190 +1,257 @@
 ---
-name: Luminous Learning
+name: Irene English Local Learning
+source: Implemented Next.js project
 colors:
-  surface: '#fcf9f8'
-  surface-dim: '#dcd9d9'
-  surface-bright: '#fcf9f8'
-  surface-container-lowest: '#ffffff'
+  background: '#ffffff'
+  foreground: '#171717'
+  brand: '#e94391'
+  brand-hover: '#d92d7f'
+  brand-deep: '#b20b67'
+  brand-soft: '#ffb0cb'
+  brand-bright: '#ff89bc'
+  surface-page: '#fcf9f8'
   surface-container-low: '#f6f3f2'
-  surface-container: '#f0eded'
-  surface-container-high: '#eae7e7'
-  surface-container-highest: '#e5e2e1'
-  on-surface: '#1c1b1b'
-  on-surface-variant: '#584048'
-  inverse-surface: '#313030'
-  inverse-on-surface: '#f3f0ef'
-  outline: '#8b7078'
-  outline-variant: '#dfbec7'
-  surface-tint: '#b51169'
-  primary: '#b20b67'
-  on-primary: '#ffffff'
-  primary-container: '#d33080'
-  on-primary-container: '#fffbff'
-  inverse-primary: '#ffb0cb'
-  secondary: '#934465'
-  on-secondary: '#ffffff'
-  secondary-container: '#fc9cc1'
-  on-secondary-container: '#792f50'
-  tertiary: '#712ae2'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#8a4cfc'
-  on-tertiary-container: '#fffbff'
-  error: '#ba1a1a'
-  on-error: '#ffffff'
-  error-container: '#ffdad6'
-  on-error-container: '#93000a'
-  primary-fixed: '#ffd9e4'
-  primary-fixed-dim: '#ffb0cb'
-  on-primary-fixed: '#3e0020'
-  on-primary-fixed-variant: '#8d0050'
-  secondary-fixed: '#ffd9e4'
-  secondary-fixed-dim: '#ffb0cc'
-  on-secondary-fixed: '#3e0021'
-  on-secondary-fixed-variant: '#762d4d'
-  tertiary-fixed: '#eaddff'
-  tertiary-fixed-dim: '#d2bbff'
-  on-tertiary-fixed: '#25005a'
-  on-tertiary-fixed-variant: '#5a00c6'
-  background: '#fcf9f8'
-  on-background: '#1c1b1b'
-  surface-variant: '#e5e2e1'
+  surface-cream: '#fffdf7'
+  surface-paper: '#fffefa'
+  border-warm: '#eadfd3'
+  text-muted-brand: '#8b7078'
+  kakao: '#fee500'
+  kakao-hover: '#f7dc00'
+  kakao-text: '#191919'
+  naver: '#03c75a'
+  naver-hover: '#02b350'
 typography:
-  display-lg:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 48px
+  fontFamily: Noto Sans KR
+  fallback: -apple-system, BlinkMacSystemFont, system-ui, sans-serif
+  hero-home:
+    fontSize: '1.7rem / 2.25rem / 2.35rem'
     fontWeight: '800'
-    lineHeight: '1.1'
-    letterSpacing: -0.02em
-  display-lg-mobile:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 32px
+    lineHeight: '1.14'
+  hero-page:
+    fontSize: '2rem / 3rem'
     fontWeight: '800'
-    lineHeight: '1.2'
-    letterSpacing: -0.02em
-  headline-md:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 24px
-    fontWeight: '700'
-    lineHeight: '1.3'
-  body-lg:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 18px
+    lineHeight: '1.18'
+  section-title:
+    fontSize: '1.875rem / 2.25rem'
+    fontWeight: '800'
+    lineHeight: '1.25'
+  card-title:
+    fontSize: '1.125rem / 1.25rem'
+    fontWeight: '800'
+    lineHeight: '1.35'
+  body:
+    fontSize: '1rem / 1.125rem'
     fontWeight: '400'
-    lineHeight: '1.6'
-  body-md:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 16px
-    fontWeight: '400'
-    lineHeight: '1.6'
-  label-bold:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 14px
+    lineHeight: '1.75rem / 2rem'
+  eyebrow:
+    fontSize: '0.875rem'
     fontWeight: '700'
-    lineHeight: '1.0'
-    letterSpacing: 0.05em
+    lineHeight: '1'
 rounded:
-  sm: 0.5rem
-  DEFAULT: 1rem
-  md: 1.5rem
-  lg: 2rem
-  xl: 3rem
+  sm: 0.75rem
+  md: 1rem
+  lg: 1.5rem
+  xl: 2rem
   full: 9999px
 spacing:
   unit: 8px
-  container-max: 1200px
-  gutter: 24px
-  margin-mobile: 20px
-  stack-sm: 8px
-  stack-md: 16px
-  stack-lg: 32px
-  section-padding: 80px
+  container-max: 1280px
+  page-x-mobile: 20px
+  page-x-tablet: 32px
+  container-x-mobile: 16px
+  container-x-tablet: 24px
+  container-x-desktop: 32px
+  section-padding-default: 80px
+  section-padding-home: 96px
+  card-gap: 24px
+  feature-gap: 32px
+motion:
+  duration-fast: 160ms
+  duration-standard: 300ms
+  easing-standard: ease
 ---
 
 ## Brand & Style
 
-This design system is built on a "Soft-Tech" aesthetic—a fusion of modern SaaS precision with a warm, approachable educational atmosphere. The personality is encouraging, high-energy, and premium. It targets lifelong learners and students who value clarity and a stress-free digital environment.
+This design system documents the implemented Irene English site: a local Korean English academy website for Samsung English Selena Irene Seokseong. The interface should feel trustworthy, bright, parent-friendly, and easy to act on. It is not a generic SaaS product page; it is a local education and consultation site where clarity, Korean readability, program credibility, and direct contact actions matter most.
 
-The visual style utilizes **Glassmorphism** and **Vibrant Minimalism**. It features soft background gradients, high-transparency layers, and "radiant" focal points. The interface should feel like a physical object made of frosted glass catching a warm light source. 
+The visual style combines warm educational surfaces, Electric Pink brand accents, Selena character imagery, local contact proof points, and restrained interactive polish. Glass and glow effects are allowed, but only as light support for headers, feature cards, and focal CTA moments.
 
 **Emotional Response:**
-- Inspired and motivated.
-- Calm yet focused.
-- Technologically advanced but human-centric.
+
+- Confident that this is a real, nearby academy.
+- Warmly guided rather than sold to.
+- Clear about programs, location, contact methods, and next steps.
+- Bright and motivating without becoming childish or visually noisy.
+
+## Implementation Anchors
+
+Use the implemented project as the source of truth.
+
+- Global tokens live in `src/app/globals.css`.
+- HeroUI is enabled through `src/app/hero.ts` and `CustomHeroUiProvider`.
+- Layout rhythm is built with Tailwind utility classes and shared components.
+- Main sections use `max-w-7xl`, `px-5 sm:px-8`, and inner `px-4 sm:px-6 lg:px-8`.
+- Primary conversion actions are telephone consultation, Kakao consultation, and Naver booking.
+- Korean UX copy should use the same concept names as `src/config/site.ts`.
 
 ## Colors
 
-The palette is dominated by a vibrant "Electric Pink" used for primary conversion points. This is balanced by a soft, airy background to prevent visual fatigue.
+The palette is led by Electric Pink, supported by warm paper surfaces and a small set of branded third-party action colors.
 
-- **Primary (#E94391):** Reserved for primary buttons, active states, and critical progress indicators.
-- **Secondary (#FF9EC3):** Used for soft accents, hover states, and decorative background blurs.
-- **Neutral:** A deep charcoal (#1A1A1A) is used for typography to maintain high legibility against the light background, while lighter grays (#F4F4F5) define subtle borders.
-- **Background:** Always utilize a very subtle radial or diagonal gradient from pure white to a faint pink tint to add depth without clutter.
+- **Brand (`#e94391`):** Primary CTA backgrounds, active tags, focus accents, and key highlights.
+- **Brand Hover (`#d92d7f`):** Hover state for primary pink actions.
+- **Brand Deep (`#b20b67`):** Gradient starts, stronger icon color, and high-emphasis brand surfaces.
+- **Brand Soft (`#ffb0cb`) and Brand Bright (`#ff89bc`):** Decorative washes, carousel backgrounds, and secondary warmth.
+- **Background (`#ffffff`):** Default body background and clean content sections.
+- **Surface Page (`#fcf9f8`):** Warm off-white section background for feature, FAQ, and local topic surfaces.
+- **Surface Cream (`#fffdf7`):** Program and editorial sections that should feel like study paper.
+- **Surface Paper (`#fffefa`):** Program cards and contained learning surfaces.
+- **Border Warm (`#eadfd3`):** Warm card borders where gray would feel too cold.
+- **Text:** Use `#171717`, Tailwind gray scales, and muted warm brand text. Avoid pure black for large bodies of UI.
+- **Kakao (`#fee500`) and Naver (`#03c75a`):** Use only for their own branded actions and icons.
+
+Do not introduce unrelated accent families. Sky and violet may appear as quiet supporting colors for grids, program categories, and illustrations, but pink remains the only primary accent family.
 
 ## Typography
 
-The design system utilizes **Plus Jakarta Sans** across all levels to maintain a friendly yet professional tone. The geometric nature of the font complements the rounded UI elements.
+Use **Noto Sans KR** for all UI and page content. The site is Korean-first, and line height, wrapping, and emphasis should be tuned for Korean readability.
 
-- **Headlines:** Use heavy weights (700-800) with tight letter spacing for a modern, "impactful" look.
-- **Body:** Standardize on 16px or 18px to ensure accessibility in educational contexts.
-- **Labels:** Use uppercase with increased letter spacing for small metadata or overlines to distinguish them from body copy.
+- **Home Hero:** `text-[1.7rem] sm:text-[2.25rem] lg:text-[2.35rem]`, `font-extrabold`, `leading-[1.14]`.
+- **Page Hero:** `text-[2rem] sm:text-5xl`, `font-extrabold`, `leading-[1.18]`.
+- **Section Titles:** `text-3xl sm:text-4xl`, `font-extrabold`.
+- **Card Titles:** `text-lg sm:text-xl` or `text-2xl` for program cards, `font-extrabold`.
+- **Body:** `text-base sm:text-lg`, `leading-7 sm:leading-8`.
+- **Eyebrows:** `text-sm font-bold text-pink-600`, short uppercase English labels such as `FEATURE`, `PROGRAM`, `LOCATION`.
+
+Use `break-keep` on Korean headlines and important descriptions so Korean phrases do not wrap awkwardly. Avoid viewport-scaled type. Keep letter spacing at the browser default unless a specific component has been visually checked.
 
 ## Layout & Spacing
 
-The layout follows a **Fixed Grid** philosophy for desktop to maintain a premium "magazine" feel, while transitioning to a fluid stack for mobile. 
+The layout uses a generous but practical local-service site rhythm.
 
-- **Focus:** Centered containers with generous vertical white space (80px+) between major sections.
-- **Rhythm:** An 8px linear scale drives all padding and margins. 
-- **Containment:** Use wide margins on desktop (auto-centering) to keep the core educational content within a readable scanning line.
+- **Containers:** Use `max-w-7xl` with `mx-auto`.
+- **Outer Page Padding:** Use `px-5 sm:px-8` on sections.
+- **Inner Container Padding:** Use `px-4 sm:px-6 lg:px-8`.
+- **Standard Sections:** Use `py-20` for secondary pages and `py-24` for major home sections.
+- **Hero:** Home hero uses a shorter top rhythm to account for the fixed 80px header; page heroes use `py-20`.
+- **Grids:** Use `gap-6` for dense card grids and `gap-8` for feature cards or mixed text/media layouts.
+- **Content Width:** Keep long descriptions around `max-w-2xl` to `max-w-4xl`.
+
+Alternate section backgrounds between white, `surface-page`, and `surface-cream` to create scan rhythm. Avoid nesting page sections inside decorative cards; cards should represent individual repeated items, grouped details, forms, maps, and CTAs.
 
 ## Elevation & Depth
 
-Hierarchy is established through **Tonal Layers** and **Ambient Glows** rather than traditional heavy shadows.
+Depth should feel soft and local-service trustworthy rather than glossy.
 
-- **Level 0 (Base):** The soft gradient background.
-- **Level 1 (Cards):** Pure white surfaces with a very soft, high-spread shadow (0px 10px 30px rgba(233, 67, 145, 0.05)).
-- **Level 2 (Active/Floating):** Primary elements use a "Pink Glow"—a drop shadow with a higher opacity of the primary color (0px 8px 20px rgba(233, 67, 145, 0.3)).
-- **Glass Effect:** Use `backdrop-filter: blur(12px)` with a `70%` white opacity for navigation bars or overlays.
+- **Header:** `bg-white/80`, `border-white/60`, `shadow-sm`, `backdrop-blur-xl`.
+- **Standard Cards:** Use light borders such as `border-pink-100`, `border-border-warm`, or `border-white/80`.
+- **Soft Shadow:** Use `shadow-lg shadow-pink-900/5` or `shadow-pink-900/10`.
+- **Program Card Shadow:** `0 16px 34px rgba(31,41,55,0.08)`.
+- **Primary CTA Shadow:** Use `shadow-pink-500/20` to `shadow-pink-500/25`.
+- **Naver/Kakao Shadows:** Only use their brand color at low opacity for related branded actions.
+
+Avoid heavy drop shadows, high-opacity glows, and decorative depth that competes with content.
 
 ## Shapes
 
-The shape language is extremely soft and approachable. 
-- **Large Cards:** Use a 32px (`2rem`) radius to create a friendly, "bubbled" container.
-- **Buttons & Inputs:** Follow a "Pill-shape" (full rounding) to encourage clicking and interaction.
-- **Icons:** Should be encased in circular or highly rounded containers.
+The implemented shape language is rounded and friendly, but not uniformly pill-shaped.
+
+- **Buttons:** Use `rounded-xl` for most page CTAs and `rounded-full` for home hero CTAs or compact floating actions.
+- **Feature Cards and Media:** Use `rounded-3xl` when the surface is visual, friendly, or highly promotional.
+- **Grouped Surfaces:** Use `rounded-2xl` for maps, filter panels, FAQ groups, and local topic blocks.
+- **Small Cards and Inputs:** Use `rounded-xl`.
+- **Icons and Badges:** Use `rounded-full` for checks, chips, and circular icon containers.
+
+Do not force all large cards to 32px radius. Match radius to component density and established local usage.
 
 ## Components
 
+### Header
+
+The header is fixed at the top with an 80px height, a translucent white surface, a subtle bottom border, and a strong logo presence. Desktop navigation uses bold text with pink hover states. Mobile navigation opens into a white menu with large touch targets.
+
+The telephone consultation button is a primary conversion element. Keep it compact on desktop and touch-friendly on mobile.
+
+### Hero Sections
+
+Home hero should lead with the learning-system promise, direct consultation CTAs, and Selena character imagery. Use a calm warm background, not a marketing split-card hero. Page heroes use a soft white-to-pink/blue gradient and concise Korean copy.
+
 ### Primary Buttons
-Large, pill-shaped buttons with `24px 48px` padding. Apply the "Primary Glow" elevation. 
-- **Animation:** Primary buttons should feature a subtle breathing animation (scale 1.0 to 1.02) and a shimmering glow effect on hover.
+
+Primary actions should be easy to scan and at least 44px tall.
+
+- Home primary CTA: `h-12 rounded-full bg-pink-600 px-7 text-base font-bold`.
+- Page CTA: `h-12 rounded-xl bg-pink-600 px-5/6 text-sm or base font-bold`.
+- Hover: darken to pink-700 or `brand-hover`.
+- Focus: use a visible 4px ring with pink at low opacity.
+
+Do not use breathing animations or shimmer effects by default. Motion should support feedback, not call attention to itself.
+
+### Secondary Buttons
+
+Secondary actions usually use a white surface, pink border, and pink or charcoal text. Branded secondary actions may use Kakao yellow or Naver green only when the action opens that channel.
 
 ### Content Cards
-Feature a 32px border radius. Use a subtle 1px border (#F4F4F5) to define the edge against the white background. Inside, use a consistent 32px padding for content.
 
-### Input Fields
-Pill-shaped with a light gray background (#F8F9FA). On focus, the border transitions to Primary Pink with a soft outer glow.
+Cards use warm borders, white or paper surfaces, and light pink shadows.
+
+- Feature cards: `rounded-3xl border border-white/80 bg-white/75 p-5 sm:p-6 shadow-lg shadow-pink-900/5 backdrop-blur`.
+- Program cards: paper surface, warm border, notebook-line background, and clear feature checklist.
+- Blog cards: `rounded-2xl border border-pink-100 bg-white shadow-lg shadow-pink-900/5`.
+- Local topic cards: `rounded-2xl` grouped containers with `rounded-xl` internal chips or rows.
+
+### Inputs & Filters
+
+Inputs should use `rounded-xl`, a white background, light pink border, and clear focus border. Search/filter surfaces may use a soft pink background at low opacity.
 
 ### Chips & Badges
-Small, fully rounded elements. Use Secondary Pink backgrounds with Primary Pink text for high-contrast legibility in a soft format.
 
-### Progress Bars
-Thick (12px+) pill-shaped tracks. The "filled" portion should use the Primary Pink color, potentially with a subtle horizontal gradient to indicate movement/progress.
+Use `rounded-full` or HeroUI `Chip`. Pink chips are for site-owned states and content tags. Kakao/Naver colors are reserved for their respective brands.
+
+### Location
+
+The map section is a contained `rounded-2xl` grid with a real Naver map when available and a designed static fallback when not. The address panel should prioritize exact location, nearby landmarks, and the Naver map action.
+
+### Blog & Local SEO Pages
+
+Blog and topic pages should keep Korean text easy to scan. Use cards, tags, topic sections, and local proof points rather than decorative effects. Local pages should keep nearby school/station terms consistent with `siteConfig.keywords`.
+
+## Motion
+
+Motion uses `motion/react` and should be subtle.
+
+- Hover lifts may use `y: -6` or `y: -8` on cards.
+- Button hover may use a color change and occasional `translateY(-1px)`.
+- Decorative background blobs may move slowly over 6-7 seconds.
+- Respect `prefers-reduced-motion` through the global CSS reduction rule.
+
+Avoid generic fade-only decoration, shimmer loops, and animation that delays task completion.
+
+## Accessibility & Interaction
+
+- Every interactive target should be at least 44x44px.
+- Use clear `focus-visible` rings for keyboard users.
+- Keep Korean text from overflowing using `break-keep`, stable widths, and responsive wrapping.
+- Do not place important text over busy imagery.
+- Buttons should name the action directly: `전화상담하기`, `네이버 예약`, `카카오톡 상담`, `블로그 더 보기`.
+- Empty, loading, error, success, disabled, hover, focus, and mobile states should be designed when a component can enter those states.
 
 ## StyleSeed Operating Rules for Future UI Work
 
 Source: https://styleseed-demo.vercel.app/llms.txt and the linked full context at https://styleseed-demo.vercel.app/llms-full.txt.
 
-Apply these rules whenever Codex creates or changes UI in this project. They should refine the existing Luminous Learning direction, not replace it.
+Apply these rules whenever Codex creates or changes UI in this project. They should refine the implemented Irene English direction, not replace it.
 
-- Use one primary accent family. Irene English's accent is Electric Pink; violet may stay as a tertiary supporting tone, and Kakao/Naver colors are allowed only for their branded actions.
+- Use one primary accent family. Irene English's accent is Electric Pink; violet and sky may stay as quiet supporting tones, and Kakao/Naver colors are allowed only for their branded actions.
 - Prefer semantic project tokens, shared classes, and HeroUI variants over one-off component styling. Avoid hardcoded hex values in React components except for required third-party brand colors.
 - Avoid pure black and heavy elevation. Text should use the existing charcoal/foreground scale, and shadows should stay soft enough to feel like ambient depth rather than decoration.
 - Keep typography explicit and context-driven. Use stable text sizes for headings, body, labels, buttons, dates, and metrics; avoid viewport-scaled text unless a responsive hero lockup truly needs it and has been visually checked.
 - Keep spacing rhythmic. Use the project 8px scale, 24px gutters, and generous section spacing; do not introduce arbitrary near-miss values for page padding or card gaps.
-- Use cards and contained surfaces for grouped information, repeated items, forms, and CTAs. Do not turn whole page sections into nested decorative cards; section rhythm should come from layout, contrast, and content hierarchy.
+- Use cards and contained surfaces for grouped information, repeated items, forms, maps, and CTAs. Do not turn whole page sections into nested decorative cards; section rhythm should come from layout, contrast, and content hierarchy.
 - Do not repeat the same section composition back-to-back. Alternate dense lists, editorial text, proof points, CTAs, media, and location/contact surfaces to create scan rhythm.
 - Make every interactive target at least 44x44px. Buttons must have clear hover/focus states, and focus-visible treatment must be obvious enough for keyboard users.
 - Use calm, human Korean UX writing. Button labels should name the action, errors should explain the fix, empty states should invite the next step, and one concept should keep one name across the site.
 - Every UI state needs a designed state: loading, empty, error, success, disabled, hover, focus, and mobile wrapping where relevant.
-- Use motion intentionally and consistently. Prefer subtle Spring/Silk/Snap-style movement; avoid generic fades, overactive glow effects, or motion that slows the user's task.
+- Use motion intentionally and consistently. Prefer subtle lift, color, and slow decorative motion; avoid overactive glow effects or motion that slows the user's task.
 - Before calling UI work done, review against StyleSeed's visual/verbal judgment: accent discipline, hierarchy, spacing, radius/shadow coherence, text fit, accessibility, and Korean copy quality.
