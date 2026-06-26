@@ -17,7 +17,10 @@ function formatDate(value: string) {
 
 function BlogImageFallback() {
   return (
-    <div className="absolute inset-0 flex items-end overflow-hidden bg-surface-cream px-6 pb-6">
+    <div
+      data-testid="blog-image-fallback"
+      className="absolute inset-0 flex items-end overflow-hidden bg-surface-cream px-6 pb-6"
+    >
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(233,67,145,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(14,165,233,0.08)_1px,transparent_1px)] bg-[size:42px_100%,100%_32px]"
@@ -96,7 +99,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
               <a
                 key={tag}
                 href={`/blog?tag=${encodeURIComponent(tag)}`}
-                className="whitespace-nowrap rounded-lg bg-pink-50 px-3 py-1 text-xs font-bold leading-4 text-pink-700"
+                className="whitespace-nowrap rounded-full bg-pink-50 px-3 py-1 text-xs font-bold leading-4 text-pink-700"
               >
                 #{tag}
               </a>

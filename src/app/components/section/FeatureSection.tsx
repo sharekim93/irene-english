@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "motion/react";
 import FeatureCard from "../ui/FeatureCard";
 import Image from "next/image";
 import selenaStarIcon from "@/images/quick03.png";
@@ -111,7 +108,7 @@ const FeaturesSection = () => {
       className="relative isolate overflow-hidden bg-surface-page px-5 py-24 sm:px-8"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div className="text-center mb-16">
+        <div className="text-center mb-16">
           <p className="mb-3 text-sm font-bold text-pink-600">
             FEATURE
           </p>
@@ -122,7 +119,7 @@ const FeaturesSection = () => {
             분당 영어유치원 10년 경력의 아이린 원장님이 직접 지도하고 영어의 4대
             영역을 균형 있게 학습합니다
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature) => (

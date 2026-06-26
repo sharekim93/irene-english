@@ -23,10 +23,14 @@ describe("BlogCard", () => {
   });
 
   it("uses the Irene English fallback when no thumbnail is provided", () => {
-    const { container } = render(<BlogCard post={post} />);
+    render(<BlogCard post={post} />);
 
     expect(screen.getByText("Irene English Note")).toBeInTheDocument();
     expect(screen.getByText("아이린 석성 학습 이야기")).toBeInTheDocument();
-    expect(container.querySelector(".rounded-full")).not.toBeInTheDocument();
+    expect(
+      screen
+        .getByTestId("blog-image-fallback")
+        .querySelector(".rounded-full"),
+    ).not.toBeInTheDocument();
   });
 });
