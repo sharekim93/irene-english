@@ -1,7 +1,8 @@
 import Link from "next/link";
 import PageHero from "@/app/components/layout/PageHero";
 import CTASection from "@/app/components/section/CTASection";
-import { siteConfig, type LocalTopicPageData } from "@/config/site";
+import ConsultActions from "@/app/components/ui/ConsultActions";
+import { type LocalTopicPageData } from "@/config/site";
 
 type LocalTopicPageProps = {
   topic: LocalTopicPageData;
@@ -15,38 +16,7 @@ export default function LocalTopicPage({ topic }: LocalTopicPageProps) {
         title={topic.heroTitle}
         description={topic.heroDescription}
       >
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <a
-            href={siteConfig.telHref}
-            className="inline-flex h-12 items-center justify-center rounded-xl bg-pink-600 px-5 text-sm font-bold text-white shadow-md shadow-pink-500/20"
-          >
-            전화상담하기
-          </a>
-          <a
-            href={siteConfig.kakaoChannelChatUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center justify-center rounded-xl border border-pink-200 bg-white px-5 text-sm font-bold text-gray-950"
-          >
-            카카오 상담
-          </a>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center justify-center rounded-xl border border-emerald-200 bg-white px-5 text-sm font-bold text-emerald-700"
-          >
-            네이버 예약
-          </a>
-          <a
-            href={siteConfig.placeUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center justify-center rounded-xl border border-sky-200 bg-white px-5 text-sm font-bold text-sky-700"
-          >
-            네이버 지도
-          </a>
-        </div>
+        <ConsultActions includeMap align="start" />
       </PageHero>
 
       <section className="bg-white px-5 py-20 sm:px-8">
@@ -55,7 +25,7 @@ export default function LocalTopicPage({ topic }: LocalTopicPageProps) {
             {topic.sections.map((section) => (
               <article
                 key={section.title}
-                className="rounded-2xl border border-pink-100 bg-white p-7 shadow-sm shadow-pink-900/5"
+                className="rounded-2xl border border-border-warm bg-white p-7 shadow-sm shadow-pink-900/5"
               >
                 <h2 className="break-keep text-2xl font-extrabold leading-8 text-gray-950">
                   {section.title}
@@ -103,8 +73,8 @@ export default function LocalTopicPage({ topic }: LocalTopicPageProps) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-sky-100 bg-white p-7">
-              <p className="text-sm font-bold text-sky-600">LOCAL LINKS</p>
+            <div className="rounded-2xl border border-border-warm bg-white p-7">
+              <p className="text-sm font-bold text-pink-600">LOCAL LINKS</p>
               <h2 className="mt-2 text-2xl font-extrabold text-gray-950">
                 함께 보면 좋은 지역 안내
               </h2>
@@ -113,7 +83,7 @@ export default function LocalTopicPage({ topic }: LocalTopicPageProps) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-xl border border-sky-100 px-4 py-3 text-sm font-bold text-gray-700"
+                    className="brand-secondary-action brand-focus-ring justify-start px-4 py-3 text-sm"
                   >
                     {link.label}
                   </Link>

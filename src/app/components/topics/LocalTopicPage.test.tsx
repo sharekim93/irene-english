@@ -45,7 +45,7 @@ describe("LocalTopicPage", () => {
       screen.getByRole("link", { name: "동백역 영어학원 안내" }),
     ).toHaveAttribute("href", "/topics/dongbaek-station-english");
     expectLinkWithHref("전화상담하기", "tel:010-3421-4383");
-    expectLinkWithHref("카카오 상담", "https://pf.kakao.com/_auFFn/chat");
+    expectLinkWithHref("카카오톡 상담", "https://pf.kakao.com/_auFFn/chat");
     expectLinkWithHref(
       "네이버 예약",
       "https://m.booking.naver.com/booking/6/bizes/1456434/items/6925790",
@@ -57,10 +57,8 @@ describe("LocalTopicPage", () => {
       }),
     ).toBeInTheDocument();
     expect(screen.getByText("010-3421-4383")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "전화 상담하기" })).toHaveAttribute(
-      "href",
-      "tel:010-3421-4383",
-    );
+    expect(screen.getAllByRole("link", { name: "전화상담하기" })).toHaveLength(2);
+    expect(screen.getAllByRole("link", { name: "카카오톡 상담" })).toHaveLength(2);
     expect(screen.getAllByRole("link", { name: "네이버 예약" })).toHaveLength(2);
   });
 });
