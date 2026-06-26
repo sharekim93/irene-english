@@ -15,7 +15,7 @@ const CTASection = () => {
           <p className="mx-auto mb-8 max-w-2xl text-lg font-bold text-white sm:text-xl">
             {siteConfig.phone}
           </p>
-          <ConsultActions className="[&_.brand-focus-ring:focus-visible]:shadow-[0_0_0_4px_rgba(255,255,255,0.34)]" />
+          <ConsultActions className="[&_.brand-focus-ring:focus-visible]:outline-[rgba(255,255,255,0.78)]" />
         </div>
       </div>
     </section>

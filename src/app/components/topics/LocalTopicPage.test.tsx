@@ -14,15 +14,15 @@ if (!seokseongTopic || seokseongTopic.intent !== "local") {
 function expectLinkWithHref(name: string, href: string | RegExp) {
   const links = screen.getAllByRole("link", { name });
 
-  expect(
-    links.some((link) => {
-      const actualHref = link.getAttribute("href") ?? "";
+  expect(links.length).toBeGreaterThan(0);
 
-      return typeof href === "string"
-        ? actualHref === href
-        : href.test(actualHref);
-    }),
-  ).toBe(true);
+  for (const link of links) {
+    const actualHref = link.getAttribute("href") ?? "";
+
+    expect(typeof href === "string" ? actualHref === href : href.test(actualHref)).toBe(
+      true,
+    );
+  }
 }
 
 describe("LocalTopicPage", () => {

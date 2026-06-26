@@ -16,13 +16,37 @@ describe("ConsultActions", () => {
       "href",
       siteConfig.kakaoChannelChatUrl,
     );
+    expect(screen.getByRole("link", { name: "카카오톡 상담" })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
+    expect(screen.getByRole("link", { name: "카카오톡 상담" })).toHaveAttribute(
+      "rel",
+      "noopener noreferrer",
+    );
     expect(screen.getByRole("link", { name: "네이버 예약" })).toHaveAttribute(
       "href",
       siteConfig.bookingUrl,
     );
+    expect(screen.getByRole("link", { name: "네이버 예약" })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
+    expect(screen.getByRole("link", { name: "네이버 예약" })).toHaveAttribute(
+      "rel",
+      "noopener noreferrer",
+    );
     expect(screen.getByRole("link", { name: "네이버 지도" })).toHaveAttribute(
       "href",
       siteConfig.placeUrl,
+    );
+    expect(screen.getByRole("link", { name: "네이버 지도" })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
+    expect(screen.getByRole("link", { name: "네이버 지도" })).toHaveAttribute(
+      "rel",
+      "noopener noreferrer",
     );
   });
 
