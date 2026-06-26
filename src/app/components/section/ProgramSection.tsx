@@ -30,7 +30,7 @@ const ProgramsSection = () => {
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600">
             첫 영어부터 중등 심화까지, 레벨 진단 후 필요한 단계부터
-            시작합니다.
+            시작합니다
           </p>
         </motion.div>
 

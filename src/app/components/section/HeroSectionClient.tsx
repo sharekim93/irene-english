@@ -18,7 +18,7 @@ export default function HeroSectionClient() {
           </h1>
           <p className="mt-6 max-w-3xl whitespace-pre-line break-keep text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
             {`학생중심 1:1 맞춤 수업에 최적화된 전문 선생님이 매일 확인하고
-AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다.`}
+AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다`}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
