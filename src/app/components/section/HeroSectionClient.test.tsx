@@ -13,8 +13,9 @@ describe("HeroSectionClient", () => {
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/학생중심 1:1 맞춤 수업에 최적화된 전문 선생님/),
-    ).toBeInTheDocument();
+      screen.getByText(/학생중심 1:1 맞춤 수업에 최적화된 전문 선생님/).textContent,
+    ).toBe(`학생중심 1:1 맞춤 수업에 최적화된 전문 선생님이 매일 확인하고
+AI 셀레나 말하기 루틴으로 반복의 힘을 만듭니다`);
     expect(screen.getByRole("link", { name: "전화상담하기" })).toHaveAttribute(
       "href",
       "tel:010-3421-4383",
