@@ -90,29 +90,34 @@ const SocialIcon = ({ name }: { name: SocialIconName }) => {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="border-t border-border-warm bg-surface-container-low py-12 text-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <hgroup>
-              <h3 className="text-xl  mb-4">{siteConfig.name}</h3>
+              <h3 className="mb-4 text-xl font-extrabold text-gray-950">
+                {siteConfig.name}
+              </h3>
             </hgroup>
-            <ul className="mt-5 space-y-2 text-sm leading-6 text-gray-400">
+            <ul className="mt-5 space-y-2 text-sm leading-6 text-gray-600">
               <li>{siteConfig.shortAddress}</li>
               <li>평일 {siteConfig.openingHoursText}</li>
               <li>
-                <a href={siteConfig.telHref} className="hover:text-white">
+                <a
+                  href={siteConfig.telHref}
+                  className="font-bold text-gray-700 transition hover:text-pink-600"
+                >
                   전화 {siteConfig.phone}
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">프로그램</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="mb-4 font-extrabold text-gray-950">프로그램</h4>
+            <ul className="space-y-2 text-gray-600">
               {programSummaries.map((program) => (
                 <li key={program.slug}>
-                  <a href={program.href} className="hover:text-white">
+                  <a href={program.href} className="transition hover:text-pink-600">
                     {program.title}
                   </a>
                 </li>
@@ -120,11 +125,11 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">학원정보</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="mb-4 font-extrabold text-gray-950">학원정보</h4>
+            <ul className="space-y-2 text-gray-600">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="hover:text-white">
+                  <a href={item.href} className="transition hover:text-pink-600">
                     {item.name}
                   </a>
                 </li>
@@ -132,7 +137,9 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 font-gothic">바로가기</h4>
+            <h4 className="mb-4 font-gothic font-extrabold text-gray-950">
+              바로가기
+            </h4>
             <ul className="space-y-2" aria-label="외부 채널">
               {socialLinks.map((link) => (
                 <li key={link.label}>
@@ -140,7 +147,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-3 text-sm font-semibold text-gray-400 transition hover:text-white"
+                    className="group flex items-center gap-3 text-sm font-bold text-gray-600 transition hover:text-pink-600"
                   >
                     <span
                       className={`inline-flex h-9 w-9 shrink-0 items-center justify-center transition group-hover:-translate-y-0.5 ${link.className}`}
@@ -154,7 +161,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 font-gothic">
+        <div className="mt-8 border-t border-border-warm pt-8 text-center font-gothic text-gray-500">
           <p>&copy; 2026 김다영. All rights reserved.</p>
         </div>
       </div>

@@ -110,7 +110,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           href={post.link}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-flex h-11 items-center justify-center rounded-xl bg-gray-950 px-4 text-sm font-bold text-white transition hover:bg-pink-600"
+          className="brand-primary-action brand-focus-ring mt-6 min-h-11 px-4 text-sm"
         >
           자세히 보기
         </a>

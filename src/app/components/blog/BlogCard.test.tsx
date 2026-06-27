@@ -20,6 +20,10 @@ describe("BlogCard", () => {
       "href",
       post.link,
     );
+    expect(screen.getByRole("link", { name: "자세히 보기" })).toHaveClass(
+      "brand-primary-action",
+      "brand-focus-ring",
+    );
   });
 
   it("uses the Irene English fallback when no thumbnail is provided", () => {
